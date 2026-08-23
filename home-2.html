@@ -232,7 +232,7 @@
                 <div class="row g-4">
                     <!-- Product 1 -->
                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product-card h-100 d-flex flex-column">
+                        <div class="product-card h-100 d-flex flex-column" data-product-id="1">
                             <div class="product-img-wrapper position-relative">
                                 <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-2 py-1">-20%</span>
                                 <img src="https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=600&q=80" alt="Artist Oil Colors" class="card-img-top">
@@ -243,9 +243,12 @@
                                 <div class="rating-stars text-warning small mb-2">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="text-muted ms-1">(4.8)</span>
                                 </div>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <span class="product-price fw-bold text-primary">$49.99</span>
-                                    <button class="btn btn-sm btn-primary add-to-cart-btn" data-id="1"><i class="fas fa-plus me-1"></i>Cart</button>
+                                <div class="mt-auto pt-2">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <span class="product-price fw-bold text-primary fs-5">$49.99</span>
+                                        <span class="text-muted small text-decoration-line-through">$59.99</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-primary w-100 add-to-cart-btn" data-product-id="1"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -253,7 +256,7 @@
 
                     <!-- Product 2 -->
                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product-card h-100 d-flex flex-column">
+                        <div class="product-card h-100 d-flex flex-column" data-product-id="2">
                             <div class="product-img-wrapper position-relative">
                                 <span class="badge bg-primary position-absolute top-0 start-0 m-2 px-2 py-1">HOT</span>
                                 <img src="https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=600&q=80" alt="Graphite Sketching Kit" class="card-img-top">
@@ -264,9 +267,12 @@
                                 <div class="rating-stars text-warning small mb-2">
                                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="text-muted ms-1">(5.0)</span>
                                  </div>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <span class="product-price fw-bold text-primary">$18.50</span>
-                                    <button class="btn btn-sm btn-primary add-to-cart-btn" data-id="2"><i class="fas fa-plus me-1"></i>Cart</button>
+                                <div class="mt-auto pt-2">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <span class="product-price fw-bold text-primary fs-5">$18.50</span>
+                                        <span class="text-muted small text-decoration-line-through">$22.00</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-primary w-100 add-to-cart-btn" data-product-id="2"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -274,7 +280,7 @@
 
                     <!-- Product 3 -->
                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product-card h-100 d-flex flex-column">
+                        <div class="product-card h-100 d-flex flex-column" data-product-id="3">
                             <div class="product-img-wrapper position-relative">
                                 <img src="https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=600&q=80" alt="Polymer Clay Set" class="card-img-top">
                             </div>
@@ -284,9 +290,12 @@
                                 <div class="rating-stars text-warning small mb-2">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="text-muted ms-1">(4.7)</span>
                                 </div>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <span class="product-price fw-bold text-primary">$32.00</span>
-                                    <button class="btn btn-sm btn-primary add-to-cart-btn" data-id="3"><i class="fas fa-plus me-1"></i>Cart</button>
+                                <div class="mt-auto pt-2">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <span class="product-price fw-bold text-primary fs-5">$32.00</span>
+                                        <span class="text-muted small text-decoration-line-through">$38.00</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-primary w-100 add-to-cart-btn" data-product-id="3"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -294,7 +303,7 @@
 
                     <!-- Product 4 -->
                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product-card h-100 d-flex flex-column">
+                        <div class="product-card h-100 d-flex flex-column" data-product-id="4">
                             <div class="product-img-wrapper position-relative">
                                 <span class="badge bg-success position-absolute top-0 start-0 m-2 px-2 py-1">BESTSELLER</span>
                                 <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Cotton Watercolor Paper" class="card-img-top">
@@ -305,9 +314,12 @@
                                 <div class="rating-stars text-warning small mb-2">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="text-muted ms-1">(4.9)</span>
                                 </div>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <span class="product-price fw-bold text-primary">$26.75</span>
-                                    <button class="btn btn-sm btn-primary add-to-cart-btn" data-id="4"><i class="fas fa-plus me-1"></i>Cart</button>
+                                <div class="mt-auto pt-2">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <span class="product-price fw-bold text-primary fs-5">$26.75</span>
+                                        <span class="text-muted small text-decoration-line-through">$31.50</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-primary w-100 add-to-cart-btn" data-product-id="4"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
                                 </div>
                             </div>
                         </div>
