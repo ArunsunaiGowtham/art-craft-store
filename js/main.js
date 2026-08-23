@@ -1299,15 +1299,34 @@
         }
       });
 
-      // Update workshop-details sidebar cancel button container if present
-      var cancelWrap = document.getElementById("workshop-cancel-btn-wrap");
-      if (cancelWrap) {
-        var currentWId = parseInt(document.getElementById("workshop-register-btn") ? document.getElementById("workshop-register-btn").getAttribute("data-workshop-id") : 0, 10);
+      // Update workshop-details sidebar registration status & buttons
+      var statusWrap = document.getElementById("workshop-registered-status-wrap");
+      var detailRegBtn = document.getElementById("workshop-register-btn");
+      var sideCancelBtn = document.getElementById("workshop-cancel-sidebar-btn");
+      
+      if (detailRegBtn) {
+        var currentWId = parseInt(detailRegBtn.getAttribute("data-workshop-id") || "0", 10);
         if (currentWId === numId) {
-          cancelWrap.style.display = count > 0 ? "block" : "none";
-          var sideCancelBtn = cancelWrap.querySelector(".cancel-this-registration-btn");
-          if (sideCancelBtn) {
-            sideCancelBtn.setAttribute("data-workshop-id", numId);
+          if (count > 0) {
+            if (statusWrap) {
+              statusWrap.style.display = "block";
+              var seatCountEl = document.getElementById("workshop-registered-seat-count");
+              if (seatCountEl) {
+                seatCountEl.textContent = count + (count === 1 ? " seat reserved" : " seats reserved");
+              }
+            }
+            if (sideCancelBtn) {
+              sideCancelBtn.setAttribute("data-workshop-id", numId);
+            }
+            detailRegBtn.style.display = "none";
+          } else {
+            if (statusWrap) {
+              statusWrap.style.display = "none";
+            }
+            detailRegBtn.style.display = "block";
+            detailRegBtn.innerHTML = '<i class="fas fa-check-circle me-2"></i>Register Now';
+            detailRegBtn.classList.remove("btn-success");
+            detailRegBtn.classList.add("btn-primary");
           }
         }
       }
