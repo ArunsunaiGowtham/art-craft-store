@@ -3326,37 +3326,51 @@ textarea.form-control {
   text-align: right;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .newsletter-form {
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 14px !important;
     width: 100% !important;
     max-width: 100% !important;
-    align-items: stretch !important;
+    align-items: center !important;
+    justify-content: center !important;
     padding-inline: 4px;
+    margin-inline: auto !important;
+    text-align: center !important;
   }
 
   .newsletter-form .newsletter-input-wrap {
     width: 100% !important;
     min-width: 100% !important;
+    max-width: 100% !important;
     flex: none !important;
   }
 
   .newsletter-form .form-control {
     width: 100% !important;
     min-width: 100% !important;
+    text-align: center !important;
   }
 
   .newsletter-form .btn {
-    width: 100% !important;
+    width: auto !important;
+    min-width: 180px !important;
+    max-width: 280px !important;
+    align-self: center !important;
+    margin: 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
     flex: none !important;
   }
 
   .newsletter-form .invalid-feedback,
   .newsletter-form .field-error {
-    text-align: center;
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
   }
-}
 
   .footer-newsletter .d-flex {
     min-width: 0;

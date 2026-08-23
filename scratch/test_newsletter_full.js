@@ -68,11 +68,11 @@ check("Validation error positioned below input with full width",
   styleCss.includes('margin-top: 6px;')
 );
 
-check("Mobile responsive styles stack input and button vertically",
-  styleCss.includes('@media (max-width: 576px)') &&
+check("Mobile responsive styles stack input and button vertically and center button",
+  styleCss.includes('@media (max-width: 768px)') &&
   styleCss.includes('flex-direction: column !important;') &&
-  styleCss.includes('.newsletter-form .btn {') &&
-  styleCss.includes('width: 100% !important;')
+  styleCss.includes('align-self: center !important;') &&
+  styleCss.includes('margin: 0 auto !important;')
 );
 
 // -------------------------------------------------------------
