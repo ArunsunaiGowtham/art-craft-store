@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art & Craft Supply Store - Premium Art Materials & Workshops</title>
+    <meta name="description" content="Premium art supplies, inspiring workshops, and a creative community — everything you need to bring your artistic vision to life. Shop painting, sketching, sculpting, crafting supplies and more.">
+    <meta name="keywords" content="art supplies, craft store, painting, sketching, sculpting, workshops, art materials, DIY crafts">
+    <meta name="author" content="ArtCraft Supply Store">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artcraftstore.com/">
+    <meta property="og:title" content="Art & Craft Supply Store - Premium Art Materials & Workshops">
+    <meta property="og:description" content="Premium art supplies, inspiring workshops, and a creative community — everything you need to bring your artistic vision to life.">
+    <meta property="og:image" content="https://placehold.co/1200x630/E85D3A/FFFFFF?text=ArtCraft+Store">
+    <meta property="og:site_name" content="ArtCraft Supply Store">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Art & Craft Supply Store - Premium Art Materials & Workshops">
+    <meta name="twitter:description" content="Premium art supplies, inspiring workshops, and a creative community — everything you need to bring your artistic vision to life.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/E85D3A/FFFFFF?text=ArtCraft+Store">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://artcraftstore.com/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-icon"><i class="fas fa-palette"></i></span>
+                <span class="logo-text">ArtCraft</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html" active >Home 1</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li><a class="nav-link" href="workshops.html">Workshops</a></li>
+                    <li><a class="nav-link" href="brands.html">Brands</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="shop.html" class="nav-icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i><span class="cart-badge wishlist-count" style="display:none">0</span></a>
+                    <a href="cart.html" class="nav-icon-btn" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="cart-badge cart-count" style="display:none">0</span></a>
+                    <button class="nav-icon-btn theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+                    <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL"><span>RTL</span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="search-overlay" style="display:none;">
+    <div class="search-overlay-content">
+      <div class="search-input-wrap">
+        <i class="fas fa-search" style="font-size:1.1rem;color:var(--text-muted);"></i>
+        <input type="text" class="form-control" placeholder="Search for art supplies, brands, workshops..." id="overlay-search-input">
+        <button class="search-overlay-close search-close" aria-label="Close search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-suggestions" id="search-suggestions">
+        <h6>Popular Searches</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="shop.html?category=painting" class="badge bg-light text-dark text-decoration-none p-2">Watercolor</a>
+          <a href="shop.html?category=sketching" class="badge bg-light text-dark text-decoration-none p-2">Pencils</a>
+          <a href="shop.html?category=crafting" class="badge bg-light text-dark text-decoration-none p-2">Clay</a>
+          <a href="workshops.html" class="badge bg-light text-dark text-decoration-none p-2">Workshops</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <main>
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h1 class="hero-title animate-on-scroll">
+                            Unleash Your <span class="text-primary">Creative</span> <span class="font-accent">Potential</span>
+                        </h1>
+                        <p class="hero-subtitle animate-on-scroll">
+                            Premium art supplies, inspiring workshops, and a creative community — everything you need to bring your artistic vision to life.
+                        </p>
+                        <div class="hero-cta animate-on-scroll">
+                            <a href="shop.html" class="btn btn-primary btn-lg"><i class="fas fa-shopping-bag me-2"></i>Shop Art Supplies</a>
+                            <a href="workshops.html" class="btn btn-outline btn-lg"><i class="fas fa-paint-brush me-2"></i>Explore Workshops</a>
+                        </div>
+                        <div class="hero-stats animate-on-scroll">
+                            <div class="hero-stat">
+                                <span class="hero-stat-number">15,000+</span>
+                                <span class="hero-stat-label">Products</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-number">500+</span>
+                                <span class="hero-stat-label">Workshops</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-number">50,000+</span>
+                                <span class="hero-stat-label">Artists</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-number">100+</span>
+                                <span class="hero-stat-label">Brands</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-10 mx-auto mt-4 mt-lg-0">
+                        <div class="hero-image animate-on-scroll">
+                            <img src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?auto=format&fit=crop&w=800&q=80" alt="ArtCraft creative art supplies and artwork" class="img-fluid w-100" style="border-radius:20px; object-fit:cover; display:block; min-height:340px; max-height:450px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-decorative hero-decorative--brush"></div>
+            <div class="hero-decorative hero-decorative--dots"></div>
+        </section>
+
+        <!-- ==================== PROJECT OF THE MONTH ==================== -->
+        <section class="section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title text-center">Project of the Month</h2>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div style="border-radius:16px; overflow:hidden; box-shadow:var(--shadow-lg); height:100%; min-height:350px;">
+                            <img src="https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=800&q=80" alt="DIY Watercolor Landscape Painting" class="img-fluid w-100 h-100" style="object-fit:cover; display:block; min-height:350px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 style="font-family:'Poppins',sans-serif; font-weight:700; margin-bottom:16px;">DIY Watercolor Landscape Painting</h3>
+                        <p style="color:var(--text-muted); margin-bottom:24px; line-height:1.7;">
+                            Create a stunning watercolor landscape with this beginner-friendly project. Learn essential watercolor techniques including wet-on-wet, layering, and color blending while painting a beautiful sunset landscape. Perfect for artists of all skill levels looking to explore the magic of watercolors.
+                        </p>
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-2">Materials Needed:</h6>
+                            <ul style="list-style:none; padding:0; color:var(--text-muted);">
+                                <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Watercolor paper (300gsm)</li>
+                                <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Watercolor paints (12-color set)</li>
+                                <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Masking tape</li>
+                                <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>2 brushes (round &amp; flat)</li>
+                                <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Pencil</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex gap-4 mb-4" style="font-size:0.9rem;">
+                            <span class="badge" style="background:var(--primary-light); color:var(--primary); padding:8px 16px; border-radius:8px;"><i class="fas fa-signal me-1"></i> Difficulty: Beginner</span>
+                            <span class="badge" style="background:var(--primary-light); color:var(--primary); padding:8px 16px; border-radius:8px;"><i class="fas fa-clock me-1"></i> Time: 2-3 hours</span>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-primary"><i class="fas fa-eye me-1"></i>View Project</a>
+                            <a href="shop.html" class="btn btn-outline"><i class="fas fa-shopping-bag me-1"></i>Shop Materials</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SHOP BY MEDIUM ==================== -->
+        <section class="section section-alt animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">Shop by Medium</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <a href="shop.html?category=painting" class="category-card">
+                            <div class="category-bg" style="background-image:url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="category-overlay"></div>
+                            <div>
+                                <div class="category-name">Painting</div>
+                                <div class="category-count">3,200 Products</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="shop.html?category=sketching" class="category-card">
+                            <div class="category-bg" style="background-image:url('https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="category-overlay"></div>
+                            <div>
+                                <div class="category-name">Drawing &amp; Sketching</div>
+                                <div class="category-count">2,800 Products</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="shop.html?category=sculpting" class="category-card">
+                            <div class="category-bg" style="background-image:url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="category-overlay"></div>
+                            <div>
+                                <div class="category-name">Sculpting</div>
+                                <div class="category-count">1,500 Products</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="shop.html?category=crafting" class="category-card">
+                            <div class="category-bg" style="background-image:url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="category-overlay"></div>
+                            <div>
+                                <div class="category-name">Crafting</div>
+                                <div class="category-count">2,100 Products</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="shop.html?category=origami" class="category-card">
+                            <div class="category-bg" style="background-image:url('images/origami-paper-collection.jpg')"></div>
+                            <div class="category-overlay"></div>
+                            <div>
+                                <div class="category-name">Origami</div>
+                                <div class="category-count">800 Products</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="shop.html?category=sketching" class="category-card">
+                            <div class="category-bg" style="background-image:url('https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="category-overlay"></div>
+                            <div>
+                                <div class="category-name">Calligraphy</div>
+                                <div class="category-count">650 Products</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="shop.html?category=diy-materials" class="category-card">
+                            <div class="category-bg" style="background-image:url('https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="category-overlay"></div>
+                            <div>
+                                <div class="category-name">DIY &amp; Handmade</div>
+                                <div class="category-count">1,900 Products</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="shop.html?category=art-tools" class="category-card">
+                            <div class="category-bg" style="background-image:url('https://images.unsplash.com/photo-1596548438137-d51ea5c83ca5?auto=format&fit=crop&w=800&q=80')"></div>
+                            <div class="category-overlay"></div>
+                            <div>
+                                <div class="category-name">Art Tools</div>
+                                <div class="category-count">2,400 Products</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FEATURED PRODUCTS ==================== -->
+        <section class="section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="row g-4">
+                    <!-- Product 1 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-card h-100" data-product-id="1">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Professional Watercolor Set" class="card-img-top">
+                                <span class="card-badge badge-sale">Sale</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="product-category">Painting</div>
+                                <h6 class="card-title">Professional Watercolor Set</h6>
+                                <div class="product-rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-count">(248)</span>
+                                </div>
+                                <div class="product-price-section">
+                                    <span class="card-price">$34.99</span>
+                                    <span class="card-price-old" style="display:none">$44.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-2 add-to-cart-btn" data-product-id="1"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-card h-100" data-product-id="2">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=600&q=80" alt="Sketching Pencil Bundle" class="card-img-top">
+                                <span class="card-badge badge-new">New</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="product-category">Drawing &amp; Sketching</div>
+                                <h6 class="card-title">Sketching Pencil Bundle</h6>
+                                <div class="product-rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-count">(186)</span>
+                                </div>
+                                <div class="product-price-section">
+                                    <span class="card-price">$12.99</span>
+                                    <span class="card-price-old" style="display:none">$16.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-2 add-to-cart-btn" data-product-id="2"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-card h-100" data-product-id="5">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=600&q=80" alt="Polymer Clay Starter Kit" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="product-category">Sculpting</div>
+                                <h6 class="card-title">Polymer Clay Starter Kit</h6>
+                                <div class="product-rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="rating-count">(124)</span>
+                                </div>
+                                <div class="product-price-section">
+                                    <span class="card-price">$19.99</span>
+                                    <span class="card-price-old" style="display:none">$24.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-2 add-to-cart-btn" data-product-id="5"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-card h-100" data-product-id="8">
+                            <div class="product-image">
+                                <img src="https://i5.walmartimages.com/seo/36-Colors-Plasticine-DIY-Plasticine-for-Children-Education-Super-Light-Clay-Air-Dry-Clay-Multi-color-Modelling-Clay-Interactive-Toy_a10541ba-c6b8-47ab-8afb-ac32595ccc03.2a212cc49013aeeeaafedff87e51fb38.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768" alt="Modeling Clay Super Pack" class="card-img-top">
+                                <span class="card-badge badge-sale">Sale</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="product-category">Sculpting</div>
+                                <h6 class="card-title">Modeling Clay Super Pack</h6>
+                                <div class="product-rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-count">(178)</span>
+                                </div>
+                                <div class="product-price-section">
+                                    <span class="card-price">$27.99</span>
+                                    <span class="card-price-old">$34.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-2 add-to-cart-btn" data-product-id="8"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-card h-100" data-product-id="12">
+                            <div class="product-image">
+                                <img src="images/origami-paper-collection.jpg" alt="Origami Paper Collection" class="card-img-top">
+                                <span class="card-badge badge-new">New</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="product-category">Origami</div>
+                                <h6 class="card-title">Origami Paper Pack</h6>
+                                <div class="product-rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="rating-count">(97)</span>
+                                </div>
+                                <div class="product-price-section">
+                                    <span class="card-price">$7.99</span>
+                                    <span class="card-price-old" style="display:none">$9.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-2 add-to-cart-btn" data-product-id="12"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-card h-100" data-product-id="17">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80" alt="Student Color Pencils (36 Pack)" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="product-category">Student Supplies</div>
+                                <h6 class="card-title">Student Color Pencils (36 Pack)</h6>
+                                <div class="product-rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-count">(456)</span>
+                                </div>
+                                <div class="product-price-section">
+                                    <span class="card-price">$8.49</span>
+                                    <span class="card-price-old" style="display:none">$11.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-2 add-to-cart-btn" data-product-id="17"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-card h-100" data-product-id="20">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=600&q=80" alt="DIY Macrame Kit" class="card-img-top">
+                                <span class="card-badge badge-sale">Sale</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="product-category">DIY &amp; Handmade</div>
+                                <h6 class="card-title">DIY Macrame Kit</h6>
+                                <div class="product-rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="rating-count">(178)</span>
+                                </div>
+                                <div class="product-price-section">
+                                    <span class="card-price">$22.99</span>
+                                    <span class="card-price-old" style="display:none">$29.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-2 add-to-cart-btn" data-product-id="20"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-card h-100" data-product-id="22">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1596548438137-d51ea5c83ca5?auto=format&fit=crop&w=600&q=80" alt="Professional Brush Set" class="card-img-top">
+                                <span class="card-badge badge-new">New</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="product-category">Art Tools</div>
+                                <h6 class="card-title">Professional Brush Set</h6>
+                                <div class="product-rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-count">(203)</span>
+                                </div>
+                                <div class="product-price-section">
+                                    <span class="card-price">$27.99</span>
+                                    <span class="card-price-old" style="display:none">$34.99</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-2 add-to-cart-btn" data-product-id="22"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="shop.html" class="btn btn-primary btn-lg"><i class="fas fa-store me-2"></i>View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== STUDENT & SCHOOL SUPPLIES ==================== -->
+        <section class="section section-alt animate-on-scroll" id="student-supplies-preview">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Student &amp; School Supplies</h2>
+                    <p class="section-subtitle">Premium quality art essentials tailored for classrooms, creative studies, and budding young artists.</p>
+                </div>
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-lg-6">
+                        <div class="student-supplies-content pe-lg-3">
+                            <span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 rounded-pill mb-3" style="font-size:0.85rem; letter-spacing:0.5px;">CLASSROOM &amp; STUDIO ESSENTIALS</span>
+                            <h3 style="font-family:'Poppins',sans-serif; font-weight:700; font-size:1.75rem; margin-bottom:16px; color:var(--text-primary);">Everything Young Artists Need</h3>
+                            <p style="color:var(--text-secondary); margin-bottom:24px; line-height:1.7; font-size:1rem;">
+                                From classroom essentials to creative explorations, our student supplies collection has everything aspiring young artists need. Quality materials at student-friendly prices — because creativity shouldn't break the bank.
+                            </p>
+                            <div class="row g-3 mb-4">
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-2 rounded-3" style="background:var(--bg-card); border:1px solid var(--border-color);">
+                                        <div class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:38px; height:38px; background:rgba(232,93,58,0.1); color:var(--primary);">
+                                            <i class="fas fa-palette"></i>
+                                        </div>
+                                        <span class="fw-medium" style="font-size:0.9rem; color:var(--text-primary);">Drawing &amp; sketchpads</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-2 rounded-3" style="background:var(--bg-card); border:1px solid var(--border-color);">
+                                        <div class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:38px; height:38px; background:rgba(58,123,222,0.1); color:#3A7BDE;">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </div>
+                                        <span class="fw-medium" style="font-size:0.9rem; color:var(--text-primary);">Color pencils &amp; crayons</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-2 rounded-3" style="background:var(--bg-card); border:1px solid var(--border-color);">
+                                        <div class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:38px; height:38px; background:rgba(244,168,37,0.1); color:#F4A825;">
+                                            <i class="fas fa-pen"></i>
+                                        </div>
+                                        <span class="fw-medium" style="font-size:0.9rem; color:var(--text-primary);">Markers &amp; highlighters</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-2 rounded-3" style="background:var(--bg-card); border:1px solid var(--border-color);">
+                                        <div class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:38px; height:38px; background:rgba(40,167,69,0.1); color:#28a745;">
+                                            <i class="fas fa-drafting-compass"></i>
+                                        </div>
+                                        <span class="fw-medium" style="font-size:0.9rem; color:var(--text-primary);">Geometry &amp; math supplies</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-2 rounded-3" style="background:var(--bg-card); border:1px solid var(--border-color);">
+                                        <div class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:38px; height:38px; background:rgba(155,89,182,0.1); color:#9b59b6;">
+                                            <i class="fas fa-paint-brush"></i>
+                                        </div>
+                                        <span class="fw-medium" style="font-size:0.9rem; color:var(--text-primary);">Sketching kits</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-2 rounded-3" style="background:var(--bg-card); border:1px solid var(--border-color);">
+                                        <div class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width:38px; height:38px; background:rgba(23,162,184,0.1); color:#17a2b8;">
+                                            <i class="fas fa-box-open"></i>
+                                        </div>
+                                        <span class="fw-medium" style="font-size:0.9rem; color:var(--text-primary);">Student art kits</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <a href="student-supplies.html" class="btn btn-primary btn-lg shadow-sm px-4"><i class="fas fa-shopping-bag me-2"></i>Shop Student Supplies</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="card h-100 border-0 shadow-sm overflow-hidden" style="border-radius:var(--radius-lg, 16px); background:var(--bg-card); border:1px solid var(--border-color); transition:transform 0.3s ease, box-shadow 0.3s ease;">
+                                    <div style="height:150px; overflow:hidden; position:relative;">
+                                        <img src="images/product-student-color-pencils.jpg" alt="Student Color Pencils (36 Pack)" class="w-100 h-100" style="object-fit:cover; display:block; transition:transform 0.4s ease;">
+                                        <span class="badge bg-primary position-absolute top-0 start-0 m-2 rounded-pill" style="font-size:0.75rem;">Popular</span>
+                                    </div>
+                                    <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
+                                        <div>
+                                            <div class="text-muted small mb-1" style="font-size:0.78rem;">Colored Pencils</div>
+                                            <h6 class="mb-1 text-truncate" style="font-size:0.92rem; font-weight:600; color:var(--text-primary);">Color Pencils (36pk)</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mt-2 pt-2 border-top" style="border-color:var(--border-color)!important;">
+                                            <span class="fw-bold text-primary" style="font-size:1rem;">$8.49</span>
+                                            <a href="shop.html?search=pencil" class="btn btn-sm btn-outline-primary rounded-circle d-flex align-items-center justify-content-center" style="width:30px; height:30px; padding:0;" aria-label="View Color Pencils"><i class="fas fa-arrow-right" style="font-size:0.75rem;"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card h-100 border-0 shadow-sm overflow-hidden" style="border-radius:var(--radius-lg, 16px); background:var(--bg-card); border:1px solid var(--border-color); transition:transform 0.3s ease, box-shadow 0.3s ease;">
+                                    <div style="height:150px; overflow:hidden; position:relative;">
+                                        <img src="images/product-student-washable-markers.jpg" alt="Washable Markers (48 Pack)" class="w-100 h-100" style="object-fit:cover; display:block; transition:transform 0.4s ease;">
+                                        <span class="badge bg-success position-absolute top-0 start-0 m-2 rounded-pill" style="font-size:0.75rem;">Top Rated</span>
+                                    </div>
+                                    <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
+                                        <div>
+                                            <div class="text-muted small mb-1" style="font-size:0.78rem;">Markers &amp; Pens</div>
+                                            <h6 class="mb-1 text-truncate" style="font-size:0.92rem; font-weight:600; color:var(--text-primary);">Washable Markers</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mt-2 pt-2 border-top" style="border-color:var(--border-color)!important;">
+                                            <span class="fw-bold text-primary" style="font-size:1rem;">$15.99</span>
+                                            <a href="shop.html?search=marker" class="btn btn-sm btn-outline-primary rounded-circle d-flex align-items-center justify-content-center" style="width:30px; height:30px; padding:0;" aria-label="View Washable Markers"><i class="fas fa-arrow-right" style="font-size:0.75rem;"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card h-100 border-0 shadow-sm overflow-hidden" style="border-radius:var(--radius-lg, 16px); background:var(--bg-card); border:1px solid var(--border-color); transition:transform 0.3s ease, box-shadow 0.3s ease;">
+                                    <div style="height:150px; overflow:hidden; position:relative;">
+                                        <img src="images/product-student-sketching-kit.jpg" alt="Student Sketching Kit" class="w-100 h-100" style="object-fit:cover; display:block; transition:transform 0.4s ease;">
+                                        <span class="badge bg-info text-white position-absolute top-0 start-0 m-2 rounded-pill" style="font-size:0.75rem;">Essentials</span>
+                                    </div>
+                                    <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
+                                        <div>
+                                            <div class="text-muted small mb-1" style="font-size:0.78rem;">Drawing &amp; Sketch</div>
+                                            <h6 class="mb-1 text-truncate" style="font-size:0.92rem; font-weight:600; color:var(--text-primary);">Sketching Kit</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mt-2 pt-2 border-top" style="border-color:var(--border-color)!important;">
+                                            <span class="fw-bold text-primary" style="font-size:1rem;">$14.99</span>
+                                            <a href="shop.html?search=sketch" class="btn btn-sm btn-outline-primary rounded-circle d-flex align-items-center justify-content-center" style="width:30px; height:30px; padding:0;" aria-label="View Sketching Kit"><i class="fas fa-arrow-right" style="font-size:0.75rem;"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card h-100 border-0 shadow-sm overflow-hidden" style="border-radius:var(--radius-lg, 16px); background:var(--bg-card); border:1px solid var(--border-color); transition:transform 0.3s ease, box-shadow 0.3s ease;">
+                                    <div style="height:150px; overflow:hidden; position:relative;">
+                                        <img src="images/product-student-complete-art-kit.jpg" alt="Complete Student Art Kit" class="w-100 h-100" style="object-fit:cover; display:block; transition:transform 0.4s ease;">
+                                        <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2 rounded-pill" style="font-size:0.75rem;">Best Value</span>
+                                    </div>
+                                    <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
+                                        <div>
+                                            <div class="text-muted small mb-1" style="font-size:0.78rem;">Bundles &amp; Kits</div>
+                                            <h6 class="mb-1 text-truncate" style="font-size:0.92rem; font-weight:600; color:var(--text-primary);">Complete Art Kit</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mt-2 pt-2 border-top" style="border-color:var(--border-color)!important;">
+                                            <span class="fw-bold text-primary" style="font-size:1rem;">$24.99</span>
+                                            <a href="student-supplies.html" class="btn btn-sm btn-outline-primary rounded-circle d-flex align-items-center justify-content-center" style="width:30px; height:30px; padding:0;" aria-label="View Complete Art Kit"><i class="fas fa-arrow-right" style="font-size:0.75rem;"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WORKSHOP EVENTS PREVIEW ==================== -->
+        <section class="section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">Upcoming Workshops</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card-art h-100 d-flex flex-column">
+                            <div class="card-img-top overflow-hidden position-relative" style="height:220px;">
+                                <img src="images/ws-watercolor-basics.jpg" alt="Watercolor Basics for Beginners" style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Sarah Mitchell" style="width:32px; height:32px; border-radius:50%; object-fit:cover;">
+                                    <small class="fw-medium">Sarah Mitchell</small>
+                                </div>
+                                <h5 class="card-title">Watercolor Basics for Beginners</h5>
+                                <p class="card-text flex-grow-1">Learn fundamental watercolor techniques including wet-on-wet, dry brush, and color mixing. Perfect for beginners.</p>
+                                <div class="d-flex gap-3 mb-3" style="font-size:0.85rem; color:var(--text-muted);">
+                                    <span><i class="fas fa-calendar me-1"></i> Sep 15, 2026</span>
+                                    <span><i class="fas fa-clock me-1"></i> 2:00 PM</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-auto pt-3" style="border-top:1px solid var(--border-color);">
+                                    <span class="fw-bold text-primary fs-5">$45.00</span>
+                                    <a href="workshop-details.html?id=1" class="btn btn-primary btn-sm">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-art h-100 d-flex flex-column">
+                            <div class="card-img-top overflow-hidden position-relative" style="height:220px;">
+                                <img src="images/ws-modern-calligraphy.jpg" alt="Modern Calligraphy Workshop" style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Emma Laurent" style="width:32px; height:32px; border-radius:50%; object-fit:cover;">
+                                    <small class="fw-medium">Emma Laurent</small>
+                                </div>
+                                <h5 class="card-title">Modern Calligraphy Workshop</h5>
+                                <p class="card-text flex-grow-1">Discover the beauty of modern calligraphy. Learn brush pen techniques and create stunning lettering pieces.</p>
+                                <div class="d-flex gap-3 mb-3" style="font-size:0.85rem; color:var(--text-muted);">
+                                    <span><i class="fas fa-calendar me-1"></i> Sep 22, 2026</span>
+                                    <span><i class="fas fa-clock me-1"></i> 10:00 AM</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-auto pt-3" style="border-top:1px solid var(--border-color);">
+                                    <span class="fw-bold text-primary fs-5">$55.00</span>
+                                    <a href="workshop-details.html?id=2" class="btn btn-primary btn-sm">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-art h-100 d-flex flex-column">
+                            <div class="card-img-top overflow-hidden position-relative" style="height:220px;">
+                                <img src="images/ws-origami-folding-class.jpg" alt="Origami Art: From Basic to Advanced" style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Yuki Tanaka" style="width:32px; height:32px; border-radius:50%; object-fit:cover;">
+                                    <small class="fw-medium">Yuki Tanaka</small>
+                                </div>
+                                <h5 class="card-title">Origami Art: From Basic to Advanced</h5>
+                                <p class="card-text flex-grow-1">Explore the ancient Japanese art of paper folding. Create beautiful geometric shapes and decorative paper sculptures.</p>
+                                <div class="d-flex gap-3 mb-3" style="font-size:0.85rem; color:var(--text-muted);">
+                                    <span><i class="fas fa-calendar me-1"></i> Oct 1, 2026</span>
+                                    <span><i class="fas fa-clock me-1"></i> 3:30 PM</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-auto pt-3" style="border-top:1px solid var(--border-color);">
+                                    <span class="fw-bold text-primary fs-5">$35.00</span>
+                                    <a href="workshop-details.html?id=4" class="btn btn-primary btn-sm">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="workshops.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-alt me-2"></i>View All Workshops</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== MEMBER TESTIMONIALS ==================== -->
+        <section class="section section-alt testimonials-section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title testimonials-title">What Our Members Say</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-avatar-wrap">
+                            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" alt="Michael Chen">
+                        </div>
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-quote-wrap">
+                            <p class="testimonial-text">“The workshops gave me the confidence to return to watercolor. The instructors are encouraging, practical, and genuinely inspiring.”</p>
+                        </div>
+                        <footer class="testimonial-author-wrap">
+                            <p class="testimonial-author-name">Michael Chen</p>
+                            <p class="testimonial-author-role">Watercolor Member</p>
+                        </footer>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-avatar-wrap">
+                            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Olivia Martinez">
+                        </div>
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-quote-wrap">
+                            <p class="testimonial-text">“I love having quality materials, fresh project ideas, and a creative community all in one place. It makes making time for art easy.”</p>
+                        </div>
+                        <footer class="testimonial-author-wrap">
+                            <p class="testimonial-author-name">Olivia Martinez</p>
+                            <p class="testimonial-author-role">Craft Club Member</p>
+                        </footer>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-avatar-wrap">
+                            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="David Park">
+                        </div>
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-quote-wrap">
+                            <p class="testimonial-text">“From the supply recommendations to the studio sessions, every detail helps me keep experimenting and growing as an artist.”</p>
+                        </div>
+                        <footer class="testimonial-author-wrap">
+                            <p class="testimonial-author-name">David Park</p>
+                            <p class="testimonial-author-role">Studio Member</p>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== BRAND SPOTLIGHT ==================== -->
+        <section class="section section-alt animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">Brand Spotlight</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4 col-lg-2">
+                        <div class="card-art text-center p-3 h-100 d-flex flex-column">
+                            <div class="rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:50px; height:50px; background:var(--primary-light); color:var(--primary);">
+                                <i class="fas fa-palette fs-5"></i>
+                            </div>
+                            <h6 class="card-title fw-bold">Winsor &amp; Newton</h6>
+                            <p class="card-text flex-grow-1" style="font-size:0.8rem;">Premium artist paints and brushes since 1832.</p>
+                            <div class="mt-auto">
+                                <a href="brands.html" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="card-art text-center p-3 h-100 d-flex flex-column">
+                            <div class="rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:50px; height:50px; background:var(--primary-light); color:var(--primary);">
+                                <i class="fas fa-pencil-alt fs-5"></i>
+                            </div>
+                            <h6 class="card-title fw-bold">Faber-Castell</h6>
+                            <p class="card-text flex-grow-1" style="font-size:0.8rem;">World's oldest manufacturer of drawing instruments.</p>
+                            <div class="mt-auto">
+                                <a href="brands.html" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="card-art text-center p-3 h-100 d-flex flex-column">
+                            <div class="rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:50px; height:50px; background:var(--primary-light); color:var(--primary);">
+                                <i class="fas fa-pen-nib fs-5"></i>
+                            </div>
+                            <h6 class="card-title fw-bold">Sakura</h6>
+                            <p class="card-text flex-grow-1" style="font-size:0.8rem;">Iconic Pigma Micron pens and Koi watercolors.</p>
+                            <div class="mt-auto">
+                                <a href="brands.html" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="card-art text-center p-3 h-100 d-flex flex-column">
+                            <div class="rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:50px; height:50px; background:var(--primary-light); color:var(--primary);">
+                                <i class="fas fa-marker fs-5"></i>
+                            </div>
+                            <h6 class="card-title fw-bold">Copic</h6>
+                            <p class="card-text flex-grow-1" style="font-size:0.8rem;">Professional-grade alcohol markers for illustrators.</p>
+                            <div class="mt-auto">
+                                <a href="brands.html" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="card-art text-center p-3 h-100 d-flex flex-column">
+                            <div class="rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:50px; height:50px; background:var(--primary-light); color:var(--primary);">
+                                <i class="fas fa-book-open fs-5"></i>
+                            </div>
+                            <h6 class="card-title fw-bold">Strathmore</h6>
+                            <p class="card-text flex-grow-1" style="font-size:0.8rem;">Premium art papers for every medium and skill level.</p>
+                            <div class="mt-auto">
+                                <a href="brands.html" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="card-art text-center p-3 h-100 d-flex flex-column">
+                            <div class="rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:50px; height:50px; background:var(--primary-light); color:var(--primary);">
+                                <i class="fas fa-paint-brush fs-5"></i>
+                            </div>
+                            <h6 class="card-title fw-bold">Daler-Rowney</h6>
+                            <p class="card-text flex-grow-1" style="font-size:0.8rem;">Fine art materials for professionals and students.</p>
+                            <div class="mt-auto">
+                                <a href="brands.html" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CREATIVE INSPIRATION / BLOG PREVIEW ==================== -->
+        <section class="section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">Creative Inspiration</h2>
+                <div class="row g-4" id="home-blog-preview" aria-live="polite"></div>
+                <div class="text-center mt-5">
+                    <a href="blog.html" class="btn btn-primary btn-lg"><i class="fas fa-blog me-2"></i>Visit Our Blog</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NEWSLETTER SECTION ==================== -->
+        <section class="section newsletter-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center;">
+            <div class="container" style="max-width:600px;">
+                <h2 style="color:white;">Stay Creative</h2>
+                <p style="color:rgba(255,255,255,0.85); margin-bottom:24px;">Subscribe for art tips, exclusive deals, workshop announcements, and creative inspiration.</p>
+                                <form class="newsletter-form" style="max-width:480px; margin:0 auto;" novalidate>
+                    <div class="newsletter-input-wrap">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div>
+                    <h5><i class="fas fa-palette me-2"></i>ArtCraft</h5>
+                    <p>Your premier destination for art supplies, creative workshops, and artistic inspiration. Fueling creativity since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Shop -->
+                <div>
+                    <h5>Shop</h5>
+                    <div class="footer-links">
+                        <a href="shop.html">All Products</a>
+                        <a href="shop.html?category=painting">Painting</a>
+                        <a href="shop.html?category=sketching">Drawing &amp; Sketching</a>
+                        <a href="shop.html?category=crafting">Crafting</a>
+                        <a href="student-supplies.html">Student Supplies</a>
+                        <a href="shop.html?category=art-tools">Art Tools</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="workshops.html">Workshops</a>
+                        <a href="brands.html">Brands</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p>Get creative tips and exclusive offers delivered to your inbox.</p>
+                    <div class="footer-newsletter">
+                        <form class="newsletter-form">
+                            <div class="d-flex gap-0">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ArtCraft Supply Store. All rights reserved.</p>
+            </div>
+        </div>
+</footer>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button class="scroll-top btn btn-primary btn-icon" id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

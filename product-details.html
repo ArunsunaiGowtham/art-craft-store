@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View product details for premium art and craft supplies at ArtCraft Supply Store.">
+  <meta name="keywords" content="art supplies, craft supplies, product details">
+  <meta name="author" content="ArtCraft Supply Store">
+  <title>Product Details - ArtCraft Supply Store</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .product-detail-gallery .product-main-image,
+    .product-detail-gallery .gallery-main-image {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      transition: opacity 0.15s ease;
+    }
+    .product-detail-gallery .thumbnail-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .product-detail-gallery .gallery-thumb,
+    .product-detail-gallery .product-thumb {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color var(--transition-fast), transform var(--transition-fast);
+      opacity: 0.7;
+    }
+    .product-detail-gallery .gallery-thumb:hover,
+    .product-detail-gallery .product-thumb:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    .product-detail-gallery .gallery-thumb.active,
+    .product-detail-gallery .product-thumb.active {
+      border-color: var(--primary);
+      opacity: 1;
+    }
+    .product-info-section .product-title {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .product-info-section .product-rating-display {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .product-info-section .product-price-display {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .product-info-section .current-price {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .product-info-section .old-price {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+    .product-info-section .discount-badge {
+      background: var(--danger);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 20px;
+    }
+    .quantity-selector .qty-btn {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+    .quantity-selector .qty-btn:first-child {
+      border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+    }
+    .quantity-selector .qty-btn:last-child {
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .quantity-selector .qty-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .quantity-selector .quantity-input {
+      width: 60px;
+      height: 44px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      border-left: none;
+      border-right: none;
+      font-size: 1rem;
+      font-weight: 600;
+      background: var(--bg-input);
+      color: var(--text-primary);
+    }
+    .quantity-selector .quantity-input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .action-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .features-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+    }
+    .features-list .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .features-list .feature-item i {
+      color: var(--success);
+      font-size: 0.85rem;
+    }
+    .product-tabs .nav-tabs {
+      border-bottom: 2px solid var(--border-color);
+    }
+    .product-tabs .nav-tabs .nav-link {
+      color: var(--text-muted);
+      font-weight: 500;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      padding: 12px 24px;
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .product-tabs .nav-tabs .nav-link:hover {
+      color: var(--text-primary);
+      border-bottom-color: var(--border-color);
+    }
+    .product-tabs .nav-tabs .nav-link.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+      background: transparent;
+    }
+    .spec-table {
+      width: 100%;
+    }
+    .spec-table tr td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.9rem;
+    }
+    .spec-table tr td:first-child {
+      font-weight: 600;
+      color: var(--text-primary);
+      width: 40%;
+    }
+    .spec-table tr td:last-child {
+      color: var(--text-secondary);
+    }
+    .review-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .review-item:last-child {
+      border-bottom: none;
+    }
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+    .review-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    @media (max-width: 768px) {
+      .product-detail-gallery .product-main-image,
+      .product-detail-gallery .gallery-main-image {
+        height: 300px;
+      }
+      .features-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <span class="logo-icon"><i class="fas fa-palette"></i></span>
+        <span class="logo-text">ArtCraft</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home <i class="fas fa-chevron-down ms-1"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+              <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+          <li><a href="brands.html" class="nav-link">Brands</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-icons">
+          <a href="shop.html" class="nav-icon-btn" aria-label="Wishlist">
+            <i class="far fa-heart"></i>
+            <span class="cart-badge wishlist-count" style="display:none;">0</span>
+          </a>
+          <a href="cart.html" class="nav-icon-btn" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge cart-count" style="display:none;">0</span>
+          </a>
+          <button class="nav-icon-btn theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL">
+            <span>RTL</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="search-overlay" style="display:none;">
+    <div class="search-overlay-content">
+      <div class="search-input-wrap">
+        <i class="fas fa-search" style="font-size:1.1rem;color:var(--text-muted);"></i>
+        <input type="text" class="form-control" placeholder="Search for art supplies, brands, workshops..." id="overlay-search-input">
+        <button class="search-overlay-close search-close" aria-label="Close search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-suggestions" id="search-suggestions">
+        <h6>Popular Searches</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="shop.html?category=painting" class="badge bg-light text-dark text-decoration-none p-2">Watercolor</a>
+          <a href="shop.html?category=sketching" class="badge bg-light text-dark text-decoration-none p-2">Pencils</a>
+          <a href="shop.html?category=crafting" class="badge bg-light text-dark text-decoration-none p-2">Clay</a>
+          <a href="workshops.html" class="badge bg-light text-dark text-decoration-none p-2">Workshops</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== BREADCRUMB ==================== -->
+  <section class="product-page-hero" style="padding-top:calc(var(--navbar-height) + 16px); padding-bottom: 20px;">
+    <div class="container">
+      <nav class="breadcrumb-art" aria-label="Breadcrumb">
+        <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+        <span class="breadcrumb-item"><a href="shop.html">Shop</a></span>
+        <span class="breadcrumb-item active" aria-current="page" id="breadcrumb-product-name">Product Name</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== PRODUCT DETAILS ==================== -->
+  <section class="section" style="padding-block-start:32px;">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- LEFT: Product Gallery -->
+        <div class="col-md-6 product-detail-gallery">
+          <img
+            src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
+            alt="Product"
+            class="product-main-image gallery-main-image"
+            style="border-radius:var(--radius-md);width:100%;height:450px;object-fit:cover;"
+            id="pd-main-image"
+          >
+          <div class="thumbnail-row" id="pd-thumbnails">
+            <img
+              src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=200&q=80"
+              alt="Thumbnail 1"
+              class="gallery-thumb product-thumb active"
+              data-image="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
+            >
+            <img
+              src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=200&q=80"
+              alt="Thumbnail 2"
+              class="gallery-thumb product-thumb"
+              data-image="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=800&q=80"
+            >
+            <img
+              src="https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=200&q=80"
+              alt="Thumbnail 3"
+              class="gallery-thumb product-thumb"
+              data-image="https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=800&q=80"
+            >
+            <img
+              src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=200&q=80"
+              alt="Thumbnail 4"
+              class="gallery-thumb product-thumb"
+              data-image="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80"
+            >
+          </div>
+        </div>
+
+        <!-- RIGHT: Product Info -->
+        <div class="col-md-6 product-info-section" id="pd-info">
+          <span class="badge mb-3" style="background:var(--primary-light);color:var(--primary);font-size:0.8rem;padding:6px 14px;border-radius:var(--radius-sm);" id="pd-category-badge">Painting</span>
+
+          <h1 class="product-title" id="pd-title">Professional Watercolor Set</h1>
+
+          <div class="product-rating-display" id="pd-rating">
+            <span><i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star-half-alt text-warning"></i></span>
+            <span style="font-size:0.9rem;font-weight:600;">4.8</span>
+            <span style="font-size:0.85rem;color:var(--text-muted);">(234 reviews)</span>
+          </div>
+
+          <div class="product-price-display" id="pd-price">
+            <span class="current-price">$49.99</span>
+            <span class="old-price">$64.99</span>
+            <span class="discount-badge">-23%</span>
+          </div>
+
+          <p style="color:var(--text-secondary);line-height:1.7;margin-bottom:24px;" id="pd-description">
+            Premium 36-color watercolor set with rich pigments and smooth blending. Perfect for professional artists and serious hobbyists.
+          </p>
+
+          <div class="quantity-selector">
+            <button class="qty-btn qty-minus" aria-label="Decrease quantity">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input type="number" class="quantity-input" value="1" min="1" max="99" id="pd-quantity" aria-label="Quantity">
+            <button class="qty-btn qty-plus" aria-label="Increase quantity">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-primary btn-lg add-to-cart-btn" id="pd-add-to-cart" style="flex:1;">
+              <i class="fas fa-cart-plus me-1"></i> Add to Cart
+            </button>
+            <button class="btn btn-accent btn-lg" id="pd-buy-now" style="flex:1;">
+              <i class="fas fa-bolt me-1"></i> Buy Now
+            </button>
+            <button class="btn btn-outline-danger btn-lg wishlist-btn" id="pd-wishlist-btn" data-product-id="1" aria-label="Add to wishlist" style="flex:0 0 auto;">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+
+          <div class="features-list" id="pd-features">
+            <div class="feature-item"><i class="fas fa-check-circle"></i> Premium Quality</div>
+            <div class="feature-item"><i class="fas fa-check-circle"></i> Fast Shipping</div>
+            <div class="feature-item"><i class="fas fa-check-circle"></i> Easy Returns</div>
+            <div class="feature-item"><i class="fas fa-check-circle"></i> Secure Payment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRODUCT TABS ==================== -->
+  <section class="section product-tabs">
+    <div class="container">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description-pane" type="button" role="tab" aria-controls="description-pane" aria-selected="true">
+            <i class="fas fa-align-left me-2"></i> Description
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs-pane" type="button" role="tab" aria-controls="specs-pane" aria-selected="false">
+            <i class="fas fa-list-alt me-2"></i> Specifications
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-pane" type="button" role="tab" aria-controls="reviews-pane" aria-selected="false">
+            <i class="fas fa-star me-2"></i> Reviews
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content pt-4">
+        <!-- Description Tab -->
+        <div class="tab-pane fade show active" id="description-pane" role="tabpanel" aria-labelledby="description-tab">
+          <div id="pd-tab-description">
+            <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">
+              Premium 36-color watercolor set with rich pigments and smooth blending. Perfect for professional artists and serious hobbyists. Each color is carefully formulated using artist-grade pigments that deliver vibrant, lightfast results on any watercolor paper.
+            </p>
+            <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">
+              This set includes a carefully curated palette of warm and cool tones, providing you with unlimited mixing possibilities. The pans are designed for easy rewetting and the compact tin case makes it perfect for studio and plein air painting alike.
+            </p>
+            <p style="color:var(--text-secondary);line-height:1.8;">
+              Whether you are a seasoned watercolorist or just beginning your artistic journey, this set offers exceptional quality that will elevate your paintings to the next level.
+            </p>
+          </div>
+        </div>
+
+        <!-- Specifications Tab -->
+        <div class="tab-pane fade" id="specs-pane" role="tabpanel" aria-labelledby="specs-tab">
+          <table class="spec-table" id="pd-spec-table">
+            <tr><td>Material</td><td>Artist-grade pigments</td></tr>
+            <tr><td>Size</td><td>Full pan set</td></tr>
+            <tr><td>Colors</td><td>36</td></tr>
+            <tr><td>Weight</td><td>1.2 kg</td></tr>
+          </table>
+        </div>
+
+        <!-- Reviews Tab -->
+        <div class="tab-pane fade" id="reviews-pane" role="tabpanel" aria-labelledby="reviews-tab">
+          <div id="pd-reviews-list">
+            <div class="review-item">
+              <div class="review-header">
+                <div class="review-avatar">SM</div>
+                <div>
+                  <div style="font-weight:600;font-size:0.95rem;">Sarah M.</div>
+                  <div class="review-meta"><i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> &mdash; July 15, 2026</div>
+                </div>
+              </div>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;padding-left:52px;">
+                Absolutely love these watercolors! The pigments are vibrant and blend beautifully.
+              </p>
+            </div>
+            <div class="review-item">
+              <div class="review-header">
+                <div class="review-avatar">DK</div>
+                <div>
+                  <div style="font-weight:600;font-size:0.95rem;">David K.</div>
+                  <div class="review-meta"><i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> &mdash; June 20, 2026</div>
+                </div>
+              </div>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;padding-left:52px;">
+                Best watercolor set I've ever used. Worth every penny.
+              </p>
+            </div>
+            <div class="review-item">
+              <div class="review-header">
+                <div class="review-avatar">EL</div>
+                <div>
+                  <div style="font-weight:600;font-size:0.95rem;">Emma L.</div>
+                  <div class="review-meta"><i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="fas fa-star text-warning" style="font-size:0.7rem;"></i> <i class="far fa-star text-warning" style="font-size:0.7rem;"></i> &mdash; May 10, 2026</div>
+                </div>
+              </div>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;padding-left:52px;">
+                Great quality, but the pans are a bit small.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RELATED PRODUCTS ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Related Products</h2>
+        <p class="section-subtitle">You might also love these items from the same category</p>
+      </div>
+      <div class="row g-4" id="pd-related-products">
+        <!-- JS populates this -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER ==================== -->
+  <section class="newsletter-section">
+    <div class="container position-relative" style="z-index:2;">
+      <h2>Stay in the Loop</h2>
+      <p>Subscribe to our newsletter for exclusive deals, new arrivals, and creative inspiration delivered to your inbox.</p>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div class="newsletter-input-wrap">
+          <input type="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="btn btn-accent">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+      <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div>
+                    <h5><i class="fas fa-palette me-2"></i>ArtCraft</h5>
+                    <p>Your premier destination for art supplies, creative workshops, and artistic inspiration. Fueling creativity since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Shop -->
+                <div>
+                    <h5>Shop</h5>
+                    <div class="footer-links">
+                        <a href="shop.html">All Products</a>
+                        <a href="shop.html?category=painting">Painting</a>
+                        <a href="shop.html?category=sketching">Drawing &amp; Sketching</a>
+                        <a href="shop.html?category=crafting">Crafting</a>
+                        <a href="student-supplies.html">Student Supplies</a>
+                        <a href="shop.html?category=art-tools">Art Tools</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="workshops.html">Workshops</a>
+                        <a href="brands.html">Brands</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p>Get creative tips and exclusive offers delivered to your inbox.</p>
+                    <div class="footer-newsletter">
+                        <form class="newsletter-form">
+                            <div class="d-flex gap-0">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ArtCraft Supply Store. All rights reserved.</p>
+            </div>
+        </div>
+</footer>
+
+  <!-- ==================== SCROLL TO TOP ==================== -->
+  <button class="scroll-to-top scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- ==================== PRODUCT DETAIL PAGE LOGIC ==================== -->
+  <script>
+    (function () {
+      "use strict";
+
+      function getProductId() {
+        var params = new URLSearchParams(window.location.search);
+        var id = parseInt(params.get("id"));
+        if (!id || isNaN(id)) id = 1;
+        return id;
+      }
+
+      function findProduct(id) {
+        var products = window.AppData ? window.AppData.products : [];
+        return products.find(function (p) { return p.id === id; }) || products[0];
+      }
+
+      function renderStars(rating) {
+        return window.renderStars ? window.renderStars(rating) : "";
+      }
+
+      function formatDate(dateStr) {
+        var d = new Date(dateStr);
+        var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        return months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+      }
+
+      function populatePage(product) {
+        document.title = product.name + " - ArtCraft Supply Store";
+
+        var breadcrumbName = document.getElementById("breadcrumb-product-name");
+        if (breadcrumbName) breadcrumbName.textContent = product.name;
+
+        var mainImg = document.getElementById("pd-main-image");
+        if (mainImg) {
+          mainImg.src = product.image;
+          mainImg.alt = product.name;
+        }
+
+        var categoryBadge = document.getElementById("pd-category-badge");
+        if (categoryBadge) {
+          categoryBadge.textContent = product.categoryLabel;
+        }
+
+        var title = document.getElementById("pd-title");
+        if (title) title.textContent = product.name;
+
+        var ratingEl = document.getElementById("pd-rating");
+        if (ratingEl) {
+          ratingEl.innerHTML = renderStars(product.rating) +
+            ' <span style="font-size:0.9rem;font-weight:600;">' + product.rating + '</span>' +
+            ' <span style="font-size:0.85rem;color:var(--text-muted);">(' + product.reviewCount + ' reviews)</span>';
+        }
+
+        var priceEl = document.getElementById("pd-price");
+        if (priceEl) {
+          var priceHtml = '<span class="current-price">$' + product.price.toFixed(2) + '</span>';
+          if (product.oldPrice) {
+            var discount = Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
+            priceHtml += '<span class="old-price">$' + product.oldPrice.toFixed(2) + '</span>';
+            priceHtml += '<span class="discount-badge">-' + discount + '%</span>';
+          }
+          priceEl.innerHTML = priceHtml;
+        }
+
+        var descEl = document.getElementById("pd-description");
+        if (descEl) descEl.textContent = product.description;
+
+        var tabDescEl = document.getElementById("pd-tab-description");
+        if (tabDescEl) {
+          tabDescEl.innerHTML = '<p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">' + product.description + '</p>' +
+            '<p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">This product is part of our ' + product.categoryLabel + ' collection, carefully selected for quality and value. Whether you\'re a beginner or a seasoned artist, you\'ll find this item meets the highest standards of craftsmanship.</p>' +
+            '<p style="color:var(--text-secondary);line-height:1.8;">Explore our full ' + product.categoryLabel + ' collection for more premium supplies tailored to your creative needs.</p>';
+        }
+
+        if (product.specifications) {
+          var specTable = document.getElementById("pd-spec-table");
+          if (specTable) {
+            var specHtml = "";
+            var keys = Object.keys(product.specifications);
+            for (var i = 0; i < keys.length; i++) {
+              specHtml += "<tr><td>" + keys[i] + "</td><td>" + product.specifications[keys[i]] + "</td></tr>";
+            }
+            specTable.innerHTML = specHtml;
+          }
+        }
+
+        if (product.reviews && product.reviews.length > 0) {
+          var reviewsList = document.getElementById("pd-reviews-list");
+          if (reviewsList) {
+            var reviewsHtml = "";
+            for (var r = 0; r < product.reviews.length; r++) {
+              var rev = product.reviews[r];
+              var initials = rev.author.split(" ").map(function(w){ return w.charAt(0); }).join("").substring(0, 2).toUpperCase();
+              var starsHtml = "";
+              for (var s = 1; s <= 5; s++) {
+                starsHtml += s <= rev.rating
+                  ? '<i class="fas fa-star text-warning" style="font-size:0.7rem;"></i>'
+                  : '<i class="far fa-star text-warning" style="font-size:0.7rem;"></i>';
+              }
+              reviewsHtml += '<div class="review-item">' +
+                '<div class="review-header">' +
+                '<div class="review-avatar">' + initials + '</div>' +
+                '<div>' +
+                '<div style="font-weight:600;font-size:0.95rem;">' + rev.author + '</div>' +
+                '<div class="review-meta">' + starsHtml + ' &mdash; ' + formatDate(rev.date) + '</div>' +
+                '</div></div>' +
+                '<p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin:0;padding-left:52px;">' + rev.comment + '</p>' +
+                '</div>';
+            }
+            reviewsList.innerHTML = reviewsHtml;
+          }
+        }
+
+        var addToCartBtn = document.getElementById("pd-add-to-cart");
+        if (addToCartBtn) {
+          addToCartBtn.setAttribute("data-product-id", product.id);
+          addToCartBtn.addEventListener("click", function () {
+            var qty = parseInt(document.getElementById("pd-quantity").value) || 1;
+            window.Cart.addItem(product, qty);
+          });
+        }
+        var productContainer = document.querySelector(".product-info-section");
+        if (productContainer) {
+          productContainer.setAttribute("data-product-id", product.id);
+        }
+
+        var wishlistBtn = document.getElementById("pd-wishlist-btn");
+        if (wishlistBtn) {
+          wishlistBtn.setAttribute("data-product-id", product.id);
+        }
+
+        var buyNowBtn = document.getElementById("pd-buy-now");
+        if (buyNowBtn) {
+          buyNowBtn.addEventListener("click", function () {
+            var qty = parseInt(document.getElementById("pd-quantity").value) || 1;
+            window.Cart.addItem(product, qty);
+            window.location.href = "checkout.html";
+          });
+        }
+
+        var thumbs = document.querySelectorAll("#pd-thumbnails .product-thumb");
+        for (var t = 0; t < thumbs.length; t++) {
+          thumbs[t].setAttribute("data-image", product.image);
+          if (t === 0) {
+            thumbs[t].classList.add("active");
+          } else {
+            thumbs[t].classList.remove("active");
+          }
+        }
+      }
+
+      function renderRelatedProducts(product) {
+        var container = document.getElementById("pd-related-products");
+        if (!container) return;
+
+        var products = window.AppData ? window.AppData.products : [];
+        var related = products.filter(function (p) {
+          return p.category === product.category && p.id !== product.id;
+        });
+
+        if (related.length === 0) {
+          related = products.filter(function (p) { return p.id !== product.id; }).slice(0, 4);
+        }
+
+        related = related.slice(0, 4);
+
+        var html = "";
+        for (var i = 0; i < related.length; i++) {
+          var p = related[i];
+          var isWishlist = window.Wishlist && window.Wishlist.isInWishlist(p.id);
+          var starsHtml = window.renderStars ? window.renderStars(p.rating) : "";
+          var badgeHtml = "";
+          if (p.badge) {
+            var badgeClass = p.badge === "sale" ? "bg-danger" : p.badge === "new" ? "bg-success" : "bg-primary";
+            badgeHtml = '<span class="position-absolute top-0 start-0 badge ' + badgeClass + ' m-2" style="z-index:2;">' + p.badge.charAt(0).toUpperCase() + p.badge.slice(1) + '</span>';
+          }
+          var oldPriceHtml = p.oldPrice ? '<span class="text-decoration-line-through text-muted me-2">$' + p.oldPrice.toFixed(2) + '</span>' : '';
+
+          html += '<div class="col-md-6 col-lg-3">' +
+            '<div class="card product-card h-100 position-relative border-0 shadow-sm" data-product-id="' + p.id + '">' +
+            badgeHtml +
+            '<div class="card-img-top overflow-hidden" style="height:180px;position:relative;">' +
+            '<a href="product-details.html?id=' + p.id + '">' +
+            '<img src="' + p.image + '" alt="' + p.name + '" class="img-fluid w-100 h-100" style="object-fit:cover;">' +
+            '</a>' +
+            '</div>' +
+            '<div class="card-body d-flex flex-column">' +
+            '<span class="badge bg-light text-dark mb-2 align-self-start">' + p.categoryLabel + '</span>' +
+            '<h6 class="card-title mb-1"><a href="product-details.html?id=' + p.id + '" class="text-decoration-none text-dark">' + p.name + '</a></h6>' +
+            '<div class="mb-2 small">' + starsHtml + ' <span class="text-muted">(' + p.reviewCount + ')</span></div>' +
+            '<div class="mb-2 mt-auto">' + oldPriceHtml + '<span class="fw-bold text-primary fs-5">$' + p.price.toFixed(2) + '</span></div>' +
+            '<div class="d-flex gap-2">' +
+            '<button class="btn btn-primary btn-sm flex-grow-1 add-to-cart-btn" data-product-id="' + p.id + '"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>' +
+            '</div></div></div></div>';
+        }
+
+        container.innerHTML = html;
+        if (window.Wishlist) window.Wishlist.syncIcons();
+      }
+
+      function initProductPage() {
+        var productId = getProductId();
+        var product = findProduct(productId);
+        if (!product) return;
+
+        populatePage(product);
+        renderRelatedProducts(product);
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initProductPage);
+      } else {
+        initProductPage();
+      }
+    })();
+  </script>
+</body>
+</html>

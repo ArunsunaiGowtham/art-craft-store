@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ArtCraft Supply Store</title>
+  <meta name="description" content="Learn about ArtCraft Supply Store - fueling creative passions since 2010. Discover our mission, team, and the community of 50,000+ artists we serve.">
+  <meta name="keywords" content="about ArtCraft, art supply store, creative community, art workshops, our story">
+  <meta name="author" content="ArtCraft Supply Store">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://artcraftstore.com/about.html">
+  <meta property="og:title" content="About Us - ArtCraft Supply Store">
+  <meta property="og:description" content="Learn about ArtCraft Supply Store - fueling creative passions since 2010.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us - ArtCraft Supply Store">
+  <meta name="twitter:description" content="Learn about ArtCraft Supply Store - fueling creative passions since 2010.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80">
+  <link rel="canonical" href="https://artcraftstore.com/about.html">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span class="logo-icon"><i class="fas fa-palette"></i></span>
+      <span class="logo-text">ArtCraft</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav">
+        <li class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fas fa-chevron-down ms-1"></i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="shop.html">Shop</a></li>
+        <li><a class="nav-link" href="workshops.html">Workshops</a></li>
+        <li><a class="nav-link" href="brands.html">Brands</a></li>
+        <li><a class="nav-link nav-active" href="about.html">About</a></li>
+        <li><a class="nav-link" href="blog.html">Blog</a></li>
+        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="shop.html" class="nav-icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i><span class="cart-badge wishlist-count" style="display:none">0</span></a>
+        <a href="cart.html" class="nav-icon-btn" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="cart-badge cart-count" style="display:none">0</span></a>
+        <button class="nav-icon-btn theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL"><span>RTL</span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="search-overlay" style="display:none;">
+    <div class="search-overlay-content">
+      <div class="search-input-wrap">
+        <i class="fas fa-search" style="font-size:1.1rem;color:var(--text-muted);"></i>
+        <input type="text" class="form-control" placeholder="Search for art supplies, brands, workshops..." id="overlay-search-input">
+        <button class="search-overlay-close search-close" aria-label="Close search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-suggestions" id="search-suggestions">
+        <h6>Popular Searches</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="shop.html?category=painting" class="badge bg-light text-dark text-decoration-none p-2">Watercolor</a>
+          <a href="shop.html?category=sketching" class="badge bg-light text-dark text-decoration-none p-2">Pencils</a>
+          <a href="shop.html?category=crafting" class="badge bg-light text-dark text-decoration-none p-2">Clay</a>
+          <a href="workshops.html" class="badge bg-light text-dark text-decoration-none p-2">Workshops</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="py-3" style="background:var(--bg-secondary, #f8f9fa);">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0" style="font-size:0.9rem;">
+        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none" style="color:var(--primary, #E85D3A);">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- PAGE HERO -->
+<section class="py-5 animate-on-scroll about-story-hero" style="color:#fff;">
+  <div class="container text-center">
+    <h1 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:2.5rem;" class="mb-3">Our Story</h1>
+    <p class="lead mb-0" style="max-width:600px;margin:0 auto;font-size:1.15rem;opacity:0.9;">Fueling creative passions since 2010</p>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="our-story-section section animate-on-scroll">
+  <div class="container">
+    <div class="row align-items-center g-4 g-lg-5">
+      <!-- Left Column: Our Story Image -->
+      <div class="col-lg-6">
+        <div class="our-story-img-container">
+          <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80" alt="ArtCraft artists and art supplies" class="our-story-img img-fluid">
+        </div>
+      </div>
+      <!-- Right Column: Our Story Content (Vertically Centered) -->
+      <div class="col-lg-6">
+        <div class="our-story-content">
+          <h2 class="our-story-title">Our Story</h2>
+          <p class="our-story-text">ArtCraft Supply Store was born from a simple idea: every artist deserves access to high-quality materials without the premium markup. Founded in 2010 by a group of passionate artists and educators, we started as a small corner shop with a big dream — to make professional-grade art supplies accessible to everyone.</p>
+          <p class="our-story-text mb-0">Over the years, we've grown from that single storefront into a comprehensive creative hub, offering thousands of products from the world's most trusted brands. But our mission remains the same: to fuel creativity by providing exceptional materials, expert guidance, and a welcoming community for artists of every skill level. Whether you're a seasoned professional or picking up a brush for the first time, ArtCraft is here to support your creative journey.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="section section-alt animate-on-scroll">
+  <div class="container">
+    <h2 class="section-title">Mission & Vision</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card-art p-4 h-100">
+          <div class="text-center mb-3">
+            <div style="width:70px;height:70px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin:0 auto;">
+              <i class="fas fa-bullseye" style="font-size:1.6rem;color:var(--primary);"></i>
+            </div>
+          </div>
+          <h3 class="card-title text-center" style="font-family:'Poppins',sans-serif;font-weight:700;">Our Mission</h3>
+          <p class="card-text" style="color:var(--text-secondary);line-height:1.7;">To inspire and empower creativity by providing artists, students, and makers with the finest art supplies, expert education, and a supportive community. We believe that everyone has an inner artist, and our mission is to help them discover and nurture that gift through quality materials and shared knowledge.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-art p-4 h-100">
+          <div class="text-center mb-3">
+            <div style="width:70px;height:70px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin:0 auto;">
+              <i class="fas fa-eye" style="font-size:1.6rem;color:var(--primary);"></i>
+            </div>
+          </div>
+          <h3 class="card-title text-center" style="font-family:'Poppins',sans-serif;font-weight:700;">Our Vision</h3>
+          <p class="card-text" style="color:var(--text-secondary);line-height:1.7;">To be the world's most trusted destination for art supplies and creative education. We envision a future where every community has access to premium materials and inspiring workshops, where creativity knows no boundaries, and where the joy of making art connects people across cultures and generations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section animate-on-scroll">
+  <div class="container">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card-art p-4 text-center h-100">
+          <div style="width:70px;height:70px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <i class="fas fa-gem" style="font-size:1.5rem;color:var(--primary);"></i>
+          </div>
+          <h5 class="card-title" style="font-family:'Poppins',sans-serif;font-weight:700;">Premium Quality</h5>
+          <p class="card-text" style="font-size:0.9rem;color:var(--text-secondary);">Every product is hand-selected for quality and performance. We only stock materials we'd use in our own studios.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-art p-4 text-center h-100">
+          <div style="width:70px;height:70px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <i class="fas fa-chalkboard-teacher" style="font-size:1.5rem;color:var(--primary);"></i>
+          </div>
+          <h5 class="card-title" style="font-family:'Poppins',sans-serif;font-weight:700;">Expert Guidance</h5>
+          <p class="card-text" style="font-size:0.9rem;color:var(--text-secondary);">Our team of working artists provides personalized advice to help you find exactly what you need for your projects.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-art p-4 text-center h-100">
+          <div style="width:70px;height:70px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <i class="fas fa-shipping-fast" style="font-size:1.5rem;color:var(--primary);"></i>
+          </div>
+          <h5 class="card-title" style="font-family:'Poppins',sans-serif;font-weight:700;">Fast Shipping</h5>
+          <p class="card-text" style="font-size:0.9rem;color:var(--text-secondary);">Orders ship within 24 hours with free delivery on orders over $50. Track your package every step of the way.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-art p-4 text-center h-100">
+          <div style="width:70px;height:70px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <i class="fas fa-users" style="font-size:1.5rem;color:var(--primary);"></i>
+          </div>
+          <h5 class="card-title" style="font-family:'Poppins',sans-serif;font-weight:700;">Creative Community</h5>
+          <p class="card-text" style="font-size:0.9rem;color:var(--text-secondary);">Join 50,000+ artists in our vibrant community. Share work, get feedback, and grow together.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR VALUES -->
+<section class="section section-alt animate-on-scroll">
+  <div class="container">
+    <h2 class="section-title">Our Values</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card-art p-4 text-center h-100">
+          <div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+            <i class="fas fa-heart" style="font-size:1.5rem;color:#fff;"></i>
+          </div>
+          <h4 class="card-title" style="font-family:'Poppins',sans-serif;font-weight:700;">Passion for Art</h4>
+          <p class="card-text" style="color:var(--text-secondary);line-height:1.7;">Art runs through everything we do. We're not just selling supplies — we're sharing our love for creativity. Every recommendation, every workshop, and every product curated reflects our genuine passion for artistic expression.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-art p-4 text-center h-100">
+          <div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+            <i class="fas fa-hand-holding-heart" style="font-size:1.5rem;color:#fff;"></i>
+          </div>
+          <h4 class="card-title" style="font-family:'Poppins',sans-serif;font-weight:700;">Customer First</h4>
+          <p class="card-text" style="color:var(--text-secondary);line-height:1.7;">Your creative success is our top priority. We listen to feedback, adapt to needs, and go the extra mile to ensure every customer feels valued and supported on their artistic journey.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-art p-4 text-center h-100">
+          <div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+            <i class="fas fa-leaf" style="font-size:1.5rem;color:#fff;"></i>
+          </div>
+          <h4 class="card-title" style="font-family:'Poppins',sans-serif;font-weight:700;">Sustainability</h4>
+          <p class="card-text" style="color:var(--text-secondary);line-height:1.7;">We're committed to protecting the planet that inspires our art. From eco-friendly packaging to sourcing sustainable materials, we make choices that respect our environment for future generations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATIVE COMMUNITY -->
+<section class="py-5 animate-on-scroll" style="background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);color:#fff;">
+  <div class="container text-center">
+    <h2 style="font-family:'Poppins',sans-serif;font-weight:700;color:#fff;margin-bottom:12px;">Our Creative Community</h2>
+    <p style="font-size:1.1rem;opacity:0.9;max-width:550px;margin:0 auto 40px;">Join thousands of artists who trust ArtCraft for their creative needs</p>
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-3">
+        <div style="background:rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:28px 16px;">
+          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:2.2rem;color:#fff;">15,000+</div>
+          <div style="opacity:0.85;font-size:0.95rem;">Products</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div style="background:rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:28px 16px;">
+          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:2.2rem;color:#fff;">50,000+</div>
+          <div style="opacity:0.85;font-size:0.95rem;">Artists</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div style="background:rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:28px 16px;">
+          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:2.2rem;color:#fff;">500+</div>
+          <div style="opacity:0.85;font-size:0.95rem;">Workshops</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div style="background:rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:28px 16px;">
+          <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:2.2rem;color:#fff;">100+</div>
+          <div style="opacity:0.85;font-size:0.95rem;">Brands</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section animate-on-scroll">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle">Real experiences and feedback from artists, educators, and makers who love our supplies.</p>
+    </div>
+    <div class="testimonials-grid">
+      <!-- Testimonial 1: Emily Rodriguez -->
+      <div class="testimonial-card">
+        <div class="testimonial-avatar-wrap">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Emily Rodriguez - Professional Artist" class="testimonial-avatar">
+        </div>
+        <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testimonial-quote-wrap">
+          <p class="testimonial-text">"This store has everything I need for my studio. The quality of their products is unmatched, and the staff is incredibly knowledgeable. My go-to for all art supplies."</p>
+        </div>
+        <div class="testimonial-author-wrap">
+          <h6 class="testimonial-author-name">Emily Rodriguez</h6>
+          <span class="testimonial-author-role">Professional Artist</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2: James Thompson -->
+      <div class="testimonial-card">
+        <div class="testimonial-avatar-wrap">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="James Thompson - Art Teacher" class="testimonial-avatar">
+        </div>
+        <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testimonial-quote-wrap">
+          <p class="testimonial-text">"I've been ordering student supplies here for my classroom. Great prices, bulk options, and the supplies hold up to daily use. Highly recommend for educators."</p>
+        </div>
+        <div class="testimonial-author-wrap">
+          <h6 class="testimonial-author-name">James Thompson</h6>
+          <span class="testimonial-author-role">Art Teacher</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3: Sarah Kim -->
+      <div class="testimonial-card">
+        <div class="testimonial-avatar-wrap">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Sarah Kim - Hobby Crafter" class="testimonial-avatar">
+        </div>
+        <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testimonial-quote-wrap">
+          <p class="testimonial-text">"The crafting section is a paradise! I found everything I needed for my resin art projects. Fast shipping and beautiful packaging too."</p>
+        </div>
+        <div class="testimonial-author-wrap">
+          <h6 class="testimonial-author-name">Sarah Kim</h6>
+          <span class="testimonial-author-role">Hobby Crafter</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="section section-alt animate-on-scroll">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Meet Our Team</h2>
+      <p class="section-subtitle">Passionate artists, crafters, and educators dedicated to fueling your creative journey.</p>
+    </div>
+    <div class="team-grid">
+      <!-- Member 1: Sarah Mitchell -->
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Sarah Mitchell - Lead Art Instructor" class="team-card-avatar">
+        <h5 class="team-card-name">Sarah Mitchell</h5>
+        <p class="team-card-role">Lead Art Instructor</p>
+        <p class="team-card-bio">Watercolor specialist with 15+ years of teaching experience. Passionate about helping beginners discover their artistic voice.</p>
+        <div class="team-card-socials">
+          <a href="#" aria-label="Sarah Mitchell Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Sarah Mitchell Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Member 2: David Chen -->
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="David Chen - Drawing &amp; Sketching Expert" class="team-card-avatar">
+        <h5 class="team-card-name">David Chen</h5>
+        <p class="team-card-role">Drawing &amp; Sketching Expert</p>
+        <p class="team-card-bio">Professional illustrator and urban sketcher. Leads our sketching workshops and curates our drawing supply collection.</p>
+        <div class="team-card-socials">
+          <a href="#" aria-label="David Chen Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="David Chen Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Member 3: Lisa Park -->
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Lisa Park - Crafting &amp; DIY Specialist" class="team-card-avatar">
+        <h5 class="team-card-name">Lisa Park</h5>
+        <p class="team-card-role">Crafting &amp; DIY Specialist</p>
+        <p class="team-card-bio">Award-winning crafter and candle maker. Manages our DIY workshops and handpicks the best crafting supplies for our shelves.</p>
+        <div class="team-card-socials">
+          <a href="#" aria-label="Lisa Park Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Lisa Park Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Member 4: Marco Rivera -->
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80" alt="Marco Rivera - Ceramics &amp; Sculpting Expert" class="team-card-avatar">
+        <h5 class="team-card-name">Marco Rivera</h5>
+        <p class="team-card-role">Ceramics &amp; Sculpting Expert</p>
+        <p class="team-card-bio">Professional ceramicist who brings hands-on clay experiences to our community. Expert in hand-building and wheel techniques.</p>
+        <div class="team-card-socials">
+          <a href="#" aria-label="Marco Rivera Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Marco Rivera Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="py-5 animate-on-scroll" style="background:linear-gradient(135deg, #1a1a2e 0%, #2d2d52 100%);color:#fff;text-align:center;">
+  <div class="container" style="max-width:700px;">
+    <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:2rem;color:#fff;margin-bottom:16px;">Ready to Start Your Creative Journey?</h2>
+    <p style="font-size:1.1rem;opacity:0.9;margin-bottom:32px;">Explore our collection of premium art supplies or join a hands-on workshop to discover your inner artist.</p>
+    <div class="d-flex gap-3 justify-content-center">
+      <a href="shop.html" class="btn btn-primary btn-lg"><i class="fas fa-shopping-bag me-2"></i>Shop Now</a>
+      <a href="workshops.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:#fff;"><i class="fas fa-paint-brush me-2"></i>Explore Workshops</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section newsletter-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center;">
+  <div class="container" style="max-width:600px;">
+    <h2 style="color:white;">Stay Creative</h2>
+    <p style="color:rgba(255,255,255,0.85); margin-bottom:24px;">Subscribe for art tips, exclusive deals, workshop announcements, and creative inspiration.</p>
+                    <form class="newsletter-form" style="max-width:480px; margin:0 auto;" novalidate>
+                    <div class="newsletter-input-wrap">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Subscribe</button>
+                </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div>
+                    <h5><i class="fas fa-palette me-2"></i>ArtCraft</h5>
+                    <p>Your premier destination for art supplies, creative workshops, and artistic inspiration. Fueling creativity since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Shop -->
+                <div>
+                    <h5>Shop</h5>
+                    <div class="footer-links">
+                        <a href="shop.html">All Products</a>
+                        <a href="shop.html?category=painting">Painting</a>
+                        <a href="shop.html?category=sketching">Drawing &amp; Sketching</a>
+                        <a href="shop.html?category=crafting">Crafting</a>
+                        <a href="student-supplies.html">Student Supplies</a>
+                        <a href="shop.html?category=art-tools">Art Tools</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="workshops.html">Workshops</a>
+                        <a href="brands.html">Brands</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p>Get creative tips and exclusive offers delivered to your inbox.</p>
+                    <div class="footer-newsletter">
+                        <form class="newsletter-form">
+                            <div class="d-flex gap-0">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ArtCraft Supply Store. All rights reserved.</p>
+            </div>
+        </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top btn btn-primary btn-icon" id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

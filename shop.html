@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our complete collection of premium art and craft supplies. Find paints, sketching tools, sculpting materials, and more at ArtCraft Supply Store.">
+  <meta name="keywords" content="art supplies, craft supplies, painting, sketching, sculpting, origami, art store">
+  <meta name="author" content="ArtCraft Supply Store">
+  <title>Shop - ArtCraft Supply Store</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <span class="logo-icon"><i class="fas fa-palette"></i></span>
+        <span class="logo-text">ArtCraft</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home <i class="fas fa-chevron-down ms-1"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-item">Home 1</a></li>
+              <li><a href="home-2.html" class="dropdown-item">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a href="shop.html" class="nav-link nav-active">Shop</a></li>
+          <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+          <li><a href="brands.html" class="nav-link">Brands</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-icons">
+          <a href="shop.html" class="nav-icon-btn" aria-label="Wishlist">
+            <i class="far fa-heart"></i>
+            <span class="cart-badge wishlist-count" style="display:none;">0</span>
+          </a>
+          <a href="cart.html" class="nav-icon-btn" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge cart-count" style="display:none;">0</span>
+          </a>
+          <button class="nav-icon-btn theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL">
+            <span>RTL</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="search-overlay" style="display:none;">
+    <div class="search-overlay-content">
+      <div class="search-input-wrap">
+        <i class="fas fa-search" style="font-size:1.1rem;color:var(--text-muted);"></i>
+        <input type="text" class="form-control" placeholder="Search for art supplies, brands, workshops..." id="overlay-search-input">
+        <button class="search-overlay-close search-close" aria-label="Close search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-suggestions" id="search-suggestions">
+        <h6>Popular Searches</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="shop.html?category=painting" class="badge bg-light text-dark text-decoration-none p-2">Watercolor</a>
+          <a href="shop.html?category=sketching" class="badge bg-light text-dark text-decoration-none p-2">Pencils</a>
+          <a href="shop.html?category=crafting" class="badge bg-light text-dark text-decoration-none p-2">Clay</a>
+          <a href="workshops.html" class="badge bg-light text-dark text-decoration-none p-2">Workshops</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SHOP HERO / HEADER ==================== -->
+  <section class="shop-hero">
+    <div class="container">
+      <nav class="breadcrumb-art" aria-label="Breadcrumb">
+        <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+        <span class="breadcrumb-item active" aria-current="page">Shop</span>
+      </nav>
+
+      <div class="shop-hero-content animate-on-scroll">
+        <h1 class="section-title">Our Collection</h1>
+        <p class="section-subtitle">Discover premium art supplies for every medium and skill level</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SHOP FILTERS & CONTENT ==================== -->
+  <section class="shop-products-section section">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="col-lg-3">
+          <div class="filter-sidebar">
+
+            <!-- Search -->
+            <div class="filter-section">
+              <h6 class="filter-section-title"><i class="fas fa-search"></i> <span>Search Products</span></h6>
+              <div class="product-search-wrapper position-relative">
+                <i class="fas fa-search product-search-icon" style="position:absolute; left:14px; top:50%; transform:translateY(-50%); color:var(--text-muted); font-size:0.9rem; pointer-events:none;"></i>
+                <input type="text" class="form-control product-search" id="product-search" placeholder="Search products..." style="padding-left:38px; height:42px; width:100%; border-radius:var(--radius-sm);">
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="filter-section">
+              <h6 class="filter-section-title"><i class="fas fa-filter"></i> <span>Categories</span></h6>
+              <div class="filter-options">
+                <button class="category-filter-btn active" data-category="all"><i class="fas fa-th-large cat-icon"></i> <span>All Products</span></button>
+                <button class="category-filter-btn" data-category="painting"><i class="fas fa-paint-brush cat-icon"></i> <span>Painting</span></button>
+                <button class="category-filter-btn" data-category="sketching"><i class="fas fa-pencil-alt cat-icon"></i> <span>Sketching</span></button>
+                <button class="category-filter-btn" data-category="sculpting"><i class="fas fa-hands cat-icon"></i> <span>Sculpting</span></button>
+                <button class="category-filter-btn" data-category="crafting"><i class="fas fa-scissors cat-icon"></i> <span>Crafting</span></button>
+                <button class="category-filter-btn" data-category="origami"><i class="fas fa-dove cat-icon"></i> <span>Origami</span></button>
+                <button class="category-filter-btn" data-category="student-supplies"><i class="fas fa-book cat-icon"></i> <span>Student Supplies</span></button>
+                <button class="category-filter-btn" data-category="art-tools"><i class="fas fa-toolbox cat-icon"></i> <span>Art Tools</span></button>
+                <button class="category-filter-btn" data-category="diy-materials"><i class="fas fa-hammer cat-icon"></i> <span>DIY Materials</span></button>
+              </div>
+            </div>
+
+            <!-- Price Range -->
+            <div class="filter-section">
+              <h6 class="filter-section-title"><i class="fas fa-dollar-sign"></i> <span>Price Range</span></h6>
+              <div class="price-range">
+                <input type="range" id="priceRange" min="0" max="200" value="200" step="5">
+                <div id="priceRangeLabel">$0 - $200</div>
+              </div>
+            </div>
+
+            <!-- Clear Filters -->
+            <div class="filter-section">
+              <button class="btn-clear-filters" onclick="window.ShopFilter.resetFilters();">
+                <i class="fas fa-times-circle"></i> <span>Clear All Filters</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="col-lg-9">
+
+          <!-- Toolbar -->
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+            <div class="product-count" id="product-count">Showing 8 of 28 products</div>
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <select class="form-select product-sort" id="product-sort" style="width:auto;min-width:180px;">
+                <option value="default">Sort by: Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+                <option value="popularity">Most Popular</option>
+                <option value="rating">Highest Rated</option>
+              </select>
+              <div class="view-toggle">
+                <button class="view-toggle-btn active" data-view="grid" aria-label="Grid view"><i class="fas fa-th"></i></button>
+                <button class="view-toggle-btn" data-view="list" aria-label="List view"><i class="fas fa-list"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Products Grid -->
+          <div id="products-container" class="products-grid row g-4">
+            <!-- JS populates this -->
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination-wrapper mt-4">
+            <nav aria-label="Shop pagination" class="w-100 d-flex justify-content-center">
+              <ul class="pagination shop-pagination justify-content-center mb-0"></ul>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER ==================== -->
+  <section class="newsletter-section">
+    <div class="container position-relative" style="z-index:2;">
+      <h2>Stay in the Loop</h2>
+      <p>Subscribe to our newsletter for exclusive deals, new arrivals, and creative inspiration delivered to your inbox.</p>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div class="newsletter-input-wrap">
+          <input type="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="btn btn-accent">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+      <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div>
+                    <h5><i class="fas fa-palette me-2"></i>ArtCraft</h5>
+                    <p>Your premier destination for art supplies, creative workshops, and artistic inspiration. Fueling creativity since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Shop -->
+                <div>
+                    <h5>Shop</h5>
+                    <div class="footer-links">
+                        <a href="shop.html">All Products</a>
+                        <a href="shop.html?category=painting">Painting</a>
+                        <a href="shop.html?category=sketching">Drawing &amp; Sketching</a>
+                        <a href="shop.html?category=crafting">Crafting</a>
+                        <a href="student-supplies.html">Student Supplies</a>
+                        <a href="shop.html?category=art-tools">Art Tools</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="workshops.html">Workshops</a>
+                        <a href="brands.html">Brands</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p>Get creative tips and exclusive offers delivered to your inbox.</p>
+                    <div class="footer-newsletter">
+                        <form class="newsletter-form">
+                            <div class="d-flex gap-0">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ArtCraft Supply Store. All rights reserved.</p>
+            </div>
+        </div>
+</footer>
+
+  <!-- ==================== SCROLL TO TOP ==================== -->
+  <button class="scroll-to-top scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

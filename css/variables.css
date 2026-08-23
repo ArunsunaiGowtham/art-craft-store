@@ -1,0 +1,90 @@
+:root {
+  --primary: #E85D3A;
+  --primary-hover: #d14e2e;
+  --primary-light: #fdf0ec;
+  --secondary: #3A7BDE;
+  --secondary-hover: #2d6ac9;
+  --accent: #F4A825;
+  --accent-hover: #e0981f;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+
+  --bg-body: #f8f6f3;
+  --bg-card: #ffffff;
+  --bg-nav: #ffffff;
+  --bg-footer: #1a1a2e;
+  --bg-hero: linear-gradient(135deg, #fdf0ec 0%, #e8f0fe 100%);
+  --bg-section-alt: #f1ede8;
+  --bg-input: #ffffff;
+  --bg-overlay: rgba(0,0,0,0.5);
+
+  --text-primary: #1a1a2e;
+  --text-secondary: #555770;
+  --text-muted: #8e8ea0;
+  --text-inverse: #ffffff;
+  --text-link: var(--primary);
+  --text-link-hover: var(--primary-hover);
+
+  --border-color: #e0ddd8;
+  --border-light: #eee;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --shadow-xl: 0 12px 40px rgba(0,0,0,0.15);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  --radius-full: 50%;
+
+  --font-primary: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-accent: 'Caveat', cursive;
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  --container-max: 1280px;
+  --navbar-height: 64px;
+  --section-padding: 80px 0;
+}
+
+[data-theme="dark"] {
+  --primary-light: rgba(232, 93, 58, 0.15);
+  --bg-body: #121218;
+  --bg-card: #1e1e2a;
+  --bg-nav: #1a1a26;
+  --bg-footer: #0e0e16;
+  --bg-hero: linear-gradient(135deg, #1a1220 0%, #121a28 100%);
+  --bg-section-alt: #181824;
+  --bg-input: #252536;
+  --bg-overlay: rgba(0,0,0,0.7);
+
+  --text-primary: #f0eff4;
+  --text-secondary: #b8b8cc;
+  --text-muted: #7878a0;
+  --text-inverse: #1a1a2e;
+  --text-link: #ff8a65;
+  --text-link-hover: #ffab91;
+
+  --border-color: #2e2e42;
+  --border-light: #282840;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+  --shadow-xl: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+[dir="rtl"] {
+  --direction: rtl;
+}
+
+[dir="ltr"], :not([dir="rtl"]) {
+  --direction: ltr;
+}

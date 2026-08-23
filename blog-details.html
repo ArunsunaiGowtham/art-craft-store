@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Article - ArtCraft Supply Store</title>
+    <meta name="description" content="Read our latest art and craft articles with expert tips, tutorials, and creative inspiration from ArtCraft Supply Store.">
+    <meta name="keywords" content="art article, craft tutorial, painting tips, drawing guide, creative inspiration">
+    <meta name="author" content="ArtCraft Supply Store">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://artcraftstore.com/blog-details.html">
+    <meta property="og:title" content="Blog Article - ArtCraft Supply Store">
+    <meta property="og:description" content="Read our latest art and craft articles with expert tips, tutorials, and creative inspiration.">
+    <meta property="og:image" content="https://placehold.co/1200x630/E85D3A/FFFFFF?text=ArtCraft+Blog">
+    <meta property="og:site_name" content="ArtCraft Supply Store">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog Article - ArtCraft Supply Store">
+    <meta name="twitter:description" content="Read our latest art and craft articles with expert tips, tutorials, and creative inspiration.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/E85D3A/FFFFFF?text=ArtCraft+Blog">
+    <link rel="canonical" href="https://artcraftstore.com/blog-details.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-icon"><i class="fas fa-palette"></i></span>
+                <span class="logo-text">ArtCraft</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li><a class="nav-link" href="workshops.html">Workshops</a></li>
+                    <li><a class="nav-link" href="brands.html">Brands</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link nav-active" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="shop.html" class="nav-icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i><span class="cart-badge wishlist-count" style="display:none">0</span></a>
+                    <a href="cart.html" class="nav-icon-btn" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="cart-badge cart-count" style="display:none">0</span></a>
+                    <button class="nav-icon-btn theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+                    <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL"><span>RTL</span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="search-overlay" style="display:none;">
+    <div class="search-overlay-content">
+      <div class="search-input-wrap">
+        <i class="fas fa-search" style="font-size:1.1rem;color:var(--text-muted);"></i>
+        <input type="text" class="form-control" placeholder="Search for art supplies, brands, workshops..." id="overlay-search-input">
+        <button class="search-overlay-close search-close" aria-label="Close search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-suggestions" id="search-suggestions">
+        <h6>Popular Searches</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="shop.html?category=painting" class="badge bg-light text-dark text-decoration-none p-2">Watercolor</a>
+          <a href="shop.html?category=sketching" class="badge bg-light text-dark text-decoration-none p-2">Pencils</a>
+          <a href="shop.html?category=crafting" class="badge bg-light text-dark text-decoration-none p-2">Clay</a>
+          <a href="workshops.html" class="badge bg-light text-dark text-decoration-none p-2">Workshops</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <main>
+
+        <!-- ==================== BREADCRUMB ==================== -->
+        <section class="section" style="padding-top:24px; padding-bottom:12px;">
+            <div class="container">
+                <div class="breadcrumb-art">
+                    <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+                    <span class="breadcrumb-item"><a href="blog.html">Blog</a></span>
+                    <span class="breadcrumb-item active" id="breadcrumb-title">Article</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ARTICLE DETAILS & SIDEBAR ==================== -->
+        <section class="section article-details-section" style="padding-top:0;">
+            <div class="container">
+                <div class="row g-5 justify-content-center">
+                    <!-- Left Column: Article Content -->
+                    <div class="col-lg-8">
+                        <article class="article-main">
+                            <!-- Article Header -->
+                            <header class="article-header">
+                                <span class="badge mb-2" id="article-category" style="background:var(--primary-light); color:var(--primary); padding:6px 14px; border-radius:var(--radius-sm); font-size:0.85rem; font-weight:600;">Article</span>
+                                <h1 id="article-title" class="article-heading">Loading article…</h1>
+                                <div class="article-meta">
+                                    <img id="article-author-avatar" src="" alt="Author" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
+                                    <div>
+                                        <small class="fw-semibold d-block" id="article-author" style="color:var(--text-primary); font-size:0.95rem;">Loading…</small>
+                                        <small class="text-muted" style="font-size:0.85rem;"><span id="article-date">—</span> &middot; <span id="article-read-time">—</span></small>
+                                    </div>
+                                </div>
+                                <div class="article-featured-img-wrap">
+                                    <img id="article-image" src="" alt="" class="article-featured-img">
+                                </div>
+                            </header>
+
+                            <!-- Article Content Body -->
+                            <div id="article-content" class="article-body">
+                                <p>Loading article content...</p>
+                            </div>
+
+                            <!-- Social Sharing -->
+                            <div class="article-share mt-5 pt-4" style="border-top:1px solid var(--border-color);">
+                                <h6 class="fw-bold mb-3" style="color:var(--text-primary);">Share this article</h6>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'facebook-share','width=580,height=400');return false;" class="btn btn-outline btn-sm" style="border-radius:var(--radius-sm); padding:8px 16px;">
+                                        <i class="fab fa-facebook-f me-1"></i> Facebook
+                                    </a>
+                                    <a href="#" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href),'twitter-share','width=580,height=400');return false;" class="btn btn-outline btn-sm" style="border-radius:var(--radius-sm); padding:8px 16px;">
+                                        <i class="fab fa-twitter me-1"></i> Twitter
+                                    </a>
+                                    <a href="#" onclick="window.open('https://pinterest.com/pin/create/button/?url='+encodeURIComponent(window.location.href),'pinterest-share','width=580,height=400');return false;" class="btn btn-outline btn-sm" style="border-radius:var(--radius-sm); padding:8px 16px;">
+                                        <i class="fab fa-pinterest-p me-1"></i> Pinterest
+                                    </a>
+                                    <a href="#" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(window.location.href),'linkedin-share','width=580,height=400');return false;" class="btn btn-outline btn-sm" style="border-radius:var(--radius-sm); padding:8px 16px;">
+                                        <i class="fab fa-linkedin-in me-1"></i> LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Right Column: Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Search Box -->
+                        <div class="card-art p-4 mb-4 animate-on-scroll">
+                            <h6 class="fw-bold mb-3" style="color:var(--text-primary);"><i class="fas fa-search me-2" style="color:var(--primary);"></i>Search</h6>
+                            <div class="position-relative">
+                                <i class="fas fa-search" style="position:absolute; left:14px; top:50%; transform:translateY(-50%); color:var(--text-muted); font-size:0.9rem; pointer-events:none;"></i>
+                                <input type="text" class="form-control" placeholder="Search articles..." style="padding-left:38px; height:42px; width:100%; border-radius:var(--radius-sm);">
+                            </div>
+                        </div>
+
+                        <!-- Recent Posts -->
+                        <div class="card-art p-4 mb-4 animate-on-scroll">
+                            <h6 class="fw-bold mb-3" style="color:var(--text-primary);"><i class="fas fa-clock me-2" style="color:var(--primary);"></i>Recent Posts</h6>
+                            <div id="recent-posts">
+                                <!-- JavaScript renders recent posts here -->
+                            </div>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="card-art p-4 mb-4 animate-on-scroll">
+                            <h6 class="fw-bold mb-3" style="color:var(--text-primary);"><i class="fas fa-folder me-2" style="color:var(--primary);"></i>Categories</h6>
+                            <div id="sidebar-categories">
+                                <!-- JavaScript renders categories here -->
+                            </div>
+                        </div>
+
+                        <!-- Newsletter Mini -->
+                        <div class="card-art p-4 animate-on-scroll" style="background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color:#fff;">
+                            <h6 class="fw-bold mb-2" style="color:#fff;"><i class="fas fa-envelope me-2"></i>Newsletter</h6>
+                            <p style="font-size:0.9rem; color:rgba(255,255,255,0.85); margin-bottom:16px;">Get creative tips and exclusive offers.</p>
+                            <form class="newsletter-form">
+                                <div class="d-flex gap-0">
+                                    <input type="email" class="form-control" placeholder="Your email" style="background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.2); color:#fff; border-radius:var(--radius-sm) 0 0 var(--radius-sm); font-size:0.9rem;">
+                                    <button type="submit" class="btn" style="background:#fff; color:var(--primary); border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-weight:600;">Go</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== RELATED ARTICLES ==================== -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Related Articles</h2>
+                <div id="related-articles" class="row g-4">
+                    <!-- JavaScript renders related articles here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NEWSLETTER SECTION ==================== -->
+        <section class="section newsletter-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center;">
+            <div class="container" style="max-width:600px;">
+                <h2 style="color:white;">Stay Creative</h2>
+                <p style="color:rgba(255,255,255,0.85); margin-bottom:24px;">Subscribe for art tips, exclusive deals, workshop announcements, and creative inspiration.</p>
+                                <form class="newsletter-form" style="max-width:480px; margin:0 auto;" novalidate>
+                    <div class="newsletter-input-wrap">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div>
+                    <h5><i class="fas fa-palette me-2"></i>ArtCraft</h5>
+                    <p>Your premier destination for art supplies, creative workshops, and artistic inspiration. Fueling creativity since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Shop -->
+                <div>
+                    <h5>Shop</h5>
+                    <div class="footer-links">
+                        <a href="shop.html">All Products</a>
+                        <a href="shop.html?category=painting">Painting</a>
+                        <a href="shop.html?category=sketching">Drawing &amp; Sketching</a>
+                        <a href="shop.html?category=crafting">Crafting</a>
+                        <a href="student-supplies.html">Student Supplies</a>
+                        <a href="shop.html?category=art-tools">Art Tools</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="workshops.html">Workshops</a>
+                        <a href="brands.html">Brands</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p>Get creative tips and exclusive offers delivered to your inbox.</p>
+                    <div class="footer-newsletter">
+                        <form class="newsletter-form">
+                            <div class="d-flex gap-0">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ArtCraft Supply Store. All rights reserved.</p>
+            </div>
+        </div>
+</footer>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button class="scroll-top btn btn-primary btn-icon" id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var params = new URLSearchParams(window.location.search);
+            var id = parseInt(params.get('id')) || 1;
+            var post = window.getBlogPostById
+              ? window.getBlogPostById(id)
+              : window.AppData.blogPosts.find(function(p) { return p.id === id; });
+            if (!post) {
+                document.getElementById('article-title').textContent = 'Article not found';
+                document.getElementById('article-content').innerHTML = '<p>The article you requested is unavailable.</p>';
+                return;
+            }
+
+            document.getElementById('article-title').textContent = post.title;
+            document.getElementById('article-category').textContent = post.category;
+            document.getElementById('article-author').textContent = post.author.name;
+            document.getElementById('article-date').textContent = post.date;
+            document.getElementById('article-read-time').textContent = post.readTime;
+            document.getElementById('article-image').src = post.image;
+            document.getElementById('article-image').alt = post.title;
+            document.getElementById('article-author-avatar').src = post.author.avatar;
+            document.getElementById('article-author-avatar').alt = post.author.name;
+            document.getElementById('breadcrumb-title').textContent = post.title;
+            document.title = post.title + ' - ArtCraft Supply Store';
+
+            var contentEl = document.getElementById('article-content');
+            if (contentEl) {
+                contentEl.innerHTML = post.content.split('\n\n').map(function(p) { return '<p>' + p + '</p>'; }).join('');
+            }
+
+            var recentEl = document.getElementById('recent-posts');
+            if (recentEl) {
+                var recent = window.AppData.blogPosts.filter(function(p) { return p.id !== id; }).slice(0, 3);
+                recentEl.innerHTML = recent.map(function(p) {
+                    return '<div class="d-flex gap-3 mb-3">' +
+                        '<img src="' + p.image + '" alt="' + p.title + '" style="width:80px;height:60px;object-fit:cover;border-radius:8px;">' +
+                        '<div><a href="blog-details.html?id=' + p.id + '" class="text-decoration-none fw-medium" style="color:var(--text-primary);font-size:0.9rem;">' + p.title + '</a>' +
+                        '<div class="d-flex align-items-center gap-1 mt-1"><img src="' + p.author.avatar + '" alt="' + p.author.name + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;"><small class="text-muted">' + p.author.name + ' &middot; ' + p.date + '</small></div></div></div>';
+                }).join('');
+            }
+
+            var categoriesEl = document.getElementById('sidebar-categories');
+            if (categoriesEl) {
+                var cats = {};
+                window.AppData.blogPosts.forEach(function(p) {
+                    if (!cats[p.category]) cats[p.category] = 0;
+                    cats[p.category]++;
+                });
+                categoriesEl.innerHTML = Object.keys(cats).map(function(cat) {
+                    var categorySlug = cat.toLowerCase().trim().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                    return '<a href="blog.html?category=' + encodeURIComponent(categorySlug) + '" class="d-flex justify-content-between align-items-center text-decoration-none mb-2" data-category="' + categorySlug + '" style="padding:8px 12px; border-radius:var(--radius-sm); background:var(--bg-section-alt); color:var(--text-primary); font-size:0.9rem;">' +
+                        '<span>' + cat + '</span>' +
+                        '<span class="badge" style="background:var(--primary-light); color:var(--primary);">' + cats[cat] + '</span></a>';
+                }).join('');
+            }
+
+            var relatedEl = document.getElementById('related-articles');
+            if (relatedEl) {
+                var related = window.AppData.blogPosts.filter(function(p) { return p.id !== id && p.category === post.category; }).slice(0, 3);
+                if (related.length < 3) {
+                    var extra = window.AppData.blogPosts.filter(function(p) { return p.id !== id && p.category !== post.category; }).slice(0, 3 - related.length);
+                    related = related.concat(extra);
+                }
+                relatedEl.innerHTML = related.map(function(p) {
+                    return '<div class="col-md-4">' +
+                        '<div class="card-art h-100 d-flex flex-column">' +
+                        '<div class="card-img-top overflow-hidden" style="height:180px;"><img src="' + p.image + '" alt="' + p.title + '" style="width:100%;height:100%;object-fit:cover;"></div>' +
+                        '<div class="card-body d-flex flex-column flex-grow-1">' +
+                        '<div class="d-flex justify-content-between align-items-center mb-2">' +
+                        '<span class="badge" style="background:var(--primary-light);color:var(--primary);">' + p.category + '</span>' +
+                        '<small class="text-muted">' + p.readTime + '</small></div>' +
+                        '<h5 class="card-title mb-2"><a href="blog-details.html?id=' + p.id + '" class="text-decoration-none" style="color:var(--text-primary);">' + p.title + '</a></h5>' +
+                        '<p class="card-text flex-grow-1 text-muted mb-3">' + p.excerpt.substring(0, 100) + '...</p>' +
+                        '<div class="blog-card-footer mt-auto pt-3" style="border-top:1px solid var(--border-color);">' +
+                        '<div class="blog-author-row d-flex align-items-center gap-2 mb-3">' +
+                        '<img src="' + p.author.avatar + '" alt="' + p.author.name + '" style="width:28px;height:28px;border-radius:50%;object-fit:cover;">' +
+                        '<div><small class="fw-medium d-block" style="font-size:0.85rem;">' + p.author.name + '</small><small class="text-muted" style="font-size:0.75rem;">' + p.date + '</small></div></div>' +
+                        '<div class="blog-card-btn-wrap d-flex justify-content-center align-items-center w-100">' +
+                        '<a href="blog-details.html?id=' + p.id + '" class="btn btn-outline btn-sm blog-read-more-btn">Read More <i class="fas fa-arrow-right ms-1"></i></a>' +
+                        '</div></div>' +
+                        '</div></div></div>';
+                }).join('');
+            }
+        });
+    </script>
+</body>
+</html>

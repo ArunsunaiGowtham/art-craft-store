@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Details - ArtCraft Supply Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span class="logo-icon"><i class="fas fa-palette"></i></span>
+      <span class="logo-text">ArtCraft</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav">
+        <li class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fas fa-chevron-down ms-1"></i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="shop.html">Shop</a></li>
+        <li><a class="nav-link nav-active" href="workshops.html">Workshops</a></li>
+        <li><a class="nav-link" href="brands.html">Brands</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="blog.html">Blog</a></li>
+        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="shop.html" class="nav-icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i><span class="cart-badge wishlist-count" style="display:none">0</span></a>
+        <a href="cart.html" class="nav-icon-btn"><i class="fas fa-shopping-bag"></i><span class="cart-badge cart-count" style="display:none">0</span></a>
+        <button class="nav-icon-btn theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL"><span>RTL</span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="search-overlay" style="display:none;">
+    <div class="search-overlay-content">
+      <div class="search-input-wrap">
+        <i class="fas fa-search" style="font-size:1.1rem;color:var(--text-muted);"></i>
+        <input type="text" class="form-control" placeholder="Search for art supplies, brands, workshops..." id="overlay-search-input">
+        <button class="search-overlay-close search-close" aria-label="Close search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-suggestions" id="search-suggestions">
+        <h6>Popular Searches</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="shop.html?category=painting" class="badge bg-light text-dark text-decoration-none p-2">Watercolor</a>
+          <a href="shop.html?category=sketching" class="badge bg-light text-dark text-decoration-none p-2">Pencils</a>
+          <a href="shop.html?category=crafting" class="badge bg-light text-dark text-decoration-none p-2">Clay</a>
+          <a href="workshops.html" class="badge bg-light text-dark text-decoration-none p-2">Workshops</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="py-3" style="background:var(--bg-secondary, #f8f9fa);">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0" style="font-size:0.9rem;">
+        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none" style="color:var(--primary, #E85D3A);">Home</a></li>
+        <li class="breadcrumb-item"><a href="workshops.html" class="text-decoration-none" style="color:var(--primary, #E85D3A);">Workshops</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-title">Workshop Details</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- HERO IMAGE / GALLERY -->
+<section class="animate-on-scroll workshop-gallery-section">
+  <div class="container">
+    <div class="workshop-gallery-wrapper">
+      <div class="workshop-main-image-container">
+        <img id="workshop-hero-image" src="images/portrait-drawing-main.jpg" alt="Workshop" class="workshop-main-image">
+      </div>
+      <!-- Thumbnails Row -->
+      <div id="workshop-thumbnails-row" class="workshop-thumbnails-row" style="display:none;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOP DETAILS -->
+<section class="py-5 animate-on-scroll">
+  <div class="container">
+    <div class="row g-5">
+      <!-- LEFT COLUMN -->
+      <div class="col-lg-8">
+        <div class="mb-3">
+          <span class="badge bg-primary" id="workshop-category-badge">Painting</span>
+        </div>
+        <h1 style="font-family:'Poppins',sans-serif;font-weight:800;" id="workshop-title" class="mb-3">Workshop Title</h1>
+
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img id="workshop-instructor-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Instructor" style="width:50px;height:50px;border-radius:50%;object-fit:cover;">
+          <div>
+            <p class="fw-bold mb-0" id="workshop-instructor-name">Instructor Name</p>
+            <small class="text-muted">Workshop Instructor</small>
+          </div>
+        </div>
+
+        <hr>
+
+        <h4 style="font-family:'Poppins',sans-serif;font-weight:700;" class="mb-3">About This Workshop</h4>
+        <p id="workshop-description" style="font-size:1.05rem;line-height:1.8;color:var(--text-muted, #6c757d);">Workshop description goes here.</p>
+
+        <h4 style="font-family:'Poppins',sans-serif;font-weight:700;" class="mt-5 mb-3">What You'll Learn</h4>
+        <ul id="workshop-learn-list" class="list-unstyled" style="font-size:1.05rem;line-height:2;"></ul>
+
+        <h4 style="font-family:'Poppins',sans-serif;font-weight:700;" class="mt-5 mb-3">Materials Required</h4>
+        <ul id="workshop-materials-list" class="list-unstyled" style="font-size:1.05rem;line-height:2;"></ul>
+      </div>
+
+      <!-- RIGHT COLUMN (SIDEBAR) -->
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-sm" style="border-radius:var(--radius-lg, 16px);position:sticky;top:100px;">
+          <div class="card-body p-4">
+            <h3 class="text-primary fw-bold mb-3" id="workshop-price" style="font-family:'Poppins',sans-serif;">$45</h3>
+
+            <div class="d-flex align-items-center gap-3 mb-3 p-3" style="background:var(--bg-secondary, #f8f9fa);border-radius:var(--radius-sm, 8px);">
+              <i class="fas fa-calendar-alt fa-lg text-primary"></i>
+              <div>
+                <small class="text-muted d-block">Date</small>
+                <strong id="workshop-date">2026-09-05</strong>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mb-3 p-3" style="background:var(--bg-secondary, #f8f9fa);border-radius:var(--radius-sm, 8px);">
+              <i class="fas fa-clock fa-lg text-primary"></i>
+              <div>
+                <small class="text-muted d-block">Time</small>
+                <strong id="workshop-time">10:00 AM - 1:00 PM</strong>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mb-3 p-3" style="background:var(--bg-secondary, #f8f9fa);border-radius:var(--radius-sm, 8px);">
+              <i class="fas fa-hourglass-half fa-lg text-primary"></i>
+              <div>
+                <small class="text-muted d-block">Duration</small>
+                <strong id="workshop-duration">3 hours</strong>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mb-3 p-3" style="background:var(--bg-secondary, #f8f9fa);border-radius:var(--radius-sm, 8px);">
+              <i class="fas fa-map-marker-alt fa-lg text-primary"></i>
+              <div>
+                <small class="text-muted d-block">Location</small>
+                <strong id="workshop-location">Art Studio A</strong>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mb-3 p-3" style="background:var(--bg-secondary, #f8f9fa);border-radius:var(--radius-sm, 8px);">
+              <i class="fas fa-signal fa-lg text-primary"></i>
+              <div>
+                <small class="text-muted d-block">Skill Level</small>
+                <strong id="workshop-skill-level">Beginner</strong>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mb-4 p-3" style="background:var(--bg-secondary, #f8f9fa);border-radius:var(--radius-sm, 8px);">
+              <i class="fas fa-users fa-lg text-primary"></i>
+              <div>
+                <small class="text-muted d-block">Seats Available</small>
+                <strong><span id="workshop-seats-left">6</span> / <span id="workshop-seats-total">20</span></strong>
+              </div>
+            </div>
+
+            <div class="progress mb-4" style="height:8px;border-radius:4px;">
+              <div id="workshop-seats-bar" class="progress-bar bg-primary" role="progressbar" style="width:70%;border-radius:4px;"></div>
+            </div>
+
+            <button class="btn btn-primary btn-lg w-100 workshop-register-btn" id="workshop-register-btn" data-workshop-id="1" style="border-radius:var(--radius-md, 10px);font-weight:600;">
+              <i class="fas fa-check-circle me-2"></i>Register Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED WORKSHOPS -->
+<section class="py-5 animate-on-scroll" style="background:var(--bg-secondary, #f8f9fa);">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 style="font-family:'Poppins',sans-serif;font-weight:700;">Related Workshops</h2>
+      <p class="text-muted">You might also enjoy these creative sessions</p>
+    </div>
+    <div id="related-workshops-grid" class="row g-4"></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="py-5 animate-on-scroll">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <h4 style="font-family:'Poppins',sans-serif;font-weight:700;">Stay in the Loop</h4>
+        <p class="text-muted mb-3">Get notified about new workshops and creative tips.</p>
+        <form class="newsletter-form">
+          <div class="d-flex gap-0">
+            <input type="email" class="form-control" placeholder="Your email address" style="border-radius:var(--radius-sm, 8px) 0 0 var(--radius-sm, 8px);">
+            <button type="submit" class="btn btn-primary" style="border-radius:0 var(--radius-sm, 8px) var(--radius-sm, 8px) 0;">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div>
+                    <h5><i class="fas fa-palette me-2"></i>ArtCraft</h5>
+                    <p>Your premier destination for art supplies, creative workshops, and artistic inspiration. Fueling creativity since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Shop -->
+                <div>
+                    <h5>Shop</h5>
+                    <div class="footer-links">
+                        <a href="shop.html">All Products</a>
+                        <a href="shop.html?category=painting">Painting</a>
+                        <a href="shop.html?category=sketching">Drawing &amp; Sketching</a>
+                        <a href="shop.html?category=crafting">Crafting</a>
+                        <a href="student-supplies.html">Student Supplies</a>
+                        <a href="shop.html?category=art-tools">Art Tools</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="workshops.html">Workshops</a>
+                        <a href="brands.html">Brands</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p>Get creative tips and exclusive offers delivered to your inbox.</p>
+                    <div class="footer-newsletter">
+                        <form class="newsletter-form">
+                            <div class="d-flex gap-0">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ArtCraft Supply Store. All rights reserved.</p>
+            </div>
+        </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" style="display:none;position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--primary, #E85D3A);color:#fff;border:none;font-size:1.2rem;cursor:pointer;z-index:999;box-shadow:0 4px 12px rgba(0,0,0,0.2);align-items:center;justify-content:center;">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var params = new URLSearchParams(window.location.search);
+  var id = parseInt(params.get('id')) || 1;
+  var workshop = window.AppData.workshops.find(function(w) { return w.id === id; });
+  if (!workshop) return;
+  var instructor = window.AppData.instructors && window.AppData.instructors[workshop.instructorId];
+  if (!instructor) instructor = { name: workshop.instructor, avatar: workshop.instructorAvatar };
+
+  document.title = workshop.title + ' - ArtCraft Supply Store';
+
+  var galleryImages = (workshop.images && Array.isArray(workshop.images) && workshop.images.length > 0)
+    ? workshop.images
+    : [workshop.image];
+
+  var heroImg = document.getElementById('workshop-hero-image');
+  var thumbsRow = document.getElementById('workshop-thumbnails-row');
+
+  if (heroImg) {
+    heroImg.src = galleryImages[0];
+    heroImg.alt = workshop.title;
+  }
+
+  if (thumbsRow) {
+    if (galleryImages.length > 1) {
+      var altDescs = {
+        'images/portrait-drawing-process.jpg': 'Advanced Portrait Drawing - Step-by-step graphite portrait sketching process',
+        'images/advanced-charcoal-portrait.jpg': 'Advanced Charcoal Portrait Drawing - Realistic elderly man charcoal portrait on easel',
+        'images/advanced-oil-painting-technique.jpg': 'Advanced Oil Painting Technique - Professional palette knife landscape painting and expressive brushwork',
+        'images/origami-advanced-kit.jpg': 'Origami Art: From Basic to Advanced - Premium folding paper and instruction kit',
+        'images/origami-paper-collection.jpg': 'Origami Art: From Basic to Advanced - Decorative patterned paper collection'
+      };
+
+      thumbsRow.style.display = 'flex';
+      thumbsRow.innerHTML = galleryImages.map(function(imgSrc, index) {
+        var activeClass = index === 0 ? 'active' : '';
+        var meaningfulAlt = altDescs[imgSrc] || (workshop.title + ' - Artwork perspective ' + (index + 1));
+        return '<button type="button" class="workshop-thumb ' + activeClass + '" data-index="' + index + '" aria-label="' + meaningfulAlt + '">' +
+          '<img src="' + imgSrc + '" alt="' + meaningfulAlt + '">' +
+          '</button>';
+      }).join('');
+
+      var thumbButtons = thumbsRow.querySelectorAll('.workshop-thumb');
+      thumbButtons.forEach(function(btn, idx) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          thumbButtons.forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+
+          if (heroImg) {
+            heroImg.style.opacity = '0.3';
+            setTimeout(function() {
+              heroImg.src = galleryImages[idx];
+              var newAlt = altDescs[galleryImages[idx]] || (workshop.title + ' - Artwork perspective ' + (idx + 1));
+              heroImg.alt = newAlt;
+              heroImg.style.opacity = '1';
+            }, 120);
+          }
+        });
+      });
+    } else {
+      thumbsRow.style.display = 'none';
+    }
+  }
+  document.getElementById('breadcrumb-title').textContent = workshop.title;
+  document.getElementById('workshop-title').textContent = workshop.title;
+  document.getElementById('workshop-instructor-avatar').src = instructor.avatar;
+  document.getElementById('workshop-instructor-avatar').alt = instructor.name;
+  document.getElementById('workshop-instructor-name').textContent = instructor.name;
+  document.getElementById('workshop-description').textContent = workshop.description;
+  document.getElementById('workshop-price').textContent = '$' + workshop.price;
+  document.getElementById('workshop-date').textContent = workshop.date;
+  document.getElementById('workshop-time').textContent = workshop.time;
+  document.getElementById('workshop-duration').textContent = workshop.duration;
+  document.getElementById('workshop-location').textContent = workshop.location;
+  document.getElementById('workshop-skill-level').textContent = workshop.skillLevel;
+  document.getElementById('workshop-category-badge').textContent = workshop.category;
+
+  var seatsLeft = workshop.seatsTotal - workshop.seatsTaken;
+  document.getElementById('workshop-seats-left').textContent = seatsLeft;
+  document.getElementById('workshop-seats-total').textContent = workshop.seatsTotal;
+  var pct = Math.round((workshop.seatsTaken / workshop.seatsTotal) * 100);
+  document.getElementById('workshop-seats-bar').style.width = pct + '%';
+
+  document.getElementById('workshop-register-btn').setAttribute('data-workshop-id', workshop.id);
+
+  var learnList = document.getElementById('workshop-learn-list');
+  learnList.innerHTML = workshop.whatYouWillLearn.map(function(item) {
+    return '<li class="d-flex align-items-start gap-2 mb-2"><i class="fas fa-check-circle text-success mt-1"></i><span>' + item + '</span></li>';
+  }).join('');
+
+  var materialsList = document.getElementById('workshop-materials-list');
+  materialsList.innerHTML = workshop.materialsRequired.map(function(item) {
+    return '<li class="d-flex align-items-start gap-2 mb-2"><i class="fas fa-box-open text-primary mt-1"></i><span>' + item + '</span></li>';
+  }).join('');
+
+  var relatedGrid = document.getElementById('related-workshops-grid');
+  if (relatedGrid) {
+    var related = window.AppData.workshops.filter(function(w) { return w.id !== workshop.id && (w.category === workshop.category || w.skillLevel === workshop.skillLevel); }).slice(0, 3);
+    if (related.length === 0) related = window.AppData.workshops.filter(function(w) { return w.id !== workshop.id; }).slice(0, 3);
+    relatedGrid.innerHTML = related.map(function(w) {
+      var seats = w.seatsTotal - w.seatsTaken;
+      var relatedInstructor = window.AppData.instructors && window.AppData.instructors[w.instructorId];
+      if (!relatedInstructor) relatedInstructor = { name: w.instructor, avatar: w.instructorAvatar };
+      return '<div class="col-md-6 col-lg-4">' +
+        '<div class="card-art h-100 d-flex flex-column">' +
+        '<div class="card-img-top overflow-hidden position-relative" style="height:220px;"><img src="' + w.image + '" alt="' + w.title + '" style="width:100%;height:100%;object-fit:cover;display:block;"></div>' +
+        '<div class="card-body d-flex flex-column flex-grow-1">' +
+        '<div class="d-flex align-items-center gap-2 mb-2"><img src="' + relatedInstructor.avatar + '" alt="' + relatedInstructor.name + '" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">' +
+        '<small class="text-muted fw-medium">' + relatedInstructor.name + '</small></div>' +
+        '<h5 class="card-title"><a href="workshop-details.html?id=' + w.id + '" class="text-decoration-none" style="color:var(--text-primary);">' + w.title + '</a></h5>' +
+        '<p class="card-text flex-grow-1">' + w.description.substring(0, 100) + '...</p>' +
+        '<div class="d-flex flex-wrap gap-3 mb-3" style="font-size:0.85rem;color:var(--text-muted);">' +
+        '<span><i class="fas fa-calendar me-1"></i> ' + w.date + '</span>' +
+        '<span><i class="fas fa-clock me-1"></i> ' + w.time + '</span></div>' +
+        '<div class="d-flex justify-content-between align-items-center mt-auto pt-3" style="border-top:1px solid var(--border-color);">' +
+        '<div><span class="fw-bold text-primary fs-5">$' + w.price + '</span>' +
+        '<small class="text-muted ms-2">' + seats + ' seats left</small></div>' +
+        '<a href="workshop-details.html?id=' + w.id + '" class="btn btn-primary btn-sm workshop-register-btn" data-workshop-id="' + w.id + '">Register Now</a></div>' +
+        '</div></div></div>';
+    }).join('');
+    if (window.WorkshopReg) {
+      related.forEach(function(w) { window.WorkshopReg.updateUI(w.id); });
+    }
+  }
+});
+</script>
+</body>
+</html>

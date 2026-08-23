@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - ArtCraft Supply Store</title>
+    <meta name="description" content="Art tips, craft tutorials, and creative inspiration from ArtCraft Supply Store. Explore expert articles on painting, drawing, crafting, and more.">
+    <meta name="keywords" content="art blog, craft tutorials, painting tips, drawing tutorials, DIY crafts, creative inspiration">
+    <meta name="author" content="ArtCraft Supply Store">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artcraftstore.com/blog.html">
+    <meta property="og:title" content="Blog - ArtCraft Supply Store">
+    <meta property="og:description" content="Art tips, craft tutorials, and creative inspiration from ArtCraft Supply Store.">
+    <meta property="og:image" content="https://placehold.co/1200x630/E85D3A/FFFFFF?text=ArtCraft+Blog">
+    <meta property="og:site_name" content="ArtCraft Supply Store">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - ArtCraft Supply Store">
+    <meta name="twitter:description" content="Art tips, craft tutorials, and creative inspiration from ArtCraft Supply Store.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/E85D3A/FFFFFF?text=ArtCraft+Blog">
+    <link rel="canonical" href="https://artcraftstore.com/blog.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-icon"><i class="fas fa-palette"></i></span>
+                <span class="logo-text">ArtCraft</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li><a class="nav-link" href="workshops.html">Workshops</a></li>
+                    <li><a class="nav-link" href="brands.html">Brands</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link nav-active" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="shop.html" class="nav-icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i><span class="cart-badge wishlist-count" style="display:none">0</span></a>
+                    <a href="cart.html" class="nav-icon-btn" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="cart-badge cart-count" style="display:none">0</span></a>
+                    <button class="nav-icon-btn theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+                    <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL"><span>RTL</span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="search-overlay" style="display:none;">
+    <div class="search-overlay-content">
+      <div class="search-input-wrap">
+        <i class="fas fa-search" style="font-size:1.1rem;color:var(--text-muted);"></i>
+        <input type="text" class="form-control" placeholder="Search for art supplies, brands, workshops..." id="overlay-search-input">
+        <button class="search-overlay-close search-close" aria-label="Close search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-suggestions" id="search-suggestions">
+        <h6>Popular Searches</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="shop.html?category=painting" class="badge bg-light text-dark text-decoration-none p-2">Watercolor</a>
+          <a href="shop.html?category=sketching" class="badge bg-light text-dark text-decoration-none p-2">Pencils</a>
+          <a href="shop.html?category=crafting" class="badge bg-light text-dark text-decoration-none p-2">Clay</a>
+          <a href="workshops.html" class="badge bg-light text-dark text-decoration-none p-2">Workshops</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <main>
+
+        <!-- ==================== BLOG HERO / HEADER ==================== -->
+        <section class="blog-hero-section">
+            <div class="container">
+                <!-- Centered Hero content with breadcrumb directly above title -->
+                <div class="blog-hero-content animate-on-scroll">
+                    <nav class="breadcrumb-art" aria-label="Breadcrumb">
+                        <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-item active" aria-current="page">Blog</span>
+                    </nav>
+
+                    <h1 class="section-title">Creative <span class="font-accent" style="color:var(--primary, #E85D3A);">Journal</span></h1>
+                    <p class="section-subtitle">Art tips, craft tutorials, and creative inspiration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SEARCH & FILTER BAR ==================== -->
+        <section class="blog-filter-section">
+            <div class="container">
+                <div class="blog-filter-wrapper">
+                    <!-- Left: Category Filters (Scrollable on mobile) -->
+                    <div class="blog-category-filters" role="tablist" aria-label="Blog Categories">
+                        <button class="blog-category-btn active" data-category="all">All</button>
+                        <button class="blog-category-btn" data-category="Art Tips">Art Tips</button>
+                        <button class="blog-category-btn" data-category="Craft Tutorials">Craft Tutorials</button>
+                        <button class="blog-category-btn" data-category="DIY">DIY</button>
+                        <button class="blog-category-btn" data-category="Painting">Painting</button>
+                        <button class="blog-category-btn" data-category="Drawing">Drawing</button>
+                        <button class="blog-category-btn" data-category="Origami">Origami</button>
+                        <button class="blog-category-btn" data-category="Workshops">Workshops</button>
+                        <button class="blog-category-btn" data-category="Product Guides">Product Guides</button>
+                        <button class="blog-category-btn" data-category="Art & Culture">Art & Culture</button>
+                    </div>
+
+                    <!-- Right: Search Bar on same row -->
+                    <div class="blog-search-box">
+                        <form class="blog-search-form" id="blog-search-form" role="search" novalidate>
+                            <div class="blog-search-input-wrapper">
+                                <i class="fas fa-search blog-search-icon" aria-hidden="true"></i>
+                                <input type="search" class="form-control blog-search-input" id="blog-search" placeholder="Search articles..." aria-label="Search articles">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== BLOG GRID ==================== -->
+        <section class="section">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                    <p class="text-muted mb-0" id="blog-count-text">Showing <strong id="blog-count" class="text-primary">8</strong> articles</p>
+                </div>
+                <div id="blog-container" class="row g-4">
+                    <!-- JavaScript renders blog posts here -->
+                </div>
+                <div id="blog-pagination" class="pagination-wrapper d-flex justify-content-center mt-5">
+                    <!-- JavaScript renders pagination if applicable -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NEWSLETTER SECTION ==================== -->
+        <section class="section newsletter-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center;">
+            <div class="container" style="max-width:600px;">
+                <h2 style="color:white;">Stay Creative</h2>
+                <p style="color:rgba(255,255,255,0.85); margin-bottom:24px;">Subscribe for art tips, exclusive deals, workshop announcements, and creative inspiration.</p>
+                                <form class="newsletter-form" style="max-width:480px; margin:0 auto;" novalidate>
+                    <div class="newsletter-input-wrap">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div>
+                    <h5><i class="fas fa-palette me-2"></i>ArtCraft</h5>
+                    <p>Your premier destination for art supplies, creative workshops, and artistic inspiration. Fueling creativity since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Shop -->
+                <div>
+                    <h5>Shop</h5>
+                    <div class="footer-links">
+                        <a href="shop.html">All Products</a>
+                        <a href="shop.html?category=painting">Painting</a>
+                        <a href="shop.html?category=sketching">Drawing &amp; Sketching</a>
+                        <a href="shop.html?category=crafting">Crafting</a>
+                        <a href="student-supplies.html">Student Supplies</a>
+                        <a href="shop.html?category=art-tools">Art Tools</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="workshops.html">Workshops</a>
+                        <a href="brands.html">Brands</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p>Get creative tips and exclusive offers delivered to your inbox.</p>
+                    <div class="footer-newsletter">
+                        <form class="newsletter-form">
+                            <div class="d-flex gap-0">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ArtCraft Supply Store. All rights reserved.</p>
+            </div>
+        </div>
+</footer>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button class="scroll-top btn btn-primary btn-icon" id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof window.initBlogPage === 'function') {
+                window.initBlogPage();
+            }
+        });
+    </script>
+</body>
+</html>

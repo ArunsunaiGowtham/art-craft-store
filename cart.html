@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ArtCraft Supply Store</title>
+    <meta name="description" content="Review your shopping cart at ArtCraft Supply Store. Edit quantities, apply promo codes, and proceed to checkout.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-icon"><i class="fas fa-palette"></i></span>
+                <span class="logo-text">ArtCraft</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home <i class="fas fa-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li><a class="nav-link" href="workshops.html">Workshops</a></li>
+                    <li><a class="nav-link" href="brands.html">Brands</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="shop.html" class="nav-icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i><span class="cart-badge wishlist-count" style="display:none">0</span></a>
+                    <a href="cart.html" class="nav-icon-btn" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="cart-badge cart-count" style="display:none">0</span></a>
+                    <button class="nav-icon-btn theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+                    <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL"><span>RTL</span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="search-overlay" style="display:none;">
+    <div class="search-overlay-content">
+      <div class="search-input-wrap">
+        <i class="fas fa-search" style="font-size:1.1rem;color:var(--text-muted);"></i>
+        <input type="text" class="form-control" placeholder="Search for art supplies, brands, workshops..." id="overlay-search-input">
+        <button class="search-overlay-close search-close" aria-label="Close search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="search-suggestions" id="search-suggestions">
+        <h6>Popular Searches</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="shop.html?category=painting" class="badge bg-light text-dark text-decoration-none p-2">Watercolor</a>
+          <a href="shop.html?category=sketching" class="badge bg-light text-dark text-decoration-none p-2">Pencils</a>
+          <a href="shop.html?category=crafting" class="badge bg-light text-dark text-decoration-none p-2">Clay</a>
+          <a href="workshops.html" class="badge bg-light text-dark text-decoration-none p-2">Workshops</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <main>
+
+        <!-- ==================== BREADCRUMB ==================== -->
+        <section class="container animate-on-scroll">
+            <nav class="breadcrumb-art" aria-label="Breadcrumb">
+                <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+                <div class="breadcrumb-item active" aria-current="page">Shopping Cart</div>
+            </nav>
+        </section>
+
+        <!-- ==================== FREE SHIPPING NOTICE ==================== -->
+        <section class="container mb-3 animate-on-scroll">
+            <div class="text-center p-3 rounded-md" style="background:var(--primary-light); border:1px solid rgba(232,93,58,0.2);">
+                <i class="fas fa-truck text-primary me-2"></i>
+                <strong>Free shipping on orders over $50!</strong>
+                <span class="text-muted ms-2" style="font-size:0.9rem;">Add more items to qualify.</span>
+            </div>
+        </section>
+
+        <!-- ==================== PAGE HEADER ==================== -->
+        <section class="container mb-4 animate-on-scroll">
+            <h1 style="font-family:var(--font-heading); font-weight:800; font-size:2.25rem;">Shopping Cart</h1>
+            <p class="text-muted" id="cart-subtitle">Review your items before checkout</p>
+        </section>
+
+        <!-- ==================== CART CONTENT ==================== -->
+        <section class="section" style="padding-top:0;">
+            <div class="container">
+                <!-- Empty Cart State -->
+                <div id="empty-cart" style="display:none;" class="text-center py-5">
+                    <div class="p-5 mx-auto" style="max-width:520px; background:var(--bg-card); border-radius:var(--radius-lg); border:1px solid var(--border-color); box-shadow:var(--shadow-md);">
+                        <i class="fas fa-shopping-bag fa-4x text-muted mb-4" style="opacity:0.4;"></i>
+                        <h3 class="fw-bold mb-2">Your Cart is Empty</h3>
+                        <p class="text-muted mb-4">Looks like you haven't added any items to your cart yet. Explore our art supplies and discover creative essentials.</p>
+                        <a href="shop.html" class="btn btn-primary btn-lg px-4"><i class="fas fa-store me-2"></i>Explore Shop</a>
+                    </div>
+                </div>
+
+                <!-- Main 2-Column Cart Layout -->
+                <div class="row align-items-start g-4" id="cart-grid-container">
+                    <!-- Left: Cart Items Section -->
+                    <div class="col-lg-8" id="cart-items"></div>
+
+                    <!-- Right: Order Summary Card -->
+                    <div class="col-lg-4" id="cart-summary"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NEWSLETTER ==================== -->
+        <section class="section newsletter-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center;">
+            <div class="container" style="max-width:600px;">
+                <h2 style="color:white;">Stay Creative</h2>
+                <p style="color:rgba(255,255,255,0.85); margin-bottom:24px;">Subscribe for art tips, exclusive deals, workshop announcements, and creative inspiration.</p>
+                                <form class="newsletter-form" style="max-width:480px; margin:0 auto;" novalidate>
+                    <div class="newsletter-input-wrap">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div>
+                    <h5><i class="fas fa-palette me-2"></i>ArtCraft</h5>
+                    <p>Your premier destination for art supplies, creative workshops, and artistic inspiration. Fueling creativity since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2: Shop -->
+                <div>
+                    <h5>Shop</h5>
+                    <div class="footer-links">
+                        <a href="shop.html">All Products</a>
+                        <a href="shop.html?category=painting">Painting</a>
+                        <a href="shop.html?category=sketching">Drawing &amp; Sketching</a>
+                        <a href="shop.html?category=crafting">Crafting</a>
+                        <a href="student-supplies.html">Student Supplies</a>
+                        <a href="shop.html?category=art-tools">Art Tools</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="workshops.html">Workshops</a>
+                        <a href="brands.html">Brands</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="pricing.html">Membership</a>
+                    </div>
+                </div>
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h5>Newsletter</h5>
+                    <p>Get creative tips and exclusive offers delivered to your inbox.</p>
+                    <div class="footer-newsletter">
+                        <form class="newsletter-form">
+                            <div class="d-flex gap-0">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ArtCraft Supply Store. All rights reserved.</p>
+            </div>
+        </div>
+</footer>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button class="scroll-top btn btn-primary btn-icon" id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var cartGrid = document.getElementById('cart-grid-container');
+      var cartItemsContainer = document.getElementById('cart-items');
+      var cartSummary = document.getElementById('cart-summary');
+      var emptyCart = document.getElementById('empty-cart');
+      var cartSubtitle = document.getElementById('cart-subtitle');
+
+      // Seed initial demo items ONLY if cart has never been initialized in localStorage
+      if (localStorage.getItem('cart') === null && window.AppData && window.AppData.products) {
+        var defaultItems = [
+          { id: 1, name: "Professional Watercolor Set", price: 49.99, image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80", quantity: 1, category: "painting" },
+          { id: 5, name: "Graphite Pencil Set 24 Pack", price: 19.99, image: "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=600&q=80", quantity: 1, category: "sketching" }
+        ];
+        window.Cart.save(defaultItems);
+      }
+
+      function renderCart() {
+        var items = window.Cart.getItems();
+
+        if (items.length === 0) {
+          if (cartGrid) cartGrid.style.display = 'none';
+          if (emptyCart) emptyCart.style.display = 'block';
+          if (cartSubtitle) cartSubtitle.textContent = 'Your cart is currently empty';
+          return;
+        }
+
+        if (emptyCart) emptyCart.style.display = 'none';
+        if (cartGrid) cartGrid.style.display = 'flex';
+
+        var totalItems = window.Cart.getCount();
+        if (cartSubtitle) cartSubtitle.textContent = totalItems + ' item' + (totalItems !== 1 ? 's' : '') + ' in your cart';
+
+        // Render Cart Items List
+        cartItemsContainer.innerHTML = items.map(function(item) {
+          // Lookup category if missing
+          var catName = item.category;
+          if (!catName && window.AppData && window.AppData.products) {
+            var found = window.AppData.products.find(function(p) { return p.id === item.id; });
+            if (found) catName = found.category;
+          }
+          var displayCat = catName ? catName.replace('-', ' ') : 'Art Supplies';
+
+          return '<div class="cart-item-card d-flex align-items-center gap-3 p-3 mb-3" data-product-id="' + item.id + '">' +
+            '<div style="width:105px; height:90px; flex-shrink:0; border-radius:8px; overflow:hidden;">' +
+            '<img src="' + item.image + '" alt="' + item.name + '" style="width:100%; height:100%; object-fit:cover; display:block;">' +
+            '</div>' +
+            '<div class="flex-grow-1 min-w-0">' +
+            '<h6 class="mb-1 fw-bold"><a href="product-details.html?id=' + item.id + '" class="text-decoration-none" style="color:var(--text-primary);">' + item.name + '</a></h6>' +
+            '<div class="d-flex align-items-center gap-2 mb-0">' +
+            '<span class="badge bg-light text-secondary border text-capitalize" style="font-size:0.75rem;">' + displayCat + '</span>' +
+            '<span class="text-muted small">$' + item.price.toFixed(2) + ' each</span>' +
+            '</div>' +
+            '</div>' +
+            '<div class="d-flex align-items-center gap-1 mx-2">' +
+            '<button class="btn btn-sm btn-outline-secondary qty-btn qty-minus" style="width:32px; height:32px; padding:0; display:inline-flex; align-items:center; justify-content:center;">-</button>' +
+            '<input type="number" class="form-control form-control-sm text-center quantity-input" value="' + item.quantity + '" min="1" max="99" style="width:48px; height:32px; padding:2px 4px;">' +
+            '<button class="btn btn-sm btn-outline-secondary qty-btn qty-plus" style="width:32px; height:32px; padding:0; display:inline-flex; align-items:center; justify-content:center;">+</button>' +
+            '</div>' +
+            '<div class="text-end" style="min-width:85px;">' +
+            '<span class="text-muted d-block small" style="font-size:0.72rem;">Subtotal</span>' +
+            '<strong class="text-primary fs-6">$' + (item.price * item.quantity).toFixed(2) + '</strong>' +
+            '</div>' +
+            '<button class="btn btn-outline-danger btn-sm remove-item-btn ms-2" data-product-id="' + item.id + '" style="width:36px; height:36px; padding:0; display:inline-flex; align-items:center; justify-content:center; border-radius:6px;" aria-label="Remove item">' +
+            '<i class="fas fa-trash-alt"></i>' +
+            '</button>' +
+            '</div>';
+        }).join('');
+
+        // Calculate Totals
+        var subtotal = window.Cart.getTotal();
+        var shipping = subtotal > 50 ? 0 : 5.99;
+        var discount = 0;
+        var total = subtotal + shipping - discount;
+
+        // Render Order Summary
+        cartSummary.innerHTML = '<div class="cart-summary-card p-4" style="position:sticky; top:90px;">' +
+          '<h5 class="mb-4 fw-bold pb-2" style="border-bottom:1px solid var(--border-color);"><i class="fas fa-receipt text-primary me-2"></i>Order Summary</h5>' +
+          '<div class="d-flex justify-content-between align-items-center mb-3"><span class="text-muted">Subtotal (' + totalItems + ' items)</span><span class="fw-semibold">$' + subtotal.toFixed(2) + '</span></div>' +
+          '<div class="d-flex justify-content-between align-items-center mb-3"><span class="text-muted">Estimated Shipping</span><span class="fw-semibold ' + (shipping === 0 ? 'text-success' : '') + '">' + (shipping === 0 ? 'Free' : '$' + shipping.toFixed(2)) + '</span></div>' +
+          '<div class="d-flex justify-content-between align-items-center mb-3"><span class="text-muted">Discount</span><span class="text-success fw-semibold">-$' + discount.toFixed(2) + '</span></div>' +
+          '<hr class="my-3" style="border-color:var(--border-color); opacity:0.6;">' +
+          '<div class="d-flex justify-content-between align-items-center mb-4"><span class="fs-5 fw-bold">Total</span><span class="text-primary fs-4 fw-bold">$' + total.toFixed(2) + '</span></div>' +
+          '<a href="checkout.html" class="btn btn-primary btn-lg w-100 mb-3 fw-bold shadow-sm" style="height:48px; display:inline-flex; align-items:center; justify-content:center;"><i class="fas fa-lock me-2"></i>Proceed to Checkout</a>' +
+          '<a href="shop.html" class="btn btn-outline w-100 mb-3 fw-semibold" style="height:44px; display:inline-flex; align-items:center; justify-content:center;"><i class="fas fa-arrow-left me-2"></i>Continue Shopping</a>' +
+          '<div class="p-3 rounded-3 text-center" style="background:var(--primary-light); border:1px solid rgba(232,93,58,0.2);">' +
+          '<i class="fas fa-truck text-primary me-2"></i>' +
+          '<small class="text-muted fw-medium">' + (subtotal > 50 ? '<span class="text-success fw-bold">You qualify for Free Shipping!</span>' : 'Add $' + (50 - subtotal).toFixed(2) + ' more for Free Shipping') + '</small>' +
+          '</div>' +
+          '</div>';
+
+        // Attach event listeners to quantity inputs
+        cartItemsContainer.querySelectorAll('.quantity-input').forEach(function(input) {
+          input.addEventListener('change', function() {
+            var card = this.closest('[data-product-id]');
+            var id = parseInt(card.getAttribute('data-product-id'));
+            window.Cart.updateQuantity(id, parseInt(this.value) || 1);
+            renderCart();
+            window.Cart.updateBadges();
+          });
+        });
+      }
+
+      renderCart();
+
+      // Handle item removal
+      document.addEventListener('click', function(e) {
+        var removeBtn = e.target.closest('.remove-item-btn');
+        if (removeBtn) {
+          e.preventDefault();
+          var id = parseInt(removeBtn.getAttribute('data-product-id'));
+          window.Cart.removeItem(id);
+          renderCart();
+          window.Cart.updateBadges();
+        }
+      });
+    });
+    </script>
+</body>
+</html>
