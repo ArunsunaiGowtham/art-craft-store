@@ -137,73 +137,63 @@
      MOBILE NAVIGATION
   ============================================================ */
   function initMobileNav() {
-    var navbarCollapse = document.querySelector(".navbar-collapse");
-    var navbarToggler = document.querySelector(".navbar-toggler");
-    var navLinks = document.querySelectorAll(".navbar-nav .nav-link:not(.dropdown-toggle)");
+    var navbarCollapses = document.querySelectorAll(".navbar-collapse");
+    var navbarTogglers = document.querySelectorAll(".navbar-toggler");
 
-    if (navbarToggler && navbarCollapse) {
-      navbarToggler.addEventListener("click", function (e) {
-        if (!window.bootstrap) {
-          e.preventDefault();
-          var isOpen = navbarCollapse.classList.toggle("show");
-          navbarToggler.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    function closeAllNavbars() {
+      navbarCollapses.forEach(function (collapse) {
+        collapse.classList.remove("show");
+      });
+      navbarTogglers.forEach(function (toggler) {
+        toggler.setAttribute("aria-expanded", "false");
+        toggler.classList.remove("active");
+        var icon = toggler.querySelector("i");
+        if (icon) {
+          icon.className = "fas fa-bars";
         }
       });
+      document.body.style.overflow = "";
     }
 
-    navLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
-        if (navbarCollapse && navbarCollapse.classList.contains("show")) {
-          if (window.bootstrap && bootstrap.Collapse) {
-            var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-            if (bsCollapse) {
-              bsCollapse.hide();
-            } else {
-              navbarCollapse.classList.remove("show");
+    navbarTogglers.forEach(function (toggler) {
+      toggler.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var targetSelector = toggler.getAttribute("data-bs-target") || toggler.getAttribute("data-target") || "#mainNav";
+        var collapse = document.querySelector(targetSelector) || document.querySelector(".navbar-collapse");
+        if (collapse) {
+          var willOpen = !collapse.classList.contains("show");
+          if (willOpen) {
+            collapse.classList.add("show");
+            toggler.setAttribute("aria-expanded", "true");
+            toggler.classList.add("active");
+            var icon = toggler.querySelector("i");
+            if (icon) {
+              icon.className = "fas fa-times";
             }
+            document.body.style.overflow = "hidden";
           } else {
-            navbarCollapse.classList.remove("show");
+            closeAllNavbars();
           }
-          if (navbarToggler) navbarToggler.setAttribute("aria-expanded", "false");
         }
+      });
+    });
+
+    document.querySelectorAll(".navbar-nav .nav-link:not(.dropdown-toggle)").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeAllNavbars();
       });
     });
 
     document.addEventListener("click", function (e) {
-      if (
-        navbarCollapse &&
-        navbarCollapse.classList.contains("show") &&
-        !navbarCollapse.contains(e.target) &&
-        navbarToggler &&
-        !navbarToggler.contains(e.target)
-      ) {
-        if (window.bootstrap && bootstrap.Collapse) {
-          var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse) {
-            bsCollapse.hide();
-          } else {
-            navbarCollapse.classList.remove("show");
-          }
-        } else {
-          navbarCollapse.classList.remove("show");
-        }
-        if (navbarToggler) navbarToggler.setAttribute("aria-expanded", "false");
+      if (!e.target.closest(".navbar") && !e.target.closest(".navbar-collapse")) {
+        closeAllNavbars();
       }
     });
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && navbarCollapse && navbarCollapse.classList.contains("show")) {
-        if (window.bootstrap && bootstrap.Collapse) {
-          var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse) {
-            bsCollapse.hide();
-          } else {
-            navbarCollapse.classList.remove("show");
-          }
-        } else {
-          navbarCollapse.classList.remove("show");
-        }
-        if (navbarToggler) navbarToggler.setAttribute("aria-expanded", "false");
+      if (e.key === "Escape") {
+        closeAllNavbars();
       }
     });
   }
