@@ -408,7 +408,8 @@
   window.Cart = {
     getItems: function () {
       try {
-        return JSON.parse(localStorage.getItem("cart")) || [];
+        var parsed = JSON.parse(localStorage.getItem("cart"));
+        return Array.isArray(parsed) ? parsed : [];
       } catch (e) {
         return [];
       }
@@ -416,41 +417,77 @@
     save: function (items) {
       localStorage.setItem("cart", JSON.stringify(items));
       this.updateBadges();
+      window.dispatchEvent(new CustomEvent("cart-updated", { detail: { items: items } }));
     },
     addItem: function (product, quantity) {
-      quantity = quantity || 1;
+      quantity = parseInt(quantity, 10) || 1;
+      if (quantity < 1) quantity = 1;
       var items = this.getItems();
-      var existing = items.find(function (item) { return item.id === product.id; });
+      var prodId = product.id;
+      var existing = items.find(function (item) { return String(item.id) === String(prodId); });
       if (existing) {
-        existing.quantity += quantity;
+        existing.quantity = (parseInt(existing.quantity, 10) || 0) + quantity;
       } else {
-        items.push({ id: product.id, name: product.name, price: product.price, image: product.image, quantity: quantity });
+        items.push({
+          id: prodId,
+          name: product.name,
+          price: typeof product.price === "number" ? product.price : (parseFloat(product.price) || 0),
+          image: product.image,
+          quantity: quantity,
+          category: product.category || ""
+        });
       }
       this.save(items);
-      showToast(product.name + " added to cart!", "success");
+      if (typeof showToast === "function") {
+        showToast(product.name + " added to cart!", "success");
+      }
     },
     removeItem: function (productId) {
-      var items = this.getItems().filter(function (item) { return item.id !== productId; });
+      var items = this.getItems().filter(function (item) { return String(item.id) !== String(productId); });
       this.save(items);
-      showToast("Item removed from cart", "info");
+      if (typeof showToast === "function") {
+        showToast("Item removed from cart", "info");
+      }
     },
     updateQuantity: function (productId, quantity) {
+      var qty = parseInt(quantity, 10) || 1;
+      if (qty < 1) qty = 1;
       var items = this.getItems();
-      var item = items.find(function (item) { return item.id === productId; });
+      var item = items.find(function (item) { return String(item.id) === String(productId); });
       if (item) {
-        item.quantity = Math.max(1, quantity);
+        item.quantity = qty;
       }
       this.save(items);
+      return item ? item.quantity : qty;
+    },
+    changeQuantity: function (productId, delta) {
+      var items = this.getItems();
+      var item = items.find(function (item) { return String(item.id) === String(productId); });
+      if (item) {
+        var currentQty = parseInt(item.quantity, 10) || 1;
+        var newQty = Math.max(1, currentQty + delta);
+        item.quantity = newQty;
+        this.save(items);
+        return item.quantity;
+      }
+      return 1;
     },
     getTotal: function () {
-      return this.getItems().reduce(function (sum, item) { return sum + item.price * item.quantity; }, 0);
+      return this.getItems().reduce(function (sum, item) {
+        var p = typeof item.price === "number" ? item.price : (parseFloat(item.price) || 0);
+        var q = parseInt(item.quantity, 10) || 1;
+        return sum + (p * q);
+      }, 0);
     },
     getCount: function () {
-      return this.getItems().reduce(function (sum, item) { return sum + item.quantity; }, 0);
+      return this.getItems().reduce(function (sum, item) {
+        return sum + (parseInt(item.quantity, 10) || 1);
+      }, 0);
     },
     clear: function () {
       localStorage.removeItem("cart");
       this.updateBadges();
+      window.dispatchEvent(new CustomEvent("cart-updated", { detail: { items: [] } }));
     },
     updateBadges: function () {
       var count = this.getCount();
@@ -1972,14 +2009,19 @@
     document.addEventListener("click", function (e) {
       var quantityBtn = e.target.closest(".qty-btn");
       if (!quantityBtn) return;
-      e.preventDefault();
+      
+      // If inside cart-item-card or cart page, cart.html handles it directly via Cart.changeQuantity
+      if (quantityBtn.closest(".cart-item-card") || document.getElementById("cart-items")) {
+        return;
+      }
 
-      var input = quantityBtn.parentElement.querySelector("input[type='number'], .quantity-input");
+      e.preventDefault();
+      var input = quantityBtn.parentElement ? quantityBtn.parentElement.querySelector("input[type='number'], .quantity-input") : null;
       if (!input) return;
 
-      var current = parseInt(input.value) || 1;
-      var min = parseInt(input.getAttribute("min")) || 1;
-      var max = parseInt(input.getAttribute("max")) || 999;
+      var current = parseInt(input.value, 10) || 1;
+      var min = parseInt(input.getAttribute("min"), 10) || 1;
+      var max = parseInt(input.getAttribute("max"), 10) || 999;
 
       if (quantityBtn.classList.contains("qty-minus") || quantityBtn.classList.contains("minus")) {
         input.value = Math.max(min, current - 1);
