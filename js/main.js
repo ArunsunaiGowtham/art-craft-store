@@ -141,9 +141,15 @@
       document.querySelectorAll(".navbar .dropdown").forEach(function (drop) {
         drop.classList.remove("show", "open");
         var toggle = drop.querySelector(".dropdown-toggle");
-        if (toggle) toggle.setAttribute("aria-expanded", "false");
+        if (toggle) {
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.classList.remove("show");
+        }
         var menu = drop.querySelector(".dropdown-menu");
-        if (menu) menu.classList.remove("show");
+        if (menu) {
+          menu.classList.remove("show");
+          menu.style.display = "";
+        }
       });
     }
 
@@ -162,20 +168,36 @@
           if (other !== parentDropdown) {
             other.classList.remove("show", "open");
             var otherToggle = other.querySelector(".dropdown-toggle");
-            if (otherToggle) otherToggle.setAttribute("aria-expanded", "false");
+            if (otherToggle) {
+              otherToggle.setAttribute("aria-expanded", "false");
+              otherToggle.classList.remove("show");
+            }
             var otherMenu = other.querySelector(".dropdown-menu");
-            if (otherMenu) otherMenu.classList.remove("show");
+            if (otherMenu) {
+              otherMenu.classList.remove("show");
+              otherMenu.style.display = "";
+            }
           }
         });
 
         if (isOpen) {
           parentDropdown.classList.remove("show", "open");
           toggle.setAttribute("aria-expanded", "false");
-          if (menu) menu.classList.remove("show");
+          toggle.classList.remove("show");
+          if (menu) {
+            menu.classList.remove("show");
+            menu.style.display = "";
+          }
         } else {
           parentDropdown.classList.add("show", "open");
           toggle.setAttribute("aria-expanded", "true");
-          if (menu) menu.classList.add("show");
+          toggle.classList.add("show");
+          if (menu) {
+            menu.classList.add("show");
+            if (window.innerWidth < 1100) {
+              menu.style.display = "block";
+            }
+          }
         }
       });
     });
