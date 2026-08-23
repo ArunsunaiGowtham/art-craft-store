@@ -797,10 +797,10 @@
     if (viewMode === "list") {
       return '<div class="product-item d-flex position-relative" data-product-id="' + product.id + '">' + badgeHtml +
         '<div style="width:200px;min-width:200px;"><a href="product-details.html?id=' + product.id + '"><img src="' + product.image + '" alt="' + product.name + '" class="img-fluid rounded"></a></div>' +
-        '<div class="flex-grow-1"><span class="badge bg-light text-dark mb-1">' + product.categoryLabel + '</span>' +
-        '<h5 class="mb-1"><a href="product-details.html?id=' + product.id + '" class="text-decoration-none text-dark">' + product.name + "</a></h5>" +
-        '<div class="mb-1">' + starsHtml + ' <small class="text-muted">(' + product.reviewCount + ")</small></div>" +
-        '<p class="mb-2 text-muted">' + product.description.substring(0, 120) + "...</p>" +
+        '<div class="flex-grow-1"><span class="product-category-badge mb-1">' + product.categoryLabel + '</span>' +
+        '<h5 class="mb-1"><a href="product-details.html?id=' + product.id + '" class="product-title-link">' + product.name + "</a></h5>" +
+        '<div class="mb-1">' + starsHtml + ' <small class="text-secondary">(' + product.reviewCount + ")</small></div>" +
+        '<p class="mb-2 text-secondary">' + product.description.substring(0, 120) + "...</p>" +
         '<div class="mb-2">' + stockBadge + "</div>" +
         '<div class="mb-2"><h5 class="text-primary d-inline">' + oldPriceHtml + "$" + product.price.toFixed(2) + "</h5></div>" +
         '<div><button class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="' + product.id + '"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button></div></div></div>';
@@ -810,10 +810,10 @@
       badgeHtml +
       productImageHtml +
       '<div class="card-body d-flex flex-column">' +
-      '<span class="badge bg-light text-dark mb-2 align-self-start">' + product.categoryLabel + "</span>" +
-      '<h6 class="card-title mb-1"><a href="product-details.html?id=' + product.id + '" class="text-decoration-none text-dark">' + product.name + "</a></h6>" +
-      '<div class="mb-2 small">' + starsHtml + ' <span class="text-muted">(' + product.reviewCount + ")</span></div>" +
-      '<p class="card-text text-muted small flex-grow-1">' + product.description.substring(0, 80) + "...</p>" +
+      '<span class="product-category-badge mb-2 align-self-start">' + product.categoryLabel + "</span>" +
+      '<h6 class="card-title mb-1"><a href="product-details.html?id=' + product.id + '" class="product-title-link">' + product.name + "</a></h6>" +
+      '<div class="mb-2 small">' + starsHtml + ' <span class="text-secondary">(' + product.reviewCount + ")</span></div>" +
+      '<p class="card-text text-secondary small flex-grow-1">' + product.description.substring(0, 80) + "...</p>" +
       '<div class="mb-2">' + oldPriceHtml + '<span class="fw-bold text-primary fs-5">$' + product.price.toFixed(2) + "</span></div>" +
       '<div class="mt-auto"><button class="btn btn-primary btn-sm w-100 add-to-cart-btn" data-product-id="' + product.id + '"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button></div>' +
       "</div></div></div>";

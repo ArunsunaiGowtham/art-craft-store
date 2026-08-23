@@ -1,0 +1,1345 @@
+[
+  {
+    "id": 1,
+    "name": "Professional Watercolor Set",
+    "category": "painting",
+    "categoryLabel": "Painting",
+    "price": 49.99,
+    "oldPrice": 64.99,
+    "rating": 4.8,
+    "reviewCount": 234,
+    "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80",
+    "badge": "bestseller",
+    "description": "Premium 36-color watercolor set with rich pigments and smooth blending. Perfect for professional artists and serious hobbyists.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Artist-grade pigments",
+      "Size": "Full pan set",
+      "Colors": "36",
+      "Weight": "1.2 kg"
+    },
+    "reviews": [
+      {
+        "author": "Sarah M.",
+        "rating": 5,
+        "date": "2026-07-15",
+        "comment": "Absolutely love these watercolors! The pigments are vibrant and blend beautifully."
+      },
+      {
+        "author": "David K.",
+        "rating": 5,
+        "date": "2026-06-20",
+        "comment": "Best watercolor set I've ever used. Worth every penny."
+      },
+      {
+        "author": "Emma L.",
+        "rating": 4,
+        "date": "2026-05-10",
+        "comment": "Great quality, but the pans are a bit small."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/watercolor,paint,palette/all?lock=102",
+      "https://loremflickr.com/960/720/watercolor,paint,palette/all?lock=103"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Acrylic Paint Tubes 24 Pack",
+    "category": "painting",
+    "categoryLabel": "Painting",
+    "price": 34.99,
+    "oldPrice": null,
+    "rating": 4.6,
+    "reviewCount": 187,
+    "image": "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80",
+    "badge": null,
+    "description": "Vibrant acrylic paints in 24 rich colors. Quick-drying, water-resistant, and perfect for canvas, wood, and fabric painting.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Acrylic polymer",
+      "Size": "12ml tubes",
+      "Colors": "24",
+      "Weight": "0.8 kg"
+    },
+    "reviews": [
+      {
+        "author": "Mike R.",
+        "rating": 5,
+        "date": "2026-07-01",
+        "comment": "These acrylics are fantastic for the price. Great pigmentation."
+      },
+      {
+        "author": "Lisa T.",
+        "rating": 4,
+        "date": "2026-06-15",
+        "comment": "Good quality, nice color range."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/acrylic,paint,tubes/all?lock=203",
+      "https://loremflickr.com/960/720/acrylic,paint,tubes/all?lock=204"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Oil Painting Starter Kit",
+    "category": "painting",
+    "categoryLabel": "Painting",
+    "price": 89.99,
+    "oldPrice": 109.99,
+    "rating": 4.7,
+    "reviewCount": 98,
+    "image": "https://stationers.pk/cdn/shop/products/143.jpg?v=1678871737&width=2421",
+    "badge": "sale",
+    "description": "Complete oil painting kit with 12 colors, brushes, palette, and canvas. Everything you need to start your oil painting journey.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Artist-grade oils",
+      "Size": "37ml tubes",
+      "Colors": "12",
+      "Includes": "Brushes, palette, canvas"
+    },
+    "reviews": [
+      {
+        "author": "John D.",
+        "rating": 5,
+        "date": "2026-07-20",
+        "comment": "Perfect starter kit! Everything works great together."
+      }
+    ],
+    "images": [
+      "https://stationers.pk/cdn/shop/products/143.jpg?v=1678871737&width=2421",
+      "https://loremflickr.com/960/720/oil,painting,canvas/all?lock=304",
+      "https://loremflickr.com/960/720/oil,painting,canvas/all?lock=305"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Gouache Paint Set 18 Colors",
+    "category": "painting",
+    "categoryLabel": "Painting",
+    "price": 42.99,
+    "oldPrice": null,
+    "rating": 4.5,
+    "reviewCount": 112,
+    "image": "https://images.ctfassets.net/f1fikihmjtrp/5hDPkzIxMZZyEviAv1aoRm/29dffef3f8d77c4f4e61974a02e9144e/00905-1009-2-4ww.jpg",
+    "badge": "new",
+    "description": "Opaque watercolor gouache paints with intense pigmentation. Ideal for illustration, design, and fine art projects.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Gouache pigment",
+      "Size": "15ml tubes",
+      "Colors": "18",
+      "Weight": "0.6 kg"
+    },
+    "reviews": [
+      {
+        "author": "Anna P.",
+        "rating": 5,
+        "date": "2026-07-25",
+        "comment": "Beautiful opaque colors! Perfect for my illustrations."
+      }
+    ],
+    "images": [
+      "https://images.ctfassets.net/f1fikihmjtrp/5hDPkzIxMZZyEviAv1aoRm/29dffef3f8d77c4f4e61974a02e9144e/00905-1009-2-4ww.jpg",
+      "https://loremflickr.com/960/720/gouache,paint,illustration/all?lock=405",
+      "https://loremflickr.com/960/720/gouache,paint,illustration/all?lock=406"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Graphite Pencil Set 24 Pack",
+    "category": "sketching",
+    "categoryLabel": "Sketching",
+    "price": 19.99,
+    "oldPrice": 24.99,
+    "rating": 4.9,
+    "reviewCount": 312,
+    "image": "images/product-student-sketching-kit.jpg",
+    "badge": "bestseller",
+    "description": "Professional graphite pencils from 6H to 8B. Smooth, consistent lead with excellent break resistance.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Graphite & cedar wood",
+      "Size": "17.5cm length",
+      "Grades": "6H to 8B",
+      "Weight": "0.3 kg"
+    },
+    "reviews": [
+      {
+        "author": "Tom W.",
+        "rating": 5,
+        "date": "2026-07-10",
+        "comment": "Smooth and consistent. Perfect range of grades."
+      },
+      {
+        "author": "Rachel S.",
+        "rating": 5,
+        "date": "2026-06-28",
+        "comment": "Best pencils I've used for sketching."
+      }
+    ],
+    "images": [
+      "images/product-student-sketching-kit.jpg",
+      "https://loremflickr.com/960/720/graphite,pencils,sketching/all?lock=506",
+      "https://loremflickr.com/960/720/graphite,pencils,sketching/all?lock=507"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Sketchbook Hardcover A4",
+    "category": "sketching",
+    "categoryLabel": "Sketching",
+    "price": 14.99,
+    "oldPrice": null,
+    "rating": 4.7,
+    "reviewCount": 256,
+    "image": "https://kmartau.mo.cloudinary.net/23221790-96fa-4608-ab0d-cea1483481a1.jpg?tx=w_3840%2Ch_3840",
+    "badge": null,
+    "description": "Premium 160-page sketchbook with acid-free paper. Perfect for pencil, charcoal, and ink work.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Acid-free paper",
+      "Size": "A4 (21x29.7cm)",
+      "Pages": "160",
+      "Weight": "0.5 kg"
+    },
+    "reviews": [
+      {
+        "author": "Kate B.",
+        "rating": 5,
+        "date": "2026-07-05",
+        "comment": "Excellent paper quality. No bleed-through with markers."
+      }
+    ],
+    "images": [
+      "https://kmartau.mo.cloudinary.net/23221790-96fa-4608-ab0d-cea1483481a1.jpg?tx=w_3840%2Ch_3840",
+      "https://loremflickr.com/960/720/sketchbook,pencil,drawing/all?lock=607",
+      "https://loremflickr.com/960/720/sketchbook,pencil,drawing/all?lock=608"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Charcoal Drawing Set",
+    "category": "sketching",
+    "categoryLabel": "Sketching",
+    "price": 22.99,
+    "oldPrice": null,
+    "rating": 4.6,
+    "reviewCount": 89,
+    "image": "https://rung.com.pk/cdn/shop/products/2300675A_grande.jpg?v=1593340585",
+    "badge": null,
+    "description": "Professional charcoal set with vine, compressed, and willow charcoal. Includes blending stumps and eraser.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Natural charcoal",
+      "Pieces": "24",
+      "Includes": "Blending stumps, eraser",
+      "Weight": "0.2 kg"
+    },
+    "reviews": [
+      {
+        "author": "Chris M.",
+        "rating": 4,
+        "date": "2026-06-12",
+        "comment": "Good variety of charcoal types. Great for expressive drawings."
+      }
+    ],
+    "images": [
+      "https://rung.com.pk/cdn/shop/products/2300675A_grande.jpg?v=1593340585",
+      "https://loremflickr.com/960/720/charcoal,drawing,sketch/all?lock=708",
+      "https://loremflickr.com/960/720/charcoal,drawing,sketch/all?lock=709"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Modeling Clay Super Pack",
+    "category": "sculpting",
+    "categoryLabel": "Sculpting",
+    "price": 27.99,
+    "oldPrice": 34.99,
+    "rating": 4.8,
+    "reviewCount": 178,
+    "image": "https://i5.walmartimages.com/seo/36-Colors-Plasticine-DIY-Plasticine-for-Children-Education-Super-Light-Clay-Air-Dry-Clay-Multi-color-Modelling-Clay-Interactive-Toy_a10541ba-c6b8-47ab-8afb-ac32595ccc03.2a212cc49013aeeeaafedff87e51fb38.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+    "badge": "sale",
+    "description": "36-color air-dry modeling clay set. Non-toxic, easy to mold, and dries hard. Perfect for sculptures and crafts.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Air-dry clay",
+      "Colors": "36",
+      "Weight": "2 kg",
+      "Drying": "24 hours"
+    },
+    "reviews": [
+      {
+        "author": "Maria G.",
+        "rating": 5,
+        "date": "2026-07-18",
+        "comment": "Kids love it! The colors are vibrant and it dries perfectly."
+      },
+      {
+        "author": "James L.",
+        "rating": 5,
+        "date": "2026-06-30",
+        "comment": "Great quality clay for beginners and pros."
+      }
+    ],
+    "images": [
+      "https://i5.walmartimages.com/seo/36-Colors-Plasticine-DIY-Plasticine-for-Children-Education-Super-Light-Clay-Air-Dry-Clay-Multi-color-Modelling-Clay-Interactive-Toy_a10541ba-c6b8-47ab-8afb-ac32595ccc03.2a212cc49013aeeeaafedff87e51fb38.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+      "https://loremflickr.com/960/720/modeling,clay,colors/all?lock=809",
+      "https://loremflickr.com/960/720/modeling,clay,colors/all?lock=810"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Pottery Wheel Beginner",
+    "category": "sculpting",
+    "categoryLabel": "Sculpting",
+    "price": 149.99,
+    "oldPrice": 199.99,
+    "rating": 4.4,
+    "reviewCount": 67,
+    "image": "https://i5.walmartimages.com/asr/f2f851cc-a43f-485d-9d50-96c7beb6b861.410bb77507b323bc7553310e8c7ce0be.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+    "badge": "sale",
+    "description": "Compact electric pottery wheel with variable speed. Includes tools and clay. Perfect for home studios.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Steel & plastic",
+      "Speed": "0-300 RPM",
+      "Weight": "8 kg",
+      "Includes": "Tools, clay"
+    },
+    "reviews": [
+      {
+        "author": "Linda H.",
+        "rating": 4,
+        "date": "2026-07-22",
+        "comment": "Great wheel for the price. Quiet motor and smooth operation."
+      }
+    ],
+    "images": [
+      "https://i5.walmartimages.com/asr/f2f851cc-a43f-485d-9d50-96c7beb6b861.410bb77507b323bc7553310e8c7ce0be.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+      "https://loremflickr.com/960/720/pottery,wheel,clay/all?lock=910",
+      "https://loremflickr.com/960/720/pottery,wheel,clay/all?lock=911"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Sculpting Tools Professional Set",
+    "category": "sculpting",
+    "categoryLabel": "Sculpting",
+    "price": 32.99,
+    "oldPrice": null,
+    "rating": 4.7,
+    "reviewCount": 145,
+    "image": "https://i5.walmartimages.com/asr/83825c96-4ac7-4d50-b9e0-92be6eda5b72.ce35c77a6afb2eb6d980b7f5c2ec4654.jpeg?odnBg=ffffff&odnHeight=768&odnWidth=768",
+    "badge": null,
+    "description": "20-piece professional sculpting tool set. Stainless steel tips with ergonomic wooden handles.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Stainless steel & wood",
+      "Pieces": "20",
+      "Handle": "Ergonomic",
+      "Weight": "0.4 kg"
+    },
+    "reviews": [
+      {
+        "author": "Robert K.",
+        "rating": 5,
+        "date": "2026-06-25",
+        "comment": "Excellent tools! The steel tips are sharp and precise."
+      }
+    ],
+    "images": [
+      "https://i5.walmartimages.com/asr/83825c96-4ac7-4d50-b9e0-92be6eda5b72.ce35c77a6afb2eb6d980b7f5c2ec4654.jpeg?odnBg=ffffff&odnHeight=768&odnWidth=768",
+      "https://loremflickr.com/960/720/sculpting,tools,clay/all?lock=1011",
+      "https://loremflickr.com/960/720/sculpting,tools,clay/all?lock=1012"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Paper Craft Kit Deluxe",
+    "category": "crafting",
+    "categoryLabel": "Crafting",
+    "price": 38.99,
+    "oldPrice": null,
+    "rating": 4.6,
+    "reviewCount": 201,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61OfxxoKVyL.jpg",
+    "badge": "bestseller",
+    "description": "Deluxe paper crafting kit with cutting tools, decorative paper, stickers, and embellishments. 200+ pieces.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Mixed media",
+      "Pieces": "200+",
+      "Includes": "Cutting tools, glue",
+      "Weight": "1.5 kg"
+    },
+    "reviews": [
+      {
+        "author": "Susan P.",
+        "rating": 5,
+        "date": "2026-07-08",
+        "comment": "Everything I need for scrapbooking in one kit!"
+      },
+      {
+        "author": "Nancy D.",
+        "rating": 4,
+        "date": "2026-06-18",
+        "comment": "Great variety of materials."
+      }
+    ],
+    "images": [
+      "https://images-na.ssl-images-amazon.com/images/I/61OfxxoKVyL.jpg",
+      "https://loremflickr.com/960/720/papercraft,scrapbook,tools/all?lock=1112",
+      "https://loremflickr.com/960/720/papercraft,scrapbook,tools/all?lock=1113"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Yarn Bundle Rainbow Pack",
+    "category": "crafting",
+    "categoryLabel": "Crafting",
+    "price": 29.99,
+    "oldPrice": 39.99,
+    "rating": 4.8,
+    "reviewCount": 156,
+    "image": "https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=600&q=80",
+    "badge": "sale",
+    "description": "12 skeins of soft acrylic yarn in rainbow colors. Perfect for knitting, crocheting, and weaving projects.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "100% acrylic",
+      "Weight": "50g per skein",
+      "Colors": "12",
+      "Length": "100m per skein"
+    },
+    "reviews": [
+      {
+        "author": "Emily R.",
+        "rating": 5,
+        "date": "2026-07-12",
+        "comment": "Soft and vibrant! Great for blankets and scarves."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/rainbow,yarn,knitting/all?lock=1213",
+      "https://loremflickr.com/960/720/rainbow,yarn,knitting/all?lock=1214"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Resin Art Starter Kit",
+    "category": "crafting",
+    "categoryLabel": "Crafting",
+    "price": 54.99,
+    "oldPrice": null,
+    "rating": 4.5,
+    "reviewCount": 89,
+    "image": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80",
+    "badge": "new",
+    "description": "Complete epoxy resin kit with pigments, molds, and tools. Create stunning resin art pieces at home.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Epoxy resin",
+      "Volume": "500ml",
+      "Includes": "Molds, pigments, tools",
+      "Weight": "1 kg"
+    },
+    "reviews": [
+      {
+        "author": "Patricia M.",
+        "rating": 5,
+        "date": "2026-07-28",
+        "comment": "Easy to use and the results are amazing!"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/resin,craft,molds/all?lock=1314",
+      "https://loremflickr.com/960/720/resin,craft,molds/all?lock=1315"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Origami Paper Collection",
+    "category": "origami",
+    "categoryLabel": "Origami",
+    "price": 16.99,
+    "oldPrice": null,
+    "rating": 4.7,
+    "reviewCount": 178,
+    "image": "images/origami-paper-collection.jpg",
+    "badge": null,
+    "description": "300 sheets of premium origami paper in 30 beautiful patterns. Perfect for all skill levels.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Traditional washi paper",
+      "Size": "15x15cm",
+      "Sheets": "300",
+      "Patterns": "30"
+    },
+    "reviews": [
+      {
+        "author": "Yuki T.",
+        "rating": 5,
+        "date": "2026-07-14",
+        "comment": "Beautiful patterns and great paper quality."
+      },
+      {
+        "author": "Anna K.",
+        "rating": 5,
+        "date": "2026-06-22",
+        "comment": "Perfect for my origami classes!"
+      }
+    ],
+    "images": [
+      "images/origami-paper-collection.jpg",
+      "https://www.kcpinternational.com/wp-content/uploads/2011/08/50043447533_84d8cbd9c4_c.jpg",
+      "https://www.sieuthianhduong.com/upload/files/Giay-gap-hac.jpg"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Origami Advanced Kit",
+    "category": "origami",
+    "categoryLabel": "Origami",
+    "price": 24.99,
+    "oldPrice": null,
+    "rating": 4.6,
+    "reviewCount": 67,
+    "image": "images/origami-advanced-kit.jpg",
+    "badge": null,
+    "description": "Advanced origami kit with 200 specialty papers, instructional booklet, and video access.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Specialty paper",
+      "Size": "20x20cm",
+      "Sheets": "200",
+      "Includes": "Booklet, video access"
+    },
+    "reviews": [
+      {
+        "author": "David C.",
+        "rating": 4,
+        "date": "2026-06-30",
+        "comment": "Great for experienced folders. The booklet is very helpful."
+      }
+    ],
+    "images": [
+      "images/origami-advanced-kit.jpg",
+      "https://pinwheelcrafts.com/cdn/shop/files/Origami_Paper_Kit_With_Folding_Tools_Hero_2000x2000_6501d2ad-35b0-40f7-8479-85e2f2b51430.png?v=1746200252",
+      "https://image-cdn.ubuy.com/origami-paper-kit-with-instructions-book/400_400_100/68132a2c387e2fe11f05bf3c.jpg"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Calligraphy Pen Set",
+    "category": "sketching",
+    "categoryLabel": "Sketching",
+    "price": 28.99,
+    "oldPrice": 35.99,
+    "rating": 4.8,
+    "reviewCount": 134,
+    "image": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80",
+    "badge": "sale",
+    "description": "Professional calligraphy pen set with 6 nib sizes, ink bottle, and practice sheets. Perfect for beginners and pros.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Brass nibs, resin handle",
+      "Nibs": "6 sizes",
+      "Includes": "Ink, practice sheets",
+      "Weight": "0.3 kg"
+    },
+    "reviews": [
+      {
+        "author": "Michelle W.",
+        "rating": 5,
+        "date": "2026-07-16",
+        "comment": "Beautiful pens! The ink flows smoothly."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/calligraphy,pen,ink/all?lock=1617",
+      "https://loremflickr.com/960/720/calligraphy,pen,ink/all?lock=1618"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Student Art Supply Bundle",
+    "category": "student-supplies",
+    "categoryLabel": "Student Supplies",
+    "price": 44.99,
+    "oldPrice": 59.99,
+    "rating": 4.7,
+    "reviewCount": 289,
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80",
+    "badge": "bestseller",
+    "description": "Complete student art supply bundle with pencils, paints, brushes, sketchbook, and more. Everything for school art classes.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Mixed",
+      "Pieces": "50+",
+      "Includes": "Pencils, paints, brushes, sketchbook",
+      "Weight": "2 kg"
+    },
+    "reviews": [
+      {
+        "author": "Parent 1",
+        "rating": 5,
+        "date": "2026-07-20",
+        "comment": "Great value for students! My daughter loves it."
+      },
+      {
+        "author": "Teacher M.",
+        "rating": 5,
+        "date": "2026-06-15",
+        "comment": "I recommend this to all my students."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/student,art,supplies/all?lock=1718",
+      "https://loremflickr.com/960/720/student,art,supplies/all?lock=1719"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Washable Markers 48 Pack",
+    "category": "student-supplies",
+    "categoryLabel": "Student Supplies",
+    "price": 19.99,
+    "oldPrice": null,
+    "rating": 4.6,
+    "reviewCount": 345,
+    "image": "images/product-student-washable-markers.jpg",
+    "badge": null,
+    "description": "Non-toxic washable markers in 48 vibrant colors. Easy wash formula removes from skin and clothing.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Non-toxic ink",
+      "Colors": "48",
+      "Washable": "Yes",
+      "Age": "3+"
+    },
+    "reviews": [
+      {
+        "author": "Mom of 3",
+        "rating": 5,
+        "date": "2026-07-08",
+        "comment": "Finally markers that actually wash out!"
+      }
+    ],
+    "images": [
+      "images/product-student-washable-markers.jpg",
+      "https://loremflickr.com/960/720/washable,markers,colors/all?lock=1819",
+      "https://loremflickr.com/960/720/washable,markers,colors/all?lock=1820"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Colored Pencil Set 36 Pack",
+    "category": "student-supplies",
+    "categoryLabel": "Student Supplies",
+    "price": 24.99,
+    "oldPrice": null,
+    "rating": 4.7,
+    "reviewCount": 198,
+    "image": "images/product-student-color-pencils.jpg",
+    "badge": null,
+    "description": "Premium colored pencils with soft, blendable cores. Rich pigments that layer beautifully.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Wax-based lead",
+      "Colors": "36",
+      "Length": "17.5cm",
+      "BreakResistant": "Yes"
+    },
+    "reviews": [
+      {
+        "author": "Student A.",
+        "rating": 4,
+        "date": "2026-06-20",
+        "comment": "Great colors and they don't break easily."
+      }
+    ],
+    "images": [
+      "images/product-student-color-pencils.jpg",
+      "https://loremflickr.com/960/720/colored,pencils,school/all?lock=1920",
+      "https://loremflickr.com/960/720/colored,pencils,school/all?lock=1921"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Professional Brush Set 15 Piece",
+    "category": "art-tools",
+    "categoryLabel": "Art Tools",
+    "price": 39.99,
+    "oldPrice": 49.99,
+    "rating": 4.8,
+    "reviewCount": 167,
+    "image": "https://images.unsplash.com/photo-1596548438137-d51ea5c83ca5?auto=format&fit=crop&w=600&q=80",
+    "badge": "sale",
+    "description": "Professional 15-piece brush set with synthetic and natural bristles. Suitable for oil, acrylic, and watercolor.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Synthetic & natural bristle",
+      "Pieces": "15",
+      "Handles": "Short & long",
+      "Case": "Included"
+    },
+    "reviews": [
+      {
+        "author": "Artist J.",
+        "rating": 5,
+        "date": "2026-07-11",
+        "comment": "These brushes hold paint beautifully. Excellent quality."
+      },
+      {
+        "author": "Karen S.",
+        "rating": 5,
+        "date": "2026-06-28",
+        "comment": "Worth the investment. Great range of sizes."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1596548438137-d51ea5c83ca5?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/paint,brushes,artist/all?lock=2021",
+      "https://loremflickr.com/960/720/paint,brushes,artist/all?lock=2022"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Adjustable Easel Studio",
+    "category": "art-tools",
+    "categoryLabel": "Art Tools",
+    "price": 69.99,
+    "oldPrice": 89.99,
+    "rating": 4.5,
+    "reviewCount": 98,
+    "image": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=600&q=80",
+    "badge": "sale",
+    "description": "Adjustable wooden easel with brass hardware. Folds flat for storage. Supports canvases up to 48 inches.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Beechwood",
+      "MaxCanvas": "48 inches",
+      "Height": "Adjustable 56-78 inches",
+      "Weight": "3.5 kg"
+    },
+    "reviews": [
+      {
+        "author": "Paul R.",
+        "rating": 4,
+        "date": "2026-07-03",
+        "comment": "Sturdy and adjustable. Great for studio use."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/wooden,easel,studio/all?lock=2122",
+      "https://loremflickr.com/960/720/wooden,easel,studio/all?lock=2123"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "DIY Candle Making Kit",
+    "category": "diy-materials",
+    "categoryLabel": "DIY Materials",
+    "price": 36.99,
+    "oldPrice": null,
+    "rating": 4.6,
+    "reviewCount": 143,
+    "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80",
+    "badge": "new",
+    "description": "Complete candle making kit with soy wax, fragrance oils, wicks, and containers. Make 6 beautiful candles.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Soy wax",
+      "Candles": "6",
+      "Fragrances": "4 scents",
+      "Weight": "2 kg"
+    },
+    "reviews": [
+      {
+        "author": "Sophia L.",
+        "rating": 5,
+        "date": "2026-07-19",
+        "comment": "So much fun! The candles smell amazing."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/candle,making,soy/all?lock=2223",
+      "https://loremflickr.com/960/720/candle,making,soy/all?lock=2224"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Macrame Cord Bundle",
+    "category": "diy-materials",
+    "categoryLabel": "DIY Materials",
+    "price": 22.99,
+    "oldPrice": null,
+    "rating": 4.5,
+    "reviewCount": 87,
+    "image": "https://kiji.itembox.cloud/product/088/000000008837/000000008837-01.jpg?size=l&t=20240805161456&w=ODAw",
+    "badge": null,
+    "description": "1000m of natural cotton macrame cord in 6 colors. Perfect for wall hangings, plant hangers, and accessories.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "100% cotton",
+      "Length": "1000m total",
+      "Colors": "6",
+      "Diameter": "3mm"
+    },
+    "reviews": [
+      {
+        "author": "Linda M.",
+        "rating": 5,
+        "date": "2026-06-25",
+        "comment": "Great quality cord. Soft and easy to work with."
+      }
+    ],
+    "images": [
+      "https://kiji.itembox.cloud/product/088/000000008837/000000008837-01.jpg?size=l&t=20240805161456&w=ODAw",
+      "https://loremflickr.com/960/720/macrame,cord,knots/all?lock=2324",
+      "https://loremflickr.com/960/720/macrame,cord,knots/all?lock=2325"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Embroidery Starter Kit",
+    "category": "diy-materials",
+    "categoryLabel": "DIY Materials",
+    "price": 31.99,
+    "oldPrice": 39.99,
+    "rating": 4.7,
+    "reviewCount": 124,
+    "image": "https://i5.walmartimages.com/asr/f6f61cf3-dc2c-4fec-a130-4b239e68039b.50a0cb4f5dbea7a7d4a32c3c57289439.jpeg?odnBg=ffffff&odnHeight=768&odnWidth=768",
+    "badge": "sale",
+    "description": "Complete embroidery kit with hoop, needles, threads, fabric, and pattern transfers. 3 beautiful designs included.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Cotton thread, linen fabric",
+      "Hoop": "8 inch",
+      "Designs": "3 patterns",
+      "Includes": "Needles, transfers"
+    },
+    "reviews": [
+      {
+        "author": "Amy C.",
+        "rating": 5,
+        "date": "2026-07-14",
+        "comment": "Perfect beginner kit! The instructions are clear."
+      }
+    ],
+    "images": [
+      "https://i5.walmartimages.com/asr/f6f61cf3-dc2c-4fec-a130-4b239e68039b.50a0cb4f5dbea7a7d4a32c3c57289439.jpeg?odnBg=ffffff&odnHeight=768&odnWidth=768",
+      "https://loremflickr.com/960/720/embroidery,hoop,thread/all?lock=2425",
+      "https://loremflickr.com/960/720/embroidery,hoop,thread/all?lock=2426"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Watercolor Student Set 12 Colors",
+    "category": "student-supplies",
+    "categoryLabel": "Student Supplies",
+    "price": 12.99,
+    "oldPrice": null,
+    "rating": 4.4,
+    "reviewCount": 267,
+    "image": "https://assets.kohinoordeutschland.de/61951_Product-1.jpg",
+    "badge": null,
+    "description": "Affordable 12-color watercolor set for students. Quality pigments at a budget-friendly price.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Student-grade pigments",
+      "Size": "Half pan",
+      "Colors": "12",
+      "Weight": "0.2 kg"
+    },
+    "reviews": [
+      {
+        "author": "Teacher L.",
+        "rating": 4,
+        "date": "2026-06-10",
+        "comment": "Great for classroom use. Good quality for the price."
+      }
+    ],
+    "images": [
+      "https://assets.kohinoordeutschland.de/61951_Product-1.jpg",
+      "https://loremflickr.com/960/720/student,watercolor,paint/all?lock=2526",
+      "https://loremflickr.com/960/720/student,watercolor,paint/all?lock=2527"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Palette Knife Set 8 Piece",
+    "category": "art-tools",
+    "categoryLabel": "Art Tools",
+    "price": 18.99,
+    "oldPrice": null,
+    "rating": 4.6,
+    "reviewCount": 98,
+    "image": "https://imgs.michaels.com/8f7b5707-2dfa-40eb-9eda-eff0577452b1.jpg",
+    "badge": null,
+    "description": "Professional palette knife set with stainless steel blades. Perfect for impasto techniques and mixing paint.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Stainless steel & wood",
+      "Pieces": "8",
+      "Blade": "Various shapes",
+      "Weight": "0.3 kg"
+    },
+    "reviews": [
+      {
+        "author": "Mark D.",
+        "rating": 5,
+        "date": "2026-07-07",
+        "comment": "Great knives for impasto work. Flexible and sturdy."
+      }
+    ],
+    "images": [
+      "https://imgs.michaels.com/8f7b5707-2dfa-40eb-9eda-eff0577452b1.jpg",
+      "https://loremflickr.com/960/720/palette,knives,paint/all?lock=2627",
+      "https://loremflickr.com/960/720/palette,knives,paint/all?lock=2628"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Air Dry Clay 10 Pack",
+    "category": "sculpting",
+    "categoryLabel": "Sculpting",
+    "price": 15.99,
+    "oldPrice": null,
+    "rating": 4.5,
+    "reviewCount": 156,
+    "image": "https://scoopi.com.au/cdn/shop/files/9_c1e28423-1a97-49b1-90c9-1e2eb904c05a_700x700.png?v=1747271922",
+    "badge": null,
+    "description": "10-pack of air-dry clay in assorted colors. No kiln needed - air dries in 24 hours.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Air-dry clay",
+      "Weight": "100g per block",
+      "Colors": "10",
+      "Drying": "24 hours"
+    },
+    "reviews": [
+      {
+        "author": "Craft Mom.",
+        "rating": 5,
+        "date": "2026-06-18",
+        "comment": "Kids had so much fun with this! Great quality."
+      }
+    ],
+    "images": [
+      "https://scoopi.com.au/cdn/shop/files/9_c1e28423-1a97-49b1-90c9-1e2eb904c05a_700x700.png?v=1747271922",
+      "https://loremflickr.com/960/720/air,dry,clay/all?lock=2728",
+      "https://loremflickr.com/960/720/air,dry,clay/all?lock=2729"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Fabric Paint Set 24 Bottles",
+    "category": "crafting",
+    "categoryLabel": "Crafting",
+    "price": 26.99,
+    "oldPrice": 32.99,
+    "rating": 4.6,
+    "reviewCount": 112,
+    "image": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&w=600&q=80",
+    "badge": "sale",
+    "description": "24 vibrant fabric paint bottles. Machine washable and permanent on cotton, canvas, and denim.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Acrylic fabric paint",
+      "Colors": "24",
+      "Volume": "30ml each",
+      "Washable": "Machine safe"
+    },
+    "reviews": [
+      {
+        "author": "DIY Artist.",
+        "rating": 4,
+        "date": "2026-07-02",
+        "comment": "Great colors and they stay on after washing!"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/fabric,paint,textile/all?lock=2829",
+      "https://loremflickr.com/960/720/fabric,paint,textile/all?lock=2830"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Artist Wooden Mixing Palette & Brushes",
+    "category": "art-tools",
+    "categoryLabel": "Art Tools",
+    "price": 21.99,
+    "oldPrice": 27.99,
+    "rating": 4.8,
+    "reviewCount": 114,
+    "image": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
+    "badge": "new",
+    "description": "Ergonomic wooden artist mixing palette with comfortable thumb hole and 3 premium paint blending brushes. Ideal for oil, acrylic, and gouache painting.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Lacquered beechwood",
+      "Size": "30x40cm",
+      "Includes": "Palette & 3 mixing brushes",
+      "Weight": "0.35 kg"
+    },
+    "reviews": [
+      {
+        "author": "Rachel K.",
+        "rating": 5,
+        "date": "2026-07-29",
+        "comment": "Comfortable thumb grip and smooth surface. Great for oil mixing!"
+      },
+      {
+        "author": "Marcus B.",
+        "rating": 5,
+        "date": "2026-07-15",
+        "comment": "Lightweight and easy to clean. Perfect companion to the studio easel."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/wooden,palette,paint,brushes/all?lock=2930",
+      "https://loremflickr.com/960/720/wooden,palette,paint,brushes/all?lock=2931"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Traditional Japanese Washi Origami Set",
+    "category": "origami",
+    "categoryLabel": "Origami",
+    "price": 18.99,
+    "oldPrice": 22.99,
+    "rating": 4.9,
+    "reviewCount": 94,
+    "image": "images/product-origami-japanese-cranes.jpg",
+    "badge": "new",
+    "description": "Authentic patterned Yuzen and Chiyogami folding papers with metallic accents. Perfect for folding elegant cranes, kimono dolls, and traditional Japanese art.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Handmade mulberry washi",
+      "Size": "15x15cm",
+      "Sheets": "120 sheets",
+      "Patterns": "24 traditional patterns",
+      "Origin": "Kyoto, Japan"
+    },
+    "reviews": [
+      {
+        "author": "Kenji S.",
+        "rating": 5,
+        "date": "2026-08-01",
+        "comment": "Outstanding texture and crisp fold lines. The gold foil details are exquisite."
+      },
+      {
+        "author": "Elena R.",
+        "rating": 5,
+        "date": "2026-07-28",
+        "comment": "Folds delicate cranes effortlessly without creasing or tearing."
+      }
+    ],
+    "images": [
+      "images/product-origami-japanese-cranes.jpg",
+      "https://loremflickr.com/960/720/origami/all?lock=3031",
+      "https://loremflickr.com/960/720/origami/all?lock=3032"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Origami Floral Blossom Craft Kit",
+    "category": "origami",
+    "categoryLabel": "Origami",
+    "price": 21.99,
+    "oldPrice": null,
+    "rating": 4.8,
+    "reviewCount": 82,
+    "image": "images/product-origami-blossom-flowers.jpg",
+    "badge": null,
+    "description": "Complete floral paper folding kit including duo-tone gradient sheets, floral stems, calyx bases, and step-by-step diagram guides for creating everlasting paper bouquets.",
+    "inStock": true,
+    "featured": false,
+    "studentProduct": true,
+    "specifications": {
+      "Material": "Satin-finish craft paper",
+      "Size": "14x14cm & 10x10cm",
+      "Sheets": "180 duo-color sheets",
+      "Includes": "Floral wire stems, diagram guide, creaser tool"
+    },
+    "reviews": [
+      {
+        "author": "Maria G.",
+        "rating": 5,
+        "date": "2026-08-05",
+        "comment": "Made a gorgeous table bouquet for my dining room. Beautiful colors!"
+      },
+      {
+        "author": "Sophie L.",
+        "rating": 4,
+        "date": "2026-07-19",
+        "comment": "Clear instructions and vibrant paper shades."
+      }
+    ],
+    "images": [
+      "images/product-origami-blossom-flowers.jpg",
+      "https://loremflickr.com/960/720/origami/all?lock=3132",
+      "https://loremflickr.com/960/720/origami/all?lock=3133"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "DIY Leather Craft Starter Kit",
+    "category": "diy-materials",
+    "categoryLabel": "DIY Materials",
+    "price": 38.99,
+    "oldPrice": 46.99,
+    "rating": 4.9,
+    "reviewCount": 96,
+    "image": "images/product-diy-leathercraft-kit.jpg",
+    "badge": "bestseller",
+    "description": "Comprehensive leatherworking kit with multi-size rotary punch, vegetable-tanned leather pieces, color swatches, burnishing tool, and edge beveler.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": false,
+    "specifications": {
+      "Material": "Full-grain & vegetable-tanned leather",
+      "Tools": "Rotary punch, skiving gauge, burnisher, awl",
+      "Pieces": "18-piece set",
+      "Includes": "Leather cuts, waxed thread, needles"
+    },
+    "reviews": [
+      {
+        "author": "Nathan T.",
+        "rating": 5,
+        "date": "2026-08-08",
+        "comment": "Fantastic starter kit! Made a wallet and key fob on my first weekend."
+      },
+      {
+        "author": "Liam S.",
+        "rating": 5,
+        "date": "2026-07-25",
+        "comment": "Heavy-duty tools and great quality leather pieces."
+      }
+    ],
+    "images": [
+      "images/product-diy-leathercraft-kit.jpg",
+      "https://loremflickr.com/960/720/diy-materials/all?lock=3233",
+      "https://loremflickr.com/960/720/diy-materials/all?lock=3234"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Artists' Oil Color Master Set (24 Colors)",
+    "brand": "Winsor & Newton",
+    "category": "painting",
+    "categoryLabel": "Painting",
+    "price": 49.99,
+    "oldPrice": 59.99,
+    "rating": 4.8,
+    "reviewCount": 248,
+    "image": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=600&q=80",
+    "badge": "sale",
+    "description": "Master oil color set crafted with single pigments for optimal color brilliance and tinting strength. Perfect for studio artists.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": false,
+    "specifications": {
+      "Brand": "Winsor & Newton",
+      "Material": "Fine artist oils",
+      "Tubes": "24 x 21ml",
+      "Finish": "Lustrous satin"
+    },
+    "reviews": [
+      {
+        "author": "Evelyn C.",
+        "rating": 5,
+        "date": "2026-08-01",
+        "comment": "Exceptional buttery consistency and intense lightfast pigments."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/painting/all?lock=3334",
+      "https://loremflickr.com/960/720/painting/all?lock=3335"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "9000 Graphite Pencil Art Set (12 Pack)",
+    "brand": "Faber-Castell",
+    "category": "sketching",
+    "categoryLabel": "Sketching",
+    "price": 18.5,
+    "oldPrice": 22,
+    "rating": 5,
+    "reviewCount": 310,
+    "image": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=600&q=80",
+    "badge": "hot",
+    "description": "Top quality Castell 9000 pencils with SV bonded break-resistant leads. Graded 8B through 2H for nuanced graphite shading.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": true,
+    "specifications": {
+      "Brand": "Faber-Castell",
+      "Material": "Cedar wood & SV bonded lead",
+      "Grades": "8B to 2H (12 pencils)",
+      "Finish": "Water-based eco varnish"
+    },
+    "reviews": [
+      {
+        "author": "Marcus R.",
+        "rating": 5,
+        "date": "2026-08-04",
+        "comment": "The gold standard of graphite drawing pencils. Effortless tone gradations."
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=600&q=80",
+      "https://loremflickr.com/960/720/sketching/all?lock=3435",
+      "https://loremflickr.com/960/720/sketching/all?lock=3436"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Premo Polymer Clay 30-Color Multipack",
+    "brand": "Sculpey",
+    "category": "sculpting",
+    "categoryLabel": "Sculpting",
+    "price": 32,
+    "oldPrice": 38,
+    "rating": 4.7,
+    "reviewCount": 195,
+    "image": "images/product-sculpey-polymer-clay.jpg",
+    "badge": null,
+    "description": "Artist-grade oven-bake polymer clay in 30 vibrant colors. Holds fine detail, remains flexible after baking, and blends cleanly.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": true,
+    "specifications": {
+      "Brand": "Sculpey",
+      "Material": "Oven-bake polymer clay",
+      "Colors": "30 assorted bars",
+      "BakeTemp": "275°F (135°C)"
+    },
+    "reviews": [
+      {
+        "author": "Hannah T.",
+        "rating": 5,
+        "date": "2026-08-10",
+        "comment": "Superb clay for jewelry and miniature sculpting. Doesn't crumble."
+      }
+    ],
+    "images": [
+      "images/product-sculpey-polymer-clay.jpg",
+      "https://loremflickr.com/960/720/sculpting/all?lock=3536",
+      "https://loremflickr.com/960/720/sculpting/all?lock=3537"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "100% Cotton Cold Press Pad (300gsm)",
+    "brand": "Arches",
+    "category": "sketching",
+    "categoryLabel": "Sketching",
+    "price": 26.75,
+    "oldPrice": 31.5,
+    "rating": 4.9,
+    "reviewCount": 220,
+    "image": "images/product-arches-watercolor-paper.jpg",
+    "badge": "bestseller",
+    "description": "Mould-made 100% cotton cold press watercolor and mixed-media paper pad. Natural gelatin sizing allows scrubbing and multiple washes.",
+    "inStock": true,
+    "featured": true,
+    "studentProduct": false,
+    "specifications": {
+      "Brand": "Arches",
+      "Material": "100% cotton rag",
+      "Weight": "300gsm (140lb)",
+      "Texture": "Cold Press (Not)"
+    },
+    "reviews": [
+      {
+        "author": "Julian P.",
+        "rating": 5,
+        "date": "2026-08-12",
+        "comment": "Unbeatable paper quality. Water distributes evenly with no buckling."
+      }
+    ],
+    "images": [
+      "images/product-arches-watercolor-paper.jpg",
+      "https://loremflickr.com/960/720/sketching/all?lock=3637",
+      "https://loremflickr.com/960/720/sketching/all?lock=3638"
+    ]
+  }
+]
