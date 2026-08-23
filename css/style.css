@@ -6929,3 +6929,104 @@ input:focus:not(:focus-visible) {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
+/* ==========================================================================
+   Mobile Button & Alignment Polish (Responsive < 768px & < 576px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Comfortable Touch Targets & Centered Flex Content */
+  .btn:not(.btn-sm):not(.nav-icon-btn):not(.qty-btn):not(.btn-close) {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-sm {
+    min-height: 38px;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Workshop Cards Footer Alignment */
+  .workshop-card-item .card-body > .d-flex.justify-content-between {
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .workshop-card-item .workshop-register-btn {
+    min-width: 130px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Hero Button Groups */
+  .hero-cta {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Product Actions on Mobile */
+  .product-details-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .product-details-actions .btn {
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Cart Action Buttons */
+  .cart-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cart-actions .btn {
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Filter Buttons Wrapping & Alignment */
+  .filter-pills,
+  .category-filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  /* Auth Forms Submit Buttons */
+  .auth-form .btn[type="submit"] {
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Contact Form Submit Button */
+  .contact-form .btn[type="submit"] {
+    align-self: center !important;
+    margin: 0 auto !important;
+    min-width: 180px !important;
+  }
+
+  /* Modal Footer Buttons */
+  .modal-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-footer .btn {
+    width: 100% !important;
+  }
+}
+
