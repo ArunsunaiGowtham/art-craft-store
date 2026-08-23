@@ -663,45 +663,8 @@ p, span, div {
     white-space: nowrap !important;
   }
 
-  .mobile-nav-actions {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-    z-index: 1035 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    flex-shrink: 0 !important;
-  }
-
-  .mobile-nav-actions .nav-icon-btn,
-  .mobile-nav-actions .theme-toggle,
-  .mobile-nav-actions .nav-icon-btn.theme-toggle {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 1.1rem !important;
-    color: var(--text-primary) !important;
-    background: transparent !important;
-    border-radius: var(--radius-full) !important;
-    position: relative !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  .mobile-nav-actions .nav-icon-btn:hover,
-  .mobile-nav-actions .theme-toggle:hover {
-    background: var(--primary-light) !important;
-    color: var(--primary) !important;
-  }
-
   .navbar-toggler,
-  .navbar-expand-lg .navbar-toggler,
-  .mobile-nav-actions .navbar-toggler {
+  .navbar-expand-lg .navbar-toggler {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -724,8 +687,7 @@ p, span, div {
   }
 
   .navbar-toggler i,
-  .navbar-expand-lg .navbar-toggler i,
-  .mobile-nav-actions .navbar-toggler i {
+  .navbar-expand-lg .navbar-toggler i {
     font-size: 1.25rem !important;
     line-height: 1 !important;
     color: #ffffff !important;

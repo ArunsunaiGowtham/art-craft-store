@@ -10,20 +10,20 @@ const htmlFiles = [
 let allPassed = true;
 
 console.log("=========================================");
-console.log("  MOBILE NAVBAR AUDIT");
+console.log("  MOBILE NAVBAR AUDIT (Clean 1-Toggler)");
 console.log("=========================================");
 
 htmlFiles.forEach(file => {
   const content = fs.readFileSync(file, 'utf8');
   const hasBrand = content.includes('class="navbar-brand"') || content.includes("class='navbar-brand'");
-  const hasMobileActions = content.includes('mobile-nav-actions');
   const hasToggler = content.includes('class="navbar-toggler"') || content.includes("class='navbar-toggler'");
   const hasCollapse = content.includes('class="collapse navbar-collapse"') || content.includes('class="navbar-collapse collapse"');
+  const hasMobileActions = content.includes('class="mobile-nav-actions');
 
-  if (hasBrand && hasMobileActions && hasToggler && hasCollapse) {
-    console.log(`✓ PASS: ${file} (Brand + MobileActions + Toggler + Collapse)`);
+  if (hasBrand && hasToggler && hasCollapse && !hasMobileActions) {
+    console.log(`✓ PASS: ${file} (Brand + Toggler + Collapse; NO unwanted header cart icon)`);
   } else {
-    console.error(`✗ FAIL: ${file} (Brand:${hasBrand}, MobileActions:${hasMobileActions}, Toggler:${hasToggler}, Collapse:${hasCollapse})`);
+    console.error(`✗ FAIL: ${file} (Brand:${hasBrand}, Toggler:${hasToggler}, Collapse:${hasCollapse}, MobileActionsClean:${!hasMobileActions})`);
     allPassed = false;
   }
 });
@@ -31,7 +31,6 @@ htmlFiles.forEach(file => {
 const css = fs.readFileSync('css/style.css', 'utf8');
 const cssChecks = [
   { name: 'navbar-toggler mobile display rule', test: css.includes('.navbar-toggler,') && css.includes('display: inline-flex !important;') },
-  { name: 'mobile-nav-actions flex layout', test: css.includes('.mobile-nav-actions {') && css.includes('display: inline-flex !important;') },
   { name: 'navbar-collapse mobile drawer fixed & animated', test: css.includes('.navbar-collapse.show') && css.includes('transform: translateY(0) !important;') }
 ];
 
@@ -45,7 +44,7 @@ cssChecks.forEach(c => {
 });
 
 if (allPassed) {
-  console.log("\nALL 17 PAGES AND CSS HAVE FULL MOBILE NAVBAR SUPPORT!");
+  console.log("\nALL 17 PAGES VERIFIED CLEAN WITH SINGLE PROMINENT HAMBURGER TOGGLER!");
 } else {
   process.exit(1);
 }
