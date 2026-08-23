@@ -250,30 +250,37 @@
           }
           var displayCat = catName ? catName.replace('-', ' ') : 'Art Supplies';
 
-          return '<div class="cart-item-card d-flex align-items-center gap-3 p-3 mb-3" data-product-id="' + item.id + '">' +
-            '<div style="width:105px; height:90px; flex-shrink:0; border-radius:8px; overflow:hidden;">' +
-            '<img src="' + item.image + '" alt="' + item.name + '" style="width:100%; height:100%; object-fit:cover; display:block;">' +
+          return '<div class="cart-item-card" data-product-id="' + item.id + '">' +
+            '<div class="cart-item-content">' +
+              '<div class="cart-item-img-wrap">' +
+                '<img src="' + item.image + '" alt="' + item.name + '" class="cart-item-img">' +
+              '</div>' +
+              '<div class="cart-item-info">' +
+                '<h6 class="cart-item-title"><a href="product-details.html?id=' + item.id + '">' + item.name + '</a></h6>' +
+                '<div class="cart-item-meta">' +
+                  '<span class="badge bg-light text-secondary border text-capitalize" style="font-size:0.75rem;">' + displayCat + '</span>' +
+                  '<span class="cart-item-unit-price">$' + item.price.toFixed(2) + ' each</span>' +
+                '</div>' +
+              '</div>' +
+              '<button type="button" class="btn btn-outline-danger btn-sm remove-item-btn" data-product-id="' + item.id + '" aria-label="Remove item">' +
+                '<i class="fas fa-trash-alt"></i>' +
+              '</button>' +
             '</div>' +
-            '<div class="flex-grow-1 min-w-0">' +
-            '<h6 class="mb-1 fw-bold"><a href="product-details.html?id=' + item.id + '" class="text-decoration-none" style="color:var(--text-primary);">' + item.name + '</a></h6>' +
-            '<div class="d-flex align-items-center gap-2 mb-0">' +
-            '<span class="badge bg-light text-secondary border text-capitalize" style="font-size:0.75rem;">' + displayCat + '</span>' +
-            '<span class="text-muted small">$' + item.price.toFixed(2) + ' each</span>' +
+            '<div class="cart-item-bottom">' +
+              '<div class="quantity-control">' +
+                '<button type="button" class="qty-btn qty-minus" aria-label="Decrease quantity" data-product-id="' + item.id + '">-</button>' +
+                '<input type="number" class="quantity-input" value="' + item.quantity + '" min="1" max="99" aria-label="Quantity">' +
+                '<button type="button" class="qty-btn qty-plus" aria-label="Increase quantity" data-product-id="' + item.id + '">+</button>' +
+              '</div>' +
+              '<div class="cart-item-subtotal">' +
+                '<span class="subtotal-label">Subtotal</span>' +
+                '<strong class="subtotal-amount">$' + (item.price * item.quantity).toFixed(2) + '</strong>' +
+              '</div>' +
+              '<button type="button" class="btn btn-outline-danger btn-sm remove-item-btn" data-product-id="' + item.id + '" aria-label="Remove item">' +
+                '<i class="fas fa-trash-alt"></i>' +
+              '</button>' +
             '</div>' +
-            '</div>' +
-            '<div class="d-flex align-items-center gap-1 mx-2">' +
-            '<button class="btn btn-sm btn-outline-secondary qty-btn qty-minus" style="width:32px; height:32px; padding:0; display:inline-flex; align-items:center; justify-content:center;">-</button>' +
-            '<input type="number" class="form-control form-control-sm text-center quantity-input" value="' + item.quantity + '" min="1" max="99" style="width:48px; height:32px; padding:2px 4px;">' +
-            '<button class="btn btn-sm btn-outline-secondary qty-btn qty-plus" style="width:32px; height:32px; padding:0; display:inline-flex; align-items:center; justify-content:center;">+</button>' +
-            '</div>' +
-            '<div class="text-end" style="min-width:85px;">' +
-            '<span class="text-muted d-block small" style="font-size:0.72rem;">Subtotal</span>' +
-            '<strong class="text-primary fs-6">$' + (item.price * item.quantity).toFixed(2) + '</strong>' +
-            '</div>' +
-            '<button class="btn btn-outline-danger btn-sm remove-item-btn ms-2" data-product-id="' + item.id + '" style="width:36px; height:36px; padding:0; display:inline-flex; align-items:center; justify-content:center; border-radius:6px;" aria-label="Remove item">' +
-            '<i class="fas fa-trash-alt"></i>' +
-            '</button>' +
-            '</div>';
+          '</div>';
         }).join('');
 
         // Calculate Totals
@@ -297,32 +304,64 @@
           '<small class="text-muted fw-medium">' + (subtotal > 50 ? '<span class="text-success fw-bold">You qualify for Free Shipping!</span>' : 'Add $' + (50 - subtotal).toFixed(2) + ' more for Free Shipping') + '</small>' +
           '</div>' +
           '</div>';
-
-        // Attach event listeners to quantity inputs
-        cartItemsContainer.querySelectorAll('.quantity-input').forEach(function(input) {
-          input.addEventListener('change', function() {
-            var card = this.closest('[data-product-id]');
-            var id = parseInt(card.getAttribute('data-product-id'));
-            window.Cart.updateQuantity(id, parseInt(this.value) || 1);
-            renderCart();
-            window.Cart.updateBadges();
-          });
-        });
       }
 
       renderCart();
 
-      // Handle item removal
-      document.addEventListener('click', function(e) {
-        var removeBtn = e.target.closest('.remove-item-btn');
-        if (removeBtn) {
-          e.preventDefault();
-          var id = parseInt(removeBtn.getAttribute('data-product-id'));
-          window.Cart.removeItem(id);
-          renderCart();
-          window.Cart.updateBadges();
-        }
-      });
+      // Delegated click handler for quantity buttons and removal inside cartItemsContainer
+      if (cartItemsContainer) {
+        cartItemsContainer.addEventListener('click', function(e) {
+          var qtyBtn = e.target.closest('.qty-btn');
+          if (qtyBtn) {
+            e.preventDefault();
+            e.stopPropagation();
+            var card = qtyBtn.closest('[data-product-id]');
+            if (!card) return;
+            var id = parseInt(card.getAttribute('data-product-id'), 10);
+            var input = card.querySelector('.quantity-input');
+            var current = input ? (parseInt(input.value, 10) || 1) : 1;
+            var newQty = current;
+
+            if (qtyBtn.classList.contains('qty-minus') || qtyBtn.classList.contains('minus')) {
+              newQty = Math.max(1, current - 1);
+            } else if (qtyBtn.classList.contains('qty-plus') || qtyBtn.classList.contains('plus')) {
+              newQty = Math.min(99, current + 1);
+            }
+
+            if (newQty !== current) {
+              window.Cart.updateQuantity(id, newQty);
+              renderCart();
+              window.Cart.updateBadges();
+            }
+            return;
+          }
+
+          var removeBtn = e.target.closest('.remove-item-btn');
+          if (removeBtn) {
+            e.preventDefault();
+            e.stopPropagation();
+            var id = parseInt(removeBtn.getAttribute('data-product-id'), 10);
+            window.Cart.removeItem(id);
+            renderCart();
+            window.Cart.updateBadges();
+          }
+        });
+
+        // Delegated change handler for direct quantity input typing
+        cartItemsContainer.addEventListener('change', function(e) {
+          if (e.target && e.target.classList.contains('quantity-input')) {
+            var card = e.target.closest('[data-product-id]');
+            if (!card) return;
+            var id = parseInt(card.getAttribute('data-product-id'), 10);
+            var val = parseInt(e.target.value, 10) || 1;
+            if (val < 1) val = 1;
+            if (val > 99) val = 99;
+            window.Cart.updateQuantity(id, val);
+            renderCart();
+            window.Cart.updateBadges();
+          }
+        });
+      }
     });
     </script>
 </body>
