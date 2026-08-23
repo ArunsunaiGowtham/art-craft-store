@@ -652,6 +652,90 @@ window.AppData = {
         { author: "Nathan T.", rating: 5, date: "2026-08-08", comment: "Fantastic starter kit! Made a wallet and key fob on my first weekend." },
         { author: "Liam S.", rating: 5, date: "2026-07-25", comment: "Heavy-duty tools and great quality leather pieces." }
       ]
+    },
+    {
+      id: 33,
+      name: "Artists' Oil Color Master Set (24 Colors)",
+      brand: "Winsor & Newton",
+      category: "painting",
+      categoryLabel: "Painting",
+      price: 49.99,
+      oldPrice: 59.99,
+      rating: 4.8,
+      reviewCount: 248,
+      image: "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=600&q=80",
+      badge: "sale",
+      description: "Master oil color set crafted with single pigments for optimal color brilliance and tinting strength. Perfect for studio artists.",
+      inStock: true,
+      featured: true,
+      studentProduct: false,
+      specifications: { Brand: "Winsor & Newton", Material: "Fine artist oils", Tubes: "24 x 21ml", Finish: "Lustrous satin" },
+      reviews: [
+        { author: "Evelyn C.", rating: 5, date: "2026-08-01", comment: "Exceptional buttery consistency and intense lightfast pigments." }
+      ]
+    },
+    {
+      id: 34,
+      name: "9000 Graphite Pencil Art Set (12 Pack)",
+      brand: "Faber-Castell",
+      category: "sketching",
+      categoryLabel: "Sketching",
+      price: 18.50,
+      oldPrice: 22.00,
+      rating: 5.0,
+      reviewCount: 310,
+      image: "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=600&q=80",
+      badge: "hot",
+      description: "Top quality Castell 9000 pencils with SV bonded break-resistant leads. Graded 8B through 2H for nuanced graphite shading.",
+      inStock: true,
+      featured: true,
+      studentProduct: true,
+      specifications: { Brand: "Faber-Castell", Material: "Cedar wood & SV bonded lead", Grades: "8B to 2H (12 pencils)", Finish: "Water-based eco varnish" },
+      reviews: [
+        { author: "Marcus R.", rating: 5, date: "2026-08-04", comment: "The gold standard of graphite drawing pencils. Effortless tone gradations." }
+      ]
+    },
+    {
+      id: 35,
+      name: "Premo Polymer Clay 30-Color Multipack",
+      brand: "Sculpey",
+      category: "sculpting",
+      categoryLabel: "Sculpting",
+      price: 32.00,
+      oldPrice: 38.00,
+      rating: 4.7,
+      reviewCount: 195,
+      image: "images/product-sculpey-polymer-clay.jpg",
+      badge: null,
+      description: "Artist-grade oven-bake polymer clay in 30 vibrant colors. Holds fine detail, remains flexible after baking, and blends cleanly.",
+      inStock: true,
+      featured: true,
+      studentProduct: true,
+      specifications: { Brand: "Sculpey", Material: "Oven-bake polymer clay", Colors: "30 assorted bars", BakeTemp: "275°F (135°C)" },
+      reviews: [
+        { author: "Hannah T.", rating: 5, date: "2026-08-10", comment: "Superb clay for jewelry and miniature sculpting. Doesn't crumble." }
+      ]
+    },
+    {
+      id: 36,
+      name: "100% Cotton Cold Press Pad (300gsm)",
+      brand: "Arches",
+      category: "sketching",
+      categoryLabel: "Sketching",
+      price: 26.75,
+      oldPrice: 31.50,
+      rating: 4.9,
+      reviewCount: 220,
+      image: "images/product-arches-watercolor-paper.jpg",
+      badge: "bestseller",
+      description: "Mould-made 100% cotton cold press watercolor and mixed-media paper pad. Natural gelatin sizing allows scrubbing and multiple washes.",
+      inStock: true,
+      featured: true,
+      studentProduct: false,
+      specifications: { Brand: "Arches", Material: "100% cotton rag", Weight: "300gsm (140lb)", Texture: "Cold Press (Not)" },
+      reviews: [
+        { author: "Julian P.", rating: 5, date: "2026-08-12", comment: "Unbeatable paper quality. Water distributes evenly with no buckling." }
+      ]
     }
   ],
 

@@ -444,6 +444,31 @@
         var productId = parseInt((card ? (card.getAttribute("data-product-id") || card.getAttribute("data-id")) : null) || addBtn.getAttribute("data-product-id") || addBtn.getAttribute("data-id"));
         var products = window.AppData ? window.AppData.products : [];
         var product = products.find(function (p) { return p.id === productId; });
+
+        // Fallback: match by card title or construct product from card DOM if needed
+        var cardTitle = card ? card.querySelector(".card-title, h6, h5, .product-name") : null;
+        if (cardTitle && cardTitle.textContent.trim()) {
+          var titleText = cardTitle.textContent.trim();
+          var matchedByName = products.find(function (p) {
+            return p.name.toLowerCase() === titleText.toLowerCase() ||
+                   titleText.toLowerCase().includes(p.name.toLowerCase()) ||
+                   p.name.toLowerCase().includes(titleText.toLowerCase());
+          });
+          if (matchedByName) {
+            product = matchedByName;
+          } else if (!product) {
+            var cardPrice = card ? card.querySelector(".product-price, .card-price, .price") : null;
+            var cardImg = card ? card.querySelector("img") : null;
+            var rawPrice = cardPrice ? parseFloat(cardPrice.textContent.replace(/[^0-9.]/g, "")) : 0;
+            product = {
+              id: productId || ("p_" + Date.now()),
+              name: titleText,
+              price: isNaN(rawPrice) ? 0 : rawPrice,
+              image: cardImg ? cardImg.getAttribute("src") : ""
+            };
+          }
+        }
+
         if (product) {
           var qtyInput = document.querySelector("#pd-quantity") || (card ? card.querySelector(".quantity-input, input[type='number']") : null);
           var qty = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
