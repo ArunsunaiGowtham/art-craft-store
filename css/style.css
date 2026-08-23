@@ -699,38 +699,39 @@ p, span, div {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
     padding: 0 !important;
     margin: 0 !important;
-    background: var(--primary-light) !important;
-    color: var(--primary) !important;
-    border: 1.5px solid var(--primary) !important;
+    background: var(--primary) !important;
+    color: #ffffff !important;
+    border: none !important;
     border-radius: var(--radius-md) !important;
-    font-size: 1.2rem !important;
+    font-size: 1.25rem !important;
     cursor: pointer !important;
     z-index: 1040 !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+    box-shadow: 0 2px 8px rgba(232, 93, 58, 0.35) !important;
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
   }
 
   .navbar-toggler i,
   .navbar-expand-lg .navbar-toggler i,
   .mobile-nav-actions .navbar-toggler i {
-    font-size: 1.2rem !important;
+    font-size: 1.25rem !important;
     line-height: 1 !important;
-    color: var(--primary) !important;
+    color: #ffffff !important;
     display: inline-block !important;
   }
 
   .navbar-toggler:hover,
   .navbar-toggler:focus,
   .navbar-toggler.active {
-    background-color: var(--primary) !important;
+    background-color: var(--primary-hover) !important;
     color: #ffffff !important;
-    border-color: var(--primary) !important;
+    transform: scale(1.05);
   }
 
   .navbar-toggler.active i,
