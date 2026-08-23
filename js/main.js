@@ -1593,7 +1593,7 @@
      NEWSLETTER FORM
   ============================================================ */
   function initNewsletter() {
-    document.querySelectorAll(".newsletter-form, #newsletter-form").forEach(function (form) {
+    document.querySelectorAll(".newsletter-form, #newsletter-form, .sidebar-newsletter-form").forEach(function (form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var email = form.querySelector("input[type='email']");

@@ -3160,6 +3160,98 @@ textarea.form-control {
 }
 
 /* ==========================================================================
+   24b. Sidebar Newsletter Widget (Blog Details & Sidebars)
+   ========================================================================== */
+
+.sidebar-newsletter-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-newsletter-form {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-newsletter-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.sidebar-newsletter-input {
+  width: 100% !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  background: #ffffff !important;
+  border: 2px solid transparent !important;
+  border-radius: var(--radius-md, 10px) !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+  caret-color: var(--primary) !important;
+  font-size: 16px !important;
+  padding: 0 16px !important;
+  line-height: 48px !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+  outline: none !important;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast) !important;
+}
+
+.sidebar-newsletter-input::placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+.sidebar-newsletter-input:focus {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45) !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+  background: #ffffff !important;
+}
+
+.sidebar-newsletter-input:-webkit-autofill,
+.sidebar-newsletter-input:-webkit-autofill:hover,
+.sidebar-newsletter-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #111827 !important;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  caret-color: #111827 !important;
+}
+
+.btn-sidebar-newsletter {
+  width: 100% !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  background: #111827 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  border-radius: var(--radius-md, 10px) !important;
+  border: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer !important;
+  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast) !important;
+}
+
+.btn-sidebar-newsletter:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28) !important;
+}
+
+.btn-sidebar-newsletter:active {
+  transform: translateY(0) !important;
+}
+
+/* ==========================================================================
    25. Pricing Cards
    ========================================================================== */
 

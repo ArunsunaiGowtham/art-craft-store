@@ -213,11 +213,11 @@
       <div class="col-md-6 text-center">
         <h4 style="font-family:'Poppins',sans-serif;font-weight:700;">Stay in the Loop</h4>
         <p class="text-muted mb-3">Get notified about new workshops and creative tips.</p>
-        <form class="newsletter-form">
-          <div class="d-flex gap-0">
-            <input type="email" class="form-control" placeholder="Your email address" style="border-radius:var(--radius-sm, 8px) 0 0 var(--radius-sm, 8px);">
-            <button type="submit" class="btn btn-primary" style="border-radius:0 var(--radius-sm, 8px) var(--radius-sm, 8px) 0;">Subscribe</button>
+        <form class="newsletter-form" style="max-width:480px; margin:0 auto;" novalidate>
+          <div class="newsletter-input-wrap">
+            <input type="email" class="form-control" placeholder="Your email address" required>
           </div>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
         </form>
       </div>
     </div>
