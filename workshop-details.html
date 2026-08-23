@@ -192,6 +192,11 @@
             <button class="btn btn-primary btn-lg w-100 workshop-register-btn" id="workshop-register-btn" data-workshop-id="1" style="border-radius:var(--radius-md, 10px);font-weight:600;">
               <i class="fas fa-check-circle me-2"></i>Register Now
             </button>
+            <div id="workshop-cancel-btn-wrap" style="display:none;" class="mt-2">
+              <button type="button" class="btn btn-outline-danger btn-lg w-100 cancel-this-registration-btn" id="workshop-cancel-sidebar-btn" data-workshop-id="1" style="border-radius:var(--radius-md, 10px);font-weight:600;">
+                <i class="fas fa-times me-2"></i>Cancel Registration
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -383,6 +388,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('workshop-seats-bar').style.width = pct + '%';
 
   document.getElementById('workshop-register-btn').setAttribute('data-workshop-id', workshop.id);
+  var sideCancelBtn = document.getElementById('workshop-cancel-sidebar-btn');
+  if (sideCancelBtn) sideCancelBtn.setAttribute('data-workshop-id', workshop.id);
+  if (window.WorkshopReg) window.WorkshopReg.updateUI(workshop.id);
 
   var learnList = document.getElementById('workshop-learn-list');
   learnList.innerHTML = workshop.whatYouWillLearn.map(function(item) {

@@ -1180,24 +1180,108 @@
     },
 
     unregister: function (workshopId) {
-      var registrations = this.getRegistrations().filter(function (registration) { return Number(registration.workshopId) !== workshopId; });
+      var numId = Number(workshopId);
+      var registrations = this.getRegistrations().filter(function (registration) { 
+        return Number(registration.workshopId) !== numId; 
+      });
       this.saveRegistrations(registrations);
-      showToast("Registration cancelled", "info");
-      this.updateUI(workshopId);
+      showToast("Workshop registration cancelled", "info");
+      this.updateUI(numId);
+      window.dispatchEvent(new CustomEvent("workshop-registration-changed", { detail: { workshopId: numId, status: "cancelled" } }));
     },
+
+    getConfirmModal: function () {
+      var existing = document.getElementById("workshopCancelConfirmModal");
+      if (existing) return existing;
+
+      var modal = document.createElement("div");
+      modal.className = "modal fade";
+      modal.id = "workshopCancelConfirmModal";
+      modal.tabIndex = -1;
+      modal.setAttribute("aria-hidden", "true");
+      modal.innerHTML = '<div class="modal-dialog modal-dialog-centered" style="max-width:420px;">' +
+        '<div class="modal-content border-0 shadow" style="border-radius:var(--radius-md, 12px); overflow:hidden; background:var(--bg-card);">' +
+          '<div class="modal-header border-0 pb-0">' +
+            '<h5 class="modal-title fw-bold text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Cancel Registration</h5>' +
+            '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>' +
+          '</div>' +
+          '<div class="modal-body py-3">' +
+            '<p class="mb-2" data-cancel-confirm-msg>Are you sure you want to cancel your registration for this workshop?</p>' +
+            '<p class="small text-muted mb-0">This will release your reserved seat(s) and cannot be undone.</p>' +
+          '</div>' +
+          '<div class="modal-footer border-0 pt-0 d-flex justify-content-end gap-2">' +
+            '<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Keep Registration</button>' +
+            '<button type="button" class="btn btn-danger confirm-cancel-action-btn"><i class="fas fa-times me-1"></i>Confirm Cancellation</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+      document.body.appendChild(modal);
+      return modal;
+    },
+
+    requestCancel: function (workshopId) {
+      var self = this;
+      var numId = Number(workshopId);
+      var workshop = self.getWorkshop(numId);
+      var count = self.getRegistrationCount(numId);
+      if (count === 0) return;
+
+      var confirmModal = self.getConfirmModal();
+      var msgEl = confirmModal.querySelector("[data-cancel-confirm-msg]");
+      if (msgEl) {
+        var wTitle = workshop ? workshop.title : "this workshop";
+        msgEl.innerHTML = 'Are you sure you want to cancel your registration for <strong>' + wTitle + '</strong>' + (count > 1 ? ' (' + count + ' seats)' : '') + '?';
+      }
+
+      var confirmBtn = confirmModal.querySelector(".confirm-cancel-action-btn");
+      confirmBtn.onclick = function () {
+        if (window.bootstrap && bootstrap.Modal) {
+          var bsModal = bootstrap.Modal.getInstance(confirmModal) || bootstrap.Modal.getOrCreateInstance(confirmModal);
+          bsModal.hide();
+        } else {
+          confirmModal.style.display = "none";
+          confirmModal.classList.remove("show");
+        }
+
+        var regModal = document.getElementById("workshopRegistrationModal");
+        if (regModal) {
+          if (window.bootstrap && bootstrap.Modal) {
+            var bsReg = bootstrap.Modal.getInstance(regModal);
+            if (bsReg) bsReg.hide();
+          } else {
+            regModal.style.display = "none";
+            regModal.classList.remove("show");
+          }
+        }
+
+        self.unregister(numId);
+      };
+
+      if (window.bootstrap && bootstrap.Modal) {
+        bootstrap.Modal.getOrCreateInstance(confirmModal).show();
+      } else {
+        confirmModal.style.display = "block";
+        confirmModal.classList.add("show");
+      }
+    },
+
     isRegistered: function (workshopId) {
-      return this.getRegistrations().some(function (registration) { return Number(registration.workshopId) === workshopId; });
+      return this.getRegistrations().some(function (registration) { return Number(registration.workshopId) === Number(workshopId); });
     },
     getRegistrationCount: function (workshopId) {
-      return this.getRegistrations().filter(function (registration) { return Number(registration.workshopId) === workshopId; }).length;
+      return this.getRegistrations().filter(function (registration) { return Number(registration.workshopId) === Number(workshopId); }).length;
     },
     getRegistered: function () {
       return this.getRegistrations().map(function (registration) { return Number(registration.workshopId); });
     },
     updateUI: function (workshopId) {
       var self = this;
-      var count = self.getRegistrationCount(workshopId);
-      document.querySelectorAll(".workshop-register-btn[data-workshop-id='" + workshopId + "']").forEach(function (btn) {
+      var numId = Number(workshopId);
+      var count = self.getRegistrationCount(numId);
+      var workshop = self.getWorkshop(numId);
+
+      // Update all register buttons across page
+      document.querySelectorAll(".workshop-register-btn[data-workshop-id='" + numId + "']").forEach(function (btn) {
         if (count > 0) {
           btn.innerHTML = '<i class="fas fa-check-circle me-1"></i> Registered' + (count > 1 ? ' (' + count + ')' : '');
           btn.classList.remove("btn-primary");
@@ -1206,7 +1290,7 @@
           btn.disabled = false;
           btn.removeAttribute("disabled");
         } else {
-          btn.innerHTML = 'Register Now';
+          btn.innerHTML = '<i class="fas fa-check-circle me-2"></i>Register Now';
           btn.classList.remove("btn-success");
           btn.classList.add("btn-primary");
           btn.title = "Click to register for this workshop";
@@ -1214,27 +1298,74 @@
           btn.removeAttribute("disabled");
         }
       });
+
+      // Update workshop-details sidebar cancel button container if present
+      var cancelWrap = document.getElementById("workshop-cancel-btn-wrap");
+      if (cancelWrap) {
+        var currentWId = parseInt(document.getElementById("workshop-register-btn") ? document.getElementById("workshop-register-btn").getAttribute("data-workshop-id") : 0, 10);
+        if (currentWId === numId) {
+          cancelWrap.style.display = count > 0 ? "block" : "none";
+          var sideCancelBtn = cancelWrap.querySelector(".cancel-this-registration-btn");
+          if (sideCancelBtn) {
+            sideCancelBtn.setAttribute("data-workshop-id", numId);
+          }
+        }
+      }
+
+      // Update seats left / progress bar on workshop-details page if this workshop is displayed
+      if (workshop) {
+        var seatsLeftEl = document.getElementById("workshop-seats-left");
+        var seatsTotalEl = document.getElementById("workshop-seats-total");
+        var seatsBarEl = document.getElementById("workshop-seats-bar");
+        if (seatsLeftEl && seatsTotalEl && seatsBarEl) {
+          var baseTaken = workshop.seatsTaken || 0;
+          var currentTaken = baseTaken + count;
+          var seatsLeft = Math.max(0, workshop.seatsTotal - currentTaken);
+          seatsLeftEl.textContent = seatsLeft;
+          seatsTotalEl.textContent = workshop.seatsTotal;
+          var pct = Math.min(100, Math.round((currentTaken / workshop.seatsTotal) * 100));
+          seatsBarEl.style.width = pct + "%";
+        }
+      }
     }
   };
 
   function initWorkshopButtons() {
     document.addEventListener("click", function (e) {
+      // 1. Cancel registration click
+      var cancelBtn = e.target.closest(".cancel-this-registration-btn, .workshop-cancel-btn, .workshop-unregister-btn, [data-action='cancel-registration']");
+      if (cancelBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        var workshopId = parseInt(cancelBtn.getAttribute("data-workshop-id"), 10);
+        if (!workshopId) {
+          var card = cancelBtn.closest("[data-workshop-id]");
+          if (card) workshopId = parseInt(card.getAttribute("data-workshop-id"), 10);
+        }
+        if (!workshopId) {
+          var modal = cancelBtn.closest("#workshopRegistrationModal");
+          if (modal) {
+            var form = modal.querySelector("[data-registration-form]");
+            if (form && form.dataset.workshopId) workshopId = parseInt(form.dataset.workshopId, 10);
+          }
+        }
+        if (workshopId) {
+          window.WorkshopReg.requestCancel(workshopId);
+        }
+        return;
+      }
+
+      // 2. Register button click
       var regBtn = e.target.closest(".workshop-register-btn");
       if (regBtn) {
         e.preventDefault();
-        var workshopId = parseInt(regBtn.getAttribute("data-workshop-id"));
+        var workshopId = parseInt(regBtn.getAttribute("data-workshop-id"), 10);
         if (workshopId) window.WorkshopReg.register(workshopId);
-      }
-      var unregBtn = e.target.closest(".workshop-unregister-btn");
-      if (unregBtn) {
-        e.preventDefault();
-        var workshopId = parseInt(unregBtn.getAttribute("data-workshop-id"));
-        if (workshopId) window.WorkshopReg.unregister(workshopId);
       }
     });
 
     document.querySelectorAll(".workshop-register-btn").forEach(function (btn) {
-      var workshopId = parseInt(btn.getAttribute("data-workshop-id"));
+      var workshopId = parseInt(btn.getAttribute("data-workshop-id"), 10);
       if (workshopId) window.WorkshopReg.updateUI(workshopId);
     });
   }
