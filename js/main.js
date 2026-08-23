@@ -134,6 +134,72 @@
   }
 
   /* ============================================================
+     NAVBAR DROPDOWNS (Desktop & Mobile)
+  ============================================================ */
+  function initDropdowns() {
+    function closeAllDropdowns() {
+      document.querySelectorAll(".navbar .dropdown").forEach(function (drop) {
+        drop.classList.remove("show", "open");
+        var toggle = drop.querySelector(".dropdown-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
+        var menu = drop.querySelector(".dropdown-menu");
+        if (menu) menu.classList.remove("show");
+      });
+    }
+
+    document.querySelectorAll(".navbar .dropdown-toggle").forEach(function (toggle) {
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var parentDropdown = toggle.closest(".dropdown");
+        if (!parentDropdown) return;
+        var menu = parentDropdown.querySelector(".dropdown-menu");
+        var isOpen = parentDropdown.classList.contains("show") || parentDropdown.classList.contains("open") || (menu && menu.classList.contains("show"));
+
+        // Close other dropdowns first
+        document.querySelectorAll(".navbar .dropdown").forEach(function (other) {
+          if (other !== parentDropdown) {
+            other.classList.remove("show", "open");
+            var otherToggle = other.querySelector(".dropdown-toggle");
+            if (otherToggle) otherToggle.setAttribute("aria-expanded", "false");
+            var otherMenu = other.querySelector(".dropdown-menu");
+            if (otherMenu) otherMenu.classList.remove("show");
+          }
+        });
+
+        if (isOpen) {
+          parentDropdown.classList.remove("show", "open");
+          toggle.setAttribute("aria-expanded", "false");
+          if (menu) menu.classList.remove("show");
+        } else {
+          parentDropdown.classList.add("show", "open");
+          toggle.setAttribute("aria-expanded", "true");
+          if (menu) menu.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".navbar .dropdown-menu .dropdown-item").forEach(function (item) {
+      item.addEventListener("click", function () {
+        closeAllDropdowns();
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".navbar .dropdown")) {
+        closeAllDropdowns();
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeAllDropdowns();
+      }
+    });
+  }
+
+  /* ============================================================
      MOBILE NAVIGATION
   ============================================================ */
   function initMobileNav() {
@@ -151,6 +217,13 @@
         if (icon) {
           icon.className = "fas fa-bars";
         }
+      });
+      document.querySelectorAll(".navbar .dropdown").forEach(function (drop) {
+        drop.classList.remove("show", "open");
+        var toggle = drop.querySelector(".dropdown-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
+        var menu = drop.querySelector(".dropdown-menu");
+        if (menu) menu.classList.remove("show");
       });
       document.body.style.overflow = "";
     }
@@ -179,7 +252,7 @@
       });
     });
 
-    document.querySelectorAll(".navbar-nav .nav-link:not(.dropdown-toggle)").forEach(function (link) {
+    document.querySelectorAll(".navbar-nav .nav-link:not(.dropdown-toggle), .navbar-nav .dropdown-item").forEach(function (link) {
       link.addEventListener("click", function () {
         closeAllNavbars();
       });
@@ -2193,6 +2266,7 @@
     initDirection();
     initActiveNav();
     initNavbarScroll();
+    initDropdowns();
     initMobileNav();
     initSearchOverlay();
     initProductCards();
