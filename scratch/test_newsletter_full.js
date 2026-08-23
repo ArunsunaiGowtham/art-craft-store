@@ -220,7 +220,8 @@ const mockWin = {
   },
   location: { href: '', pathname: '/' },
   showToast: () => {},
-  addEventListener: () => {}
+  addEventListener: () => {},
+  matchMedia: () => ({ matches: false, addEventListener: () => {}, removeEventListener: () => {} })
 };
 
 const sandbox = {
@@ -233,13 +234,9 @@ const sandbox = {
 };
 vm.createContext(sandbox);
 
-// Extract validateField function from main.js and run it
-vm.runInContext(`
-  ${mainJsCode}
-  window._validateField = validateField;
-`, sandbox);
+vm.runInContext(mainJsCode, sandbox);
 
-const validateField = sandbox.window._validateField;
+const validateField = sandbox.window.validateField;
 
 // Test A: Empty field validation
 input.value = '';

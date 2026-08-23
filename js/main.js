@@ -1533,6 +1533,7 @@
 
     return isValid;
   }
+  window.validateField = validateField;
 
   function validateForm(form) {
     var inputs = form.querySelectorAll("[required], [type='email'], [type='tel']");
