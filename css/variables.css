@@ -15,6 +15,8 @@
   /* Background Colors */
   --bg-body: #f8f6f3;
   --bg-card: #ffffff;
+  --bg-secondary: #f4f0eb;
+  --bg-info-box: #f8f6f3;
   --bg-nav: #ffffff;
   --bg-footer: #1a1a2e;
   --bg-hero: linear-gradient(135deg, #fdf0ec 0%, #e8f0fe 100%);
@@ -107,6 +109,8 @@
   --primary-light: rgba(232, 93, 58, 0.15);
   --bg-body: #121218;
   --bg-card: #1e1e2a;
+  --bg-secondary: #181824;
+  --bg-info-box: #252538;
   --bg-nav: #1a1a26;
   --bg-footer: #0e0e16;
   --bg-hero: linear-gradient(135deg, #1a1220 0%, #121a28 100%);

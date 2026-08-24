@@ -4643,6 +4643,69 @@ textarea.form-control {
 }
 
 /* ==========================================================================
+   Workshop Details Sidebar & Info Items (Light & Dark Mode)
+   ========================================================================== */
+
+.workshop-sidebar-card {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.workshop-info-box {
+  background: var(--bg-info-box, var(--bg-secondary, #f4f0eb)) !important;
+  border: 1px solid var(--border-color, #e0ddd8) !important;
+  border-radius: var(--radius-sm, 8px) !important;
+  color: var(--text-primary) !important;
+  transition: all var(--transition-fast);
+}
+
+.workshop-info-box i {
+  color: var(--primary) !important;
+}
+
+.workshop-info-box small,
+.workshop-info-box small.text-muted {
+  color: var(--text-muted) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.workshop-info-box strong {
+  color: var(--text-heading, var(--text-primary)) !important;
+  font-size: 0.95rem !important;
+  font-weight: 600;
+  line-height: 1.4;
+  display: block;
+}
+
+[data-theme="dark"] .workshop-sidebar-card {
+  background: #1e1e2a !important;
+  border-color: #2e2e42 !important;
+  color: #f0eff4 !important;
+}
+
+[data-theme="dark"] .workshop-info-box {
+  background: #252538 !important;
+  border-color: #33334d !important;
+  color: #f0eff4 !important;
+}
+
+[data-theme="dark"] .workshop-info-box strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .workshop-info-box small,
+[data-theme="dark"] .workshop-info-box small.text-muted {
+  color: #a0a0b8 !important;
+}
+
+/* ==========================================================================
    Workshops Page Hero Banner Styling
    ========================================================================== */
 
