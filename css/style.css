@@ -2051,7 +2051,7 @@ textarea.form-control {
 /* Footer column headings */
 .footer h5,
 .footer h4 {
-  color: var(--text-inverse);
+  color: #ffffff !important;
   font-family: var(--font-heading);
   font-size: var(--font-size-md);
   letter-spacing: -0.01em;
@@ -2062,6 +2062,12 @@ textarea.form-control {
   align-items: center;
   gap: 8px;
   font-style: normal;
+}
+
+.footer h5 i,
+.footer h4 i {
+  color: var(--primary) !important;
+  font-size: 1.1rem;
 }
 
 /* 4-column grid — ArtCraft & Newsletter get extra width */
@@ -2263,7 +2269,7 @@ textarea.form-control {
 
 /* ---- Footer Bottom (copyright bar) ---- */
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.12) !important;
   padding: 24px 32px;
   text-align: center;
   font-size: var(--font-size-sm);
@@ -2279,6 +2285,70 @@ textarea.form-control {
   font-family: var(--font-primary);
   font-size: 0.85rem;
   color: var(--text-inverse-muted);
+}
+
+/* ==========================================================================
+   Dark Theme Footer Contrast Polish
+   ========================================================================== */
+
+[data-theme="dark"] .footer {
+  background: #0d0d15 !important;
+  border-top: 1px solid #222233 !important;
+}
+
+[data-theme="dark"] .footer h5,
+[data-theme="dark"] .footer h4 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .footer h5 i,
+[data-theme="dark"] .footer h4 i {
+  color: var(--primary) !important;
+}
+
+[data-theme="dark"] .footer p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme="dark"] .footer-links a {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+[data-theme="dark"] .footer-links a:hover {
+  color: #ff8a65 !important;
+}
+
+[data-theme="dark"] .footer-social a {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .footer-social a:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .footer-newsletter .form-control,
+[data-theme="dark"] .footer-newsletter .newsletter-form .form-control {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .footer-newsletter .form-control::placeholder,
+[data-theme="dark"] .footer-newsletter .newsletter-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+[data-theme="dark"] .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.12) !important;
+  color: rgba(255, 255, 255, 0.68) !important;
+}
+
+[data-theme="dark"] .footer-bottom p {
+  color: rgba(255, 255, 255, 0.68) !important;
 }
 
 /* ---- Scroll-to-Top Button ---- */
