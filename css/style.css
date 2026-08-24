@@ -3616,6 +3616,72 @@ textarea.form-control {
   background: var(--danger);
 }
 
+/* Workshop Card Bottom Action Row Layout */
+.workshop-card-action-row,
+.workshop-card-item .card-body > .d-flex.justify-content-between,
+.card-art .card-body > .d-flex.justify-content-between.mt-auto,
+.workshop-card .card-body > .d-flex.justify-content-between {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  gap: 12px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-top: auto !important;
+  position: static !important;
+  box-sizing: border-box !important;
+  transform: none !important;
+}
+
+.workshop-card-price-wrap,
+.workshop-card-item .card-body > .d-flex.justify-content-between > div,
+.card-art .card-body > .d-flex.justify-content-between.mt-auto > div,
+.card-art .card-body > .d-flex.justify-content-between.mt-auto > span:first-child {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  flex: 0 1 auto !important;
+  min-width: 0 !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+}
+
+.workshop-card-price-wrap .text-primary,
+.workshop-card-item .card-body > .d-flex.justify-content-between .text-primary,
+.card-art .card-body > .d-flex.justify-content-between.mt-auto .text-primary {
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.workshop-register-btn,
+.workshop-card-item .workshop-register-btn,
+.card-art .card-body > .d-flex.justify-content-between .btn,
+.workshop-card .card-body > .d-flex.justify-content-between .btn {
+  width: auto !important;
+  max-width: fit-content !important;
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  position: static !important;
+  float: none !important;
+  transform: none !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  padding: 8px 18px !important;
+  font-size: 0.85rem !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  border-radius: var(--radius-lg, 20px) !important;
+  box-sizing: border-box !important;
+}
+
 /* ==========================================================================
    21. Brand Cards
    ========================================================================== */
@@ -6028,7 +6094,7 @@ input.blog-search::placeholder {
     max-width: 100%;
   }
 
-  .btn {
+  .btn:not(.workshop-register-btn):not(.btn-sm):not(.qty-btn):not(.nav-icon-btn):not(.btn-close):not(.carousel-control-btn):not(.view-toggle-btn) {
     width: 100%;
     justify-content: center;
   }
@@ -7622,16 +7688,70 @@ input:focus:not(:focus-visible) {
   }
 
   /* Workshop Cards Footer Alignment */
-  .workshop-card-item .card-body > .d-flex.justify-content-between {
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
+  .workshop-card-action-row,
+  .workshop-card-item .card-body > .d-flex.justify-content-between,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto,
+  .workshop-card .card-body > .d-flex.justify-content-between {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: auto !important;
+    position: static !important;
+    box-sizing: border-box !important;
+    transform: none !important;
   }
 
-  .workshop-card-item .workshop-register-btn {
-    min-width: 130px;
-    text-align: center;
-    justify-content: center;
+  .workshop-register-btn,
+  .workshop-card-item .workshop-register-btn,
+  .card-art .card-body > .d-flex.justify-content-between .btn,
+  .workshop-card .card-body > .d-flex.justify-content-between .btn {
+    width: auto !important;
+    min-width: auto !important;
+    max-width: fit-content !important;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    position: static !important;
+    float: none !important;
+    transform: none !important;
+    padding: 7px 14px !important;
+    font-size: 0.82rem !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  .workshop-card-price-wrap,
+  .workshop-card-item .card-body > .d-flex.justify-content-between > div,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto > div,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto > span:first-child {
+    display: inline-flex !important;
+    align-items: baseline !important;
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    white-space: nowrap !important;
+    gap: 4px !important;
+  }
+
+  .workshop-card-price-wrap .text-primary,
+  .workshop-card-item .card-body > .d-flex.justify-content-between .text-primary,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto .text-primary {
+    font-size: 1.1rem !important;
+  }
+
+  .workshop-card-price-wrap small,
+  .workshop-card-item .card-body > .d-flex.justify-content-between small,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto small {
+    font-size: 0.75rem !important;
   }
 
   /* Hero Button Groups */
@@ -7701,4 +7821,67 @@ input:focus:not(:focus-visible) {
     width: 100% !important;
   }
 }
+
+@media (max-width: 480px) {
+  .workshop-card-action-row,
+  .workshop-card-item .card-body > .d-flex.justify-content-between,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto,
+  .workshop-card .card-body > .d-flex.justify-content-between {
+    gap: 6px !important;
+  }
+
+  .workshop-register-btn,
+  .workshop-card-item .workshop-register-btn,
+  .card-art .card-body > .d-flex.justify-content-between .btn,
+  .workshop-card .card-body > .d-flex.justify-content-between .btn {
+    padding: 6px 12px !important;
+    font-size: 0.78rem !important;
+    height: 34px !important;
+    min-height: 34px !important;
+  }
+
+  .workshop-card-price-wrap .text-primary,
+  .workshop-card-item .card-body > .d-flex.justify-content-between .text-primary,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto .text-primary {
+    font-size: 1.05rem !important;
+  }
+
+  .workshop-card-price-wrap small,
+  .workshop-card-item .card-body > .d-flex.justify-content-between small,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto small {
+    font-size: 0.72rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .workshop-card-action-row,
+  .workshop-card-item .card-body > .d-flex.justify-content-between,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto,
+  .workshop-card .card-body > .d-flex.justify-content-between {
+    gap: 4px !important;
+  }
+
+  .workshop-register-btn,
+  .workshop-card-item .workshop-register-btn,
+  .card-art .card-body > .d-flex.justify-content-between .btn,
+  .workshop-card .card-body > .d-flex.justify-content-between .btn {
+    padding: 5px 9px !important;
+    font-size: 0.74rem !important;
+    height: 32px !important;
+    min-height: 32px !important;
+  }
+
+  .workshop-card-price-wrap .text-primary,
+  .workshop-card-item .card-body > .d-flex.justify-content-between .text-primary,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto .text-primary {
+    font-size: 0.95rem !important;
+  }
+
+  .workshop-card-price-wrap small,
+  .workshop-card-item .card-body > .d-flex.justify-content-between small,
+  .card-art .card-body > .d-flex.justify-content-between.mt-auto small {
+    font-size: 0.68rem !important;
+  }
+}
+
 

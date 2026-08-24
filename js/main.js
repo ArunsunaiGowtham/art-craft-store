@@ -1530,8 +1530,9 @@
           '<span><i class="fas fa-clock text-primary me-1"></i> ' + (w.time || "TBD") + '</span>' +
           '<span><i class="fas fa-map-marker-alt text-primary me-1"></i> ' + (w.location || "Studio") + '</span>' +
           '</div>' +
-          '<div class="d-flex justify-content-between align-items-center mt-auto">' +
-          '<div><span class="fw-bold text-primary fs-5">$' + (w.price || 0) + '</span>' +
+          '<div class="workshop-card-action-row d-flex justify-content-between align-items-center mt-auto">' +
+          '<div class="workshop-card-price-wrap d-flex align-items-baseline gap-2">' +
+          '<span class="fw-bold text-primary fs-5">$' + (w.price || 0) + '</span>' +
           '<small class="text-muted ms-2">' + seatsLeft + ' seats left</small></div>' +
           '<a href="workshop-details.html?id=' + w.id + '" class="btn btn-primary btn-sm workshop-register-btn" data-workshop-id="' + w.id + '">Register Now</a>' +
           '</div>' +
