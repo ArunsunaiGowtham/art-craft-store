@@ -1512,12 +1512,12 @@
 
         return '<div class="col-md-6 col-lg-4 workshop-card-item" data-category="' + categorySlug + '" data-level="' + levelSlug + '" style="animation-delay:' + animDelay + ';">' +
           '<div class="card-art h-100 d-flex flex-column" style="border:1px solid var(--border-color);">' +
-          '<div class="card-img-top overflow-hidden position-relative" style="height:220px;">' +
+          '<a href="workshop-details.html?id=' + w.id + '" class="card-img-top d-block overflow-hidden position-relative" style="height:220px;" aria-label="View ' + w.title + ' details">' +
           '<img src="' + w.image + '" alt="' + w.title + '" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">' +
-          '<div style="position:absolute; top:12px; left:12px; display:flex; gap:6px; flex-wrap:wrap;">' +
+          '<div style="position:absolute; top:12px; left:12px; display:flex; gap:6px; flex-wrap:wrap; pointer-events:none;">' +
           '<span style="background:rgba(0,0,0,0.65); backdrop-filter:blur(4px); color:#fff; font-size:0.75rem; font-weight:600; padding:4px 12px; border-radius:20px; text-transform:capitalize;">' + categoryDisplay + '</span>' +
           '</div>' +
-          '</div>' +
+          '</a>' +
           '<div class="card-body d-flex flex-column flex-grow-1 p-4">' +
           '<div class="d-flex align-items-center gap-2 mb-2">' +
           '<img src="' + instructor.avatar + '" alt="' + instructor.name + '" style="width:32px; height:32px; border-radius:50%; object-fit:cover;">' +
