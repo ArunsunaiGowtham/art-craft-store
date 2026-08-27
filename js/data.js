@@ -807,7 +807,7 @@ window.AppData = {
       id: 8,
       name: "DIY & Handmade",
       slug: "diy-materials",
-      image: "https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=800&q=80",
+      image: "images/diy-handmade-category.jpg",
       description: "Candle making, macrame, embroidery, and other handmade craft materials.",
       productCount: 3,
       color: "#fd7e14"
