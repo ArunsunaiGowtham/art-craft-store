@@ -4090,23 +4090,90 @@ textarea.form-control {
 }
 
 /* Dark Theme Support for Newsletter */
-[data-theme="dark"] .newsletter-form .form-control {
-  background: #252538 !important;
-  border-color: #3f3f58 !important;
+[data-theme="dark"] input[type="email"],
+.dark-mode input[type="email"],
+[data-theme="dark"] .newsletter input[type="email"],
+.dark-mode .newsletter input[type="email"],
+[data-theme="dark"] .newsletter-form input[type="email"],
+.dark-mode .newsletter-form input[type="email"],
+[data-theme="dark"] .newsletter-section input[type="email"],
+.dark-mode .newsletter-section input[type="email"],
+[data-theme="dark"] .newsletter-form .form-control,
+.dark-mode .newsletter-form .form-control,
+[data-theme="dark"] .footer-newsletter .form-control,
+.dark-mode .footer-newsletter .form-control {
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   caret-color: #ffffff !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  background-color: #252536 !important;
+  border-color: #3f3f58 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-[data-theme="dark"] .newsletter-form .form-control::placeholder {
+[data-theme="dark"] input[type="email"]::placeholder,
+.dark-mode input[type="email"]::placeholder,
+[data-theme="dark"] .newsletter input[type="email"]::placeholder,
+.dark-mode .newsletter input[type="email"]::placeholder,
+[data-theme="dark"] .newsletter-form input[type="email"]::placeholder,
+.dark-mode .newsletter-form input[type="email"]::placeholder,
+[data-theme="dark"] .newsletter-section input[type="email"]::placeholder,
+.dark-mode .newsletter-section input[type="email"]::placeholder,
+[data-theme="dark"] .newsletter-form .form-control::placeholder,
+.dark-mode .newsletter-form .form-control::placeholder,
+[data-theme="dark"] .footer-newsletter .form-control::placeholder,
+.dark-mode .footer-newsletter .form-control::placeholder {
   color: #9ca3af !important;
+  -webkit-text-fill-color: #9ca3af !important;
+  opacity: 1 !important;
 }
 
-[data-theme="dark"] .newsletter-form .form-control:focus {
-  background: #2a2a40 !important;
-  border-color: #ff8a65 !important;
+[data-theme="dark"] input[type="email"]:focus,
+.dark-mode input[type="email"]:focus,
+[data-theme="dark"] .newsletter input[type="email"]:focus,
+.dark-mode .newsletter input[type="email"]:focus,
+[data-theme="dark"] .newsletter-form input[type="email"]:focus,
+.dark-mode .newsletter-form input[type="email"]:focus,
+[data-theme="dark"] .newsletter-section input[type="email"]:focus,
+.dark-mode .newsletter-section input[type="email"]:focus,
+[data-theme="dark"] .newsletter-form .form-control:focus,
+.dark-mode .newsletter-form .form-control:focus,
+[data-theme="dark"] .footer-newsletter .form-control:focus,
+.dark-mode .footer-newsletter .form-control:focus {
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff !important;
+  background-color: #252536 !important;
+  border-color: var(--primary, #e85d3a) !important;
   box-shadow: 0 0 0 3px rgba(232, 93, 58, 0.35) !important;
+  outline: none;
+}
+
+[data-theme="dark"] input[type="email"]:-webkit-autofill,
+.dark-mode input[type="email"]:-webkit-autofill,
+[data-theme="dark"] input[type="email"]:-webkit-autofill:hover,
+.dark-mode input[type="email"]:-webkit-autofill:hover,
+[data-theme="dark"] input[type="email"]:-webkit-autofill:focus,
+.dark-mode input[type="email"]:-webkit-autofill:focus,
+[data-theme="dark"] .newsletter input[type="email"]:-webkit-autofill,
+.dark-mode .newsletter input[type="email"]:-webkit-autofill,
+[data-theme="dark"] .newsletter-form input[type="email"]:-webkit-autofill,
+.dark-mode .newsletter-form input[type="email"]:-webkit-autofill,
+[data-theme="dark"] .newsletter-section input[type="email"]:-webkit-autofill,
+.dark-mode .newsletter-section input[type="email"]:-webkit-autofill,
+[data-theme="dark"] .newsletter-form .form-control:-webkit-autofill,
+.dark-mode .newsletter-form .form-control:-webkit-autofill,
+[data-theme="dark"] .newsletter-form .form-control:-webkit-autofill:hover,
+.dark-mode .newsletter-form .form-control:-webkit-autofill:hover,
+[data-theme="dark"] .newsletter-form .form-control:-webkit-autofill:focus,
+.dark-mode .newsletter-form .form-control:-webkit-autofill:focus,
+[data-theme="dark"] .footer-newsletter .form-control:-webkit-autofill,
+.dark-mode .footer-newsletter .form-control:-webkit-autofill {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0 1000px #252536 inset !important;
+  box-shadow: 0 0 0 1000px #252536 inset !important;
+  caret-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
 
 [data-theme="dark"] .workshops-newsletter-section {

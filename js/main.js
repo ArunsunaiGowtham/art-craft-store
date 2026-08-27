@@ -424,15 +424,19 @@
       if (quantity < 1) quantity = 1;
       var items = this.getItems();
       var prodId = product.id;
-      var existing = items.find(function (item) { return String(item.id) === String(prodId); });
+      var prodName = product.name;
+      var existing = items.find(function (item) {
+        return (prodId != null && String(item.id) === String(prodId)) ||
+               (prodName && item.name && item.name.toLowerCase() === prodName.toLowerCase());
+      });
       if (existing) {
         existing.quantity = (parseInt(existing.quantity, 10) || 0) + quantity;
       } else {
         items.push({
-          id: prodId,
+          id: prodId != null ? prodId : ("p_" + Date.now()),
           name: product.name,
           price: typeof product.price === "number" ? product.price : (parseFloat(product.price) || 0),
-          image: product.image,
+          image: product.image || "",
           quantity: quantity,
           category: product.category || ""
         });
@@ -572,40 +576,102 @@
       var addBtn = e.target.closest(".add-to-cart-btn, #pd-add-to-cart, #quick-view-add-cart, button[data-action='add-to-cart']");
       if (addBtn) {
         e.preventDefault();
-        var card = addBtn.closest(".product-card, .product-item, .product-info-section, [data-product-id], [data-id]");
-        var productId = parseInt((card ? (card.getAttribute("data-product-id") || card.getAttribute("data-id")) : null) || addBtn.getAttribute("data-product-id") || addBtn.getAttribute("data-id"));
-        var products = window.AppData ? window.AppData.products : [];
-        var product = products.find(function (p) { return p.id === productId; });
+        e.stopPropagation();
 
-        // Fallback: match by card title or construct product from card DOM if needed
+        var card = addBtn.closest(".product-card, .product-item, .product-info-section, [data-product-id], [data-id]");
+        var rawId = addBtn.getAttribute("data-product-id") || addBtn.getAttribute("data-id") || (card ? (card.getAttribute("data-product-id") || card.getAttribute("data-id")) : null);
+        var productId = rawId ? parseInt(rawId, 10) : null;
+
         var cardTitle = card ? card.querySelector(".card-title, h6, h5, .product-name") : null;
-        if (cardTitle && cardTitle.textContent.trim()) {
-          var titleText = cardTitle.textContent.trim();
+        var titleText = cardTitle ? cardTitle.textContent.trim() : "";
+
+        var cardPrice = card ? card.querySelector(".product-price, .card-price, .price") : null;
+        var priceText = cardPrice ? cardPrice.textContent.trim() : "";
+        var parsedPrice = priceText ? parseFloat(priceText.replace(/[^0-9.]/g, "")) : 0;
+
+        var cardImg = card ? card.querySelector(".product-image img, .card-img-top, img") : null;
+        var imgSrc = cardImg ? (cardImg.getAttribute("src") || "") : "";
+
+        var cardCat = card ? card.querySelector(".product-category, .badge") : null;
+        var catText = cardCat ? cardCat.textContent.trim() : "";
+
+        var products = (window.AppData && Array.isArray(window.AppData.products)) ? window.AppData.products : [];
+
+        var product = null;
+
+        // Try exact name match in AppData first if card has a title
+        if (titleText) {
           var matchedByName = products.find(function (p) {
-            return p.name.toLowerCase() === titleText.toLowerCase() ||
-                   titleText.toLowerCase().includes(p.name.toLowerCase()) ||
-                   p.name.toLowerCase().includes(titleText.toLowerCase());
+            return p.name.toLowerCase() === titleText.toLowerCase();
           });
           if (matchedByName) {
-            product = matchedByName;
-          } else if (!product) {
-            var cardPrice = card ? card.querySelector(".product-price, .card-price, .price") : null;
-            var cardImg = card ? card.querySelector("img") : null;
-            var rawPrice = cardPrice ? parseFloat(cardPrice.textContent.replace(/[^0-9.]/g, "")) : 0;
-            product = {
-              id: productId || ("p_" + Date.now()),
-              name: titleText,
-              price: isNaN(rawPrice) ? 0 : rawPrice,
-              image: cardImg ? cardImg.getAttribute("src") : ""
-            };
+            product = Object.assign({}, matchedByName);
+          }
+        }
+
+        // Try ID match if no exact name match
+        if (!product && productId && !isNaN(productId)) {
+          var matchedById = products.find(function (p) { return p.id === productId; });
+          if (matchedById) {
+            // Only use ID match if title doesn't contradict or if card has no conflicting title
+            if (!titleText || matchedById.name.toLowerCase() === titleText.toLowerCase()) {
+              product = Object.assign({}, matchedById);
+            }
+          }
+        }
+
+        // If card represents a specific product with its own DOM values (e.g. Home Page static card)
+        if (!product) {
+          product = {
+            id: (productId && !isNaN(productId)) ? productId : ("p_" + (titleText ? titleText.toLowerCase().replace(/[^a-z0-9]/g, "_") : Date.now())),
+            name: titleText || "Art Supply Product",
+            price: (!isNaN(parsedPrice) && parsedPrice > 0) ? parsedPrice : 0,
+            image: imgSrc || "",
+            category: catText || ""
+          };
+        } else {
+          // If card DOM has specific displayed price/image, ensure it matches what user clicked
+          if (!isNaN(parsedPrice) && parsedPrice > 0) {
+            product.price = parsedPrice;
+          }
+          if (imgSrc) {
+            product.image = imgSrc;
           }
         }
 
         if (product) {
-          var qtyInput = document.querySelector("#pd-quantity") || (card ? card.querySelector(".quantity-input, input[type='number']") : null);
-          var qty = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+          // Determine quantity
+          var qty = 1;
+          if (addBtn.id === "pd-add-to-cart") {
+            var pdQty = document.querySelector("#pd-quantity");
+            if (pdQty) qty = parseInt(pdQty.value, 10) || 1;
+          } else if (card) {
+            var cardQty = card.querySelector(".quantity-input, input[type='number']");
+            if (cardQty) qty = parseInt(cardQty.value, 10) || 1;
+          }
+
           window.Cart.addItem(product, qty);
+
+          // Small success feedback on button without modifying other elements
+          var origHtml = addBtn.getAttribute("data-orig-html");
+          if (!origHtml) {
+            origHtml = addBtn.innerHTML;
+            addBtn.setAttribute("data-orig-html", origHtml);
+          }
+          addBtn.innerHTML = '<i class="fas fa-check me-1"></i> Added to Cart';
+          addBtn.classList.add("btn-success");
+          addBtn.classList.remove("btn-primary");
+
+          // Reset button state smoothly after 1.5 seconds
+          if (addBtn._resetTimer) clearTimeout(addBtn._resetTimer);
+          addBtn._resetTimer = setTimeout(function () {
+            addBtn.innerHTML = origHtml;
+            addBtn.classList.remove("btn-success");
+            addBtn.classList.add("btn-primary");
+            addBtn._resetTimer = null;
+          }, 1500);
         }
+        return;
       }
 
       var wishlistBtn = e.target.closest(".wishlist-btn, .add-wishlist-btn, [data-action='wishlist']");
