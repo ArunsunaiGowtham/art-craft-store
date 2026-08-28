@@ -990,7 +990,7 @@
     }
     var oldPriceHtml = product.oldPrice ? '<span class="text-decoration-line-through text-muted me-2">$' + product.oldPrice.toFixed(2) + "</span>" : "";
     var stockBadge = product.inStock ? '<span class="badge bg-success">In Stock</span>' : '<span class="badge bg-secondary">Out of Stock</span>';
-    var productImageHtml = '<div class="card-img-top overflow-hidden" style="height:200px;"><a href="product-details.html?id=' + product.id + '"><img src="' + product.image + '" alt="' + product.name + '" class="img-fluid w-100 h-100" style="object-fit:cover;"></a></div>';
+    var productImageHtml = '<div class="product-image card-img-top overflow-hidden"><a href="product-details.html?id=' + product.id + '"><img src="' + product.image + '" alt="' + product.name + '" class="img-fluid w-100 h-100" style="object-fit:cover;"></a></div>';
 
     if (viewMode === "list") {
       return '<div class="product-item d-flex position-relative" data-product-id="' + product.id + '">' + badgeHtml +
@@ -1004,16 +1004,15 @@
         '<div><button class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="' + product.id + '"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button></div></div></div>';
     }
 
-    return '<div class="col-md-6 col-lg-4 col-xl-3"><div class="card product-card h-100 position-relative border-0 shadow-sm" data-product-id="' + product.id + '">' +
+    return '<div class="col-12 col-sm-6 col-lg-4 col-xl-3"><div class="card product-card h-100 position-relative border-0 shadow-sm" data-product-id="' + product.id + '">' +
       badgeHtml +
       productImageHtml +
       '<div class="card-body d-flex flex-column">' +
       '<span class="product-category-badge mb-2 align-self-start">' + product.categoryLabel + "</span>" +
       '<h6 class="card-title mb-1"><a href="product-details.html?id=' + product.id + '" class="product-title-link">' + product.name + "</a></h6>" +
-      '<div class="mb-2 small">' + starsHtml + ' <span class="text-secondary">(' + product.reviewCount + ")</span></div>" +
-      '<p class="card-text text-secondary small flex-grow-1">' + product.description.substring(0, 80) + "...</p>" +
-      '<div class="mb-2">' + oldPriceHtml + '<span class="fw-bold text-primary fs-5">$' + product.price.toFixed(2) + "</span></div>" +
-      '<div class="mt-auto"><button class="btn btn-primary btn-sm w-100 add-to-cart-btn" data-product-id="' + product.id + '"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button></div>' +
+      '<div class="product-rating small">' + starsHtml + ' <span class="text-secondary">(' + product.reviewCount + ")</span></div>" +
+      '<div class="product-price-section">' + oldPriceHtml + '<span class="card-price fw-bold text-primary fs-5">$' + product.price.toFixed(2) + "</span></div>" +
+      '<button class="btn btn-primary btn-sm w-100 add-to-cart-btn" data-product-id="' + product.id + '"><i class="fas fa-cart-plus me-1"></i> Add to Cart</button>' +
       "</div></div></div>";
   }
 
