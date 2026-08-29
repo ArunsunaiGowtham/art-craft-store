@@ -814,6 +814,73 @@ window.AppData = {
     }
   ],
 
+  projects: [
+    {
+      id: 1,
+      slug: "diy-watercolor-landscape-painting",
+      title: "DIY Watercolor Landscape Painting",
+      subtitle: "Create a stunning sunset landscape with beginner-friendly watercolor techniques",
+      image: "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=800&q=80",
+      description: "Create a stunning watercolor landscape with this beginner-friendly project. Learn essential watercolor techniques including wet-on-wet, layering, and color blending while painting a beautiful sunset landscape. Perfect for artists of all skill levels looking to explore the magic of watercolors.",
+      difficulty: "Beginner",
+      time: "2-3 hours",
+      category: "Painting",
+      categorySlug: "painting",
+      featured: true,
+      materials: [
+        "Watercolor paper (300gsm)",
+        "Watercolor paints (12-color set)",
+        "Masking tape",
+        "2 brushes (round & flat)",
+        "Pencil"
+      ],
+      detailedMaterials: [
+        { name: "Watercolor Paper (300gsm)", note: "Cold-pressed heavy sheet to prevent buckling", icon: "fa-file" },
+        { name: "Watercolor Paints (12-color set)", note: "Cadmium yellow, orange, rose, ultramarine, indigo, Payne's gray", icon: "fa-palette" },
+        { name: "Masking Tape", note: "Acid-free low tack tape for crisp border margins", icon: "fa-tape" },
+        { name: "2 Brushes (Round & Flat)", note: "Size 8 round brush & 1/2-inch flat wash brush", icon: "fa-paint-brush" },
+        { name: "Pencil & Eraser", note: "2B pencil for soft horizon and contour guidelines", icon: "fa-pencil-alt" }
+      ],
+      steps: [
+        {
+          step: 1,
+          title: "Paper Preparation & Taping",
+          description: "Secure your 300gsm cold-pressed watercolor paper to a sturdy flat board using painter's tape along all four edges. Press firmly along the inner edge to ensure clean, razor-sharp borders and stop the paper from warping."
+        },
+        {
+          step: 2,
+          title: "Light Horizon Sketch",
+          description: "With a light 2B pencil, gently sketch a horizon line in the lower third of the paper. Add loose outlines for distant mountain ridges across the midground."
+        },
+        {
+          step: 3,
+          title: "Wet-on-Wet Sunset Sky Wash",
+          description: "Evenly wet the sky section with clean water. Apply warm lemon yellow near the horizon, blending up into glowing cadmium orange, rose madder, and deep cobalt violet at the top of the canvas."
+        },
+        {
+          step: 4,
+          title: "Atmospheric Mountain Silhouettes",
+          description: "Once the sky wash dries completely, glaze translucent lavender on the furthest ridge. Mix a richer indigo and Payne's gray for the nearer hills to produce realistic atmospheric perspective."
+        },
+        {
+          step: 5,
+          title: "Water Surface & Foreground Details",
+          description: "Paint mirror reflections on the foreground lake with light horizontal strokes. Use the tip of your round brush to add pine trees and grassy shoreline silhouettes."
+        },
+        {
+          step: 6,
+          title: "Final Drying & Border Reveal",
+          description: "Let your painting dry naturally. Slowly peel away the masking tape at a 45-degree angle away from the paper to reveal your clean, framed watercolor artwork."
+        }
+      ],
+      tips: [
+        "Always keep two jars of water at your station: one for rinsing dirty pigments, and one with clean water for wetting the paper.",
+        "Work at a slight tilt (around 15 degrees) so gravity pulls the watercolor wash smoothly downwards without pooling.",
+        "Test your color mixture and transparency on a scrap piece of watercolor paper before touching your main piece."
+      ]
+    }
+  ],
+
   workshops: [
     {
       id: 1,
