@@ -2198,6 +2198,24 @@ textarea.form-control {
   font-size: 1.1rem;
 }
 
+.footer-brand,
+.footer h5 a,
+.footer h4 a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity var(--transition-fast, 0.2s ease);
+}
+
+.footer-brand:hover,
+.footer h5 a:hover,
+.footer h4 a:hover {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  opacity: 0.85;
+}
+
 /* 4-column grid — ArtCraft & Newsletter get extra width */
 .footer-grid {
   display: grid;
