@@ -7956,7 +7956,7 @@ input:focus:not(:focus-visible) {
 }
 
 [data-theme="dark"] .contact-hero .breadcrumb-item a:hover {
-  color: var(--primary-light, #ff7e5f) !important;
+  color: #ff8a65 !important;
 }
 
 [data-theme="dark"] .contact-hero .breadcrumb-item + .breadcrumb-item::before {
@@ -7964,7 +7964,7 @@ input:focus:not(:focus-visible) {
 }
 
 [data-theme="dark"] .contact-hero .breadcrumb-item.active {
-  color: var(--primary-light, #ff7e5f) !important;
+  color: #ff8a65 !important;
   font-weight: 700;
 }
 
