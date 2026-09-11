@@ -1655,9 +1655,9 @@ window.AppData = {
     {
       id: 5,
       name: "Strathmore",
-      logo: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=200&q=80",
+      logo: "images/strathmore-artist-paper.jpg",
       description: "American paper manufacturer producing fine art papers, pads, and sketchbooks since 1893.",
-      image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+      image: "images/strathmore-artist-paper.jpg"
     },
     {
       id: 6,
