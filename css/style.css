@@ -4129,13 +4129,62 @@ textarea.form-control {
   text-align: center;
 }
 
+.newsletter-section[style*="bg-section-alt"] h2,
+.newsletter-section[style*="background"] h2.section-title {
+  color: var(--text-primary) !important;
+}
+
 .newsletter-section p {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.05rem;
   max-width: 500px;
   margin-inline: auto;
   margin-block-end: 24px;
   text-align: center;
+}
+
+.newsletter-section > .container > .text-center > p,
+.newsletter-section > .container > .text-center > .section-subtitle-light {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-block-end: 24px;
+  text-align: center;
+}
+
+/* Card descriptions inside newsletter-section (e.g. Explore by Craft Discipline cards) */
+.newsletter-section .card-art,
+.newsletter-section a.card-art {
+  background: var(--bg-card) !important;
+}
+
+.newsletter-section .card-art p,
+.newsletter-section .card-art .text-muted,
+.newsletter-section a.card-art p,
+.newsletter-section a.card-art .text-muted {
+  color: var(--text-secondary) !important;
+  font-size: 0.875rem !important;
+  max-width: 100% !important;
+  margin-inline: 0 !important;
+  margin-block-end: 0 !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+[data-theme="dark"] .newsletter-section .card-art,
+[data-theme="dark"] .newsletter-section a.card-art {
+  background: var(--bg-card) !important;
+}
+
+[data-theme="dark"] .newsletter-section .card-art p,
+[data-theme="dark"] .newsletter-section .card-art .text-muted,
+[data-theme="dark"] .newsletter-section a.card-art p,
+[data-theme="dark"] .newsletter-section a.card-art .text-muted {
+  color: var(--text-secondary) !important;
 }
 
 .newsletter-form {
