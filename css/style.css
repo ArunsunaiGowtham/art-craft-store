@@ -5437,8 +5437,8 @@ textarea.form-control {
    ========================================================================== */
 
 .blog-hero-section {
-  min-height: 280px;
-  padding: 56px 0 52px;
+  min-height: var(--page-hero-height, 240px);
+  padding: 24px 0;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -7655,17 +7655,31 @@ input:focus:not(:focus-visible) {
 }
 
 /* ==========================================================================
-   PAGE HERO BACKGROUNDS
-   Shared system for page-specific background images with readability overlays.
-   Each page adds its own modifier class (.shop-hero, .about-hero, etc.)
+   PAGE HERO BACKGROUNDS & UNIFORM HERO HEIGHT
+   Maintain a consistent hero section height across all pages for a cohesive layout.
    ========================================================================== */
+
+.shop-hero,
+.workshops-hero-section,
+.brand-spotlight-hero,
+.about-story-hero,
+.blog-hero-section,
+.pricing-hero,
+.membership-hero,
+.contact-hero,
+.student-supplies-hero {
+  min-height: var(--page-hero-height, 240px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
 
 /* ---- SHOP PAGE ---- */
 .shop-hero {
   position: relative;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 36px;
+  padding: 24px 0;
   background-image:
     linear-gradient(rgba(248,246,243,0.78), rgba(248,246,243,0.78)),
     url('../images/backgrounds/shop-bg.jpg');
@@ -7684,13 +7698,15 @@ input:focus:not(:focus-visible) {
 .shop-hero .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .shop-hero .breadcrumb-art {
   padding-top: 4px;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
   margin-bottom: 4px;
   align-self: flex-start;
 }
@@ -7725,7 +7741,7 @@ input:focus:not(:focus-visible) {
   font-weight: 700;
   text-align: center;
   margin-bottom: 0;
-  padding-bottom: 14px;
+  padding-bottom: 8px;
   position: relative;
 }
 
@@ -7733,7 +7749,7 @@ input:focus:not(:focus-visible) {
   text-align: center;
   color: var(--text-secondary);
   max-width: 600px;
-  margin: 12px auto 0;
+  margin: 8px auto 0;
   font-size: 1.05rem;
   text-shadow: 0 1px 3px rgba(255,255,255,0.75);
 }
@@ -7753,12 +7769,18 @@ input:focus:not(:focus-visible) {
 
 /* ---- ABOUT PAGE ---- */
 .about-story-hero {
+  padding: 24px 0;
+  text-align: center;
   background-image:
     linear-gradient(rgba(232,93,58,0.32), rgba(209,78,46,0.32)),
     url('../images/backgrounds/about-bg.jpg');
   background-size: cover;
   background-position: center 30%;
   background-repeat: no-repeat;
+}
+
+.about-story-hero .container {
+  width: 100%;
 }
 
 /* Text contrast on the about hero (readable over the visible image) */
@@ -7770,12 +7792,17 @@ input:focus:not(:focus-visible) {
 
 /* ---- BLOG PAGE ---- */
 .blog-hero-section {
+  padding: 24px 0;
   background-image:
     linear-gradient(135deg, rgba(22, 18, 28, 0.85) 0%, rgba(42, 26, 38, 0.78) 50%, rgba(20, 16, 26, 0.88) 100%),
     url('../images/backgrounds/blog-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.blog-hero-section .container {
+  width: 100%;
 }
 
 .blog-hero-section .breadcrumb-art,
@@ -7805,6 +7832,7 @@ input:focus:not(:focus-visible) {
 
 /* ---- WORKSHOPS PAGE ---- */
 .workshops-hero-section {
+  padding: 20px 0;
   background-image:
     linear-gradient(rgba(20,20,40,0.70), rgba(20,20,40,0.70)),
     url('../images/backgrounds/workshops-bg.jpg');
@@ -7813,8 +7841,17 @@ input:focus:not(:focus-visible) {
   background-repeat: no-repeat;
 }
 
+.workshops-hero-container {
+  width: 100%;
+}
+
+.workshops-hero-card {
+  height: 190px;
+}
+
 /* ---- BRANDS PAGE ---- */
 .brand-spotlight-hero {
+  padding: 24px 0;
   background-image:
     linear-gradient(135deg, rgba(26,26,46,0.74) 0%, rgba(45,45,82,0.74) 100%),
     url('../images/backgrounds/brands-bg.jpg');
@@ -7825,12 +7862,18 @@ input:focus:not(:focus-visible) {
 
 /* ---- CONTACT PAGE ---- */
 .contact-hero {
+  padding: 20px 0;
+  flex-direction: column !important;
   background-image:
     linear-gradient(rgba(248,246,243,0.28), rgba(248,246,243,0.28)),
     url('../images/backgrounds/contact-bg.jpg');
   background-size: cover;
   background-position: center 35%;
   background-repeat: no-repeat;
+}
+
+.contact-hero .section {
+  padding: 8px 0 !important;
 }
 
 .contact-hero h1 {
@@ -7865,8 +7908,7 @@ input:focus:not(:focus-visible) {
   width: 100%;
   margin: 0;
   margin-top: 0;
-  padding-top: 20px;
-  padding-bottom: 48px;
+  padding: 20px 0;
   overflow: hidden;
   background-image:
     linear-gradient(rgba(248,246,243,0.30), rgba(248,246,243,0.30)),
@@ -7887,8 +7929,20 @@ input:focus:not(:focus-visible) {
 .membership-hero .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   z-index: 2;
+  width: 100%;
+}
+
+/* ---- STUDENT SUPPLIES PAGE ---- */
+.student-supplies-hero {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.student-supplies-hero .container {
+  width: 100%;
 }
 
 .pricing-hero .breadcrumb-art,

@@ -103,6 +103,7 @@
   --container-max: 1280px;
   --navbar-height: 64px;
   --section-padding: 80px 0;
+  --page-hero-height: 240px;
 }
 
 [data-theme="dark"] {
