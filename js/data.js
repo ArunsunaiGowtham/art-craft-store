@@ -1627,30 +1627,30 @@ window.AppData = {
     {
       id: 1,
       name: "Winsor & Newton",
-      logo: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=200&q=80",
+      logo: "images/brand-winsor-newton.jpg",
       description: "Over 180 years of expertise in creating professional artists' materials. Trusted by masters from Turner to Hockney.",
-      image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80"
+      image: "images/brand-winsor-newton.jpg"
     },
     {
       id: 2,
       name: "Faber-Castell",
-      logo: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=200&q=80",
+      logo: "images/brand-faber-castell.jpg",
       description: "The world's oldest pencil manufacturer, producing premium drawing and coloring instruments since 1761.",
-      image: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80"
+      image: "images/brand-faber-castell.jpg"
     },
     {
       id: 3,
       name: "Sakura",
-      logo: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=200&q=80",
+      logo: "images/brand-sakura.jpg",
       description: "Japanese innovation in art supplies. Creators of the iconic Pigma Micron pens and Koi watercolors.",
-      image: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80"
+      image: "images/brand-sakura.jpg"
     },
     {
       id: 4,
       name: "Copic",
-      logo: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=200&q=80",
+      logo: "images/brand-copic.jpg",
       description: "Premium alcohol-based markers loved by illustrators, designers, and manga artists worldwide.",
-      image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80"
+      image: "images/brand-copic.jpg"
     },
     {
       id: 5,
@@ -1662,9 +1662,16 @@ window.AppData = {
     {
       id: 6,
       name: "Daler-Rowney",
-      logo: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=200&q=80",
+      logo: "images/brand-daler-rowney.jpg",
       description: "British fine art materials company with a heritage spanning over 250 years of artistic excellence.",
-      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80"
+      image: "images/brand-daler-rowney.jpg"
+    },
+    {
+      id: 7,
+      name: "Creative Software",
+      logo: "images/brand-creative-software.jpg",
+      description: "Industry-standard digital art, drawing, and creative design suites engineered for concept artists, illustrators, and graphic designers.",
+      image: "images/brand-creative-software.jpg"
     }
   ],
 
