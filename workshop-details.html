@@ -81,18 +81,6 @@
     </div>
   </div>
 
-<section class="py-3" style="background:var(--bg-secondary, #f8f9fa);">
-  <div class="container">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb mb-0" style="font-size:0.9rem;">
-        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none" style="color:var(--primary, #E85D3A);">Home</a></li>
-        <li class="breadcrumb-item"><a href="workshops.html" class="text-decoration-none" style="color:var(--primary, #E85D3A);">Workshops</a></li>
-        <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-title">Workshop Details</li>
-      </ol>
-    </nav>
-  </div>
-</section>
-
 <!-- HERO IMAGE / GALLERY -->
 <section class="animate-on-scroll workshop-gallery-section">
   <div class="container">
@@ -385,7 +373,8 @@ document.addEventListener('DOMContentLoaded', function() {
       thumbsRow.style.display = 'none';
     }
   }
-  document.getElementById('breadcrumb-title').textContent = workshop.title;
+  var bTitle = document.getElementById('breadcrumb-title');
+  if (bTitle) bTitle.textContent = workshop.title;
   document.getElementById('workshop-title').textContent = workshop.title;
   document.getElementById('workshop-instructor-avatar').src = instructor.avatar;
   document.getElementById('workshop-instructor-avatar').alt = instructor.name;

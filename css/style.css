@@ -191,7 +191,7 @@ p:last-child {
   top: 0;
   left: 0;
   right: 0;
-  height: var(--navbar-height, 70px);
+  height: var(--navbar-height, 64px);
   background: var(--bg-nav);
   border-bottom: 1px solid var(--border-color);
   z-index: 1030;
@@ -957,6 +957,13 @@ body::before {
   content: '';
   display: block;
   height: var(--navbar-height, 64px);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* ==========================================================================
@@ -966,6 +973,7 @@ body::before {
 .hero {
   position: relative;
   background: var(--bg-hero);
+  margin-top: 0;
   padding: 100px 0 80px;
   overflow: hidden;
   min-height: 520px;
@@ -5437,8 +5445,9 @@ textarea.form-control {
    ========================================================================== */
 
 .blog-hero-section {
-  min-height: var(--page-hero-height, 240px);
+  min-height: var(--page-hero-height, 280px);
   padding: 24px 0;
+  margin-top: 0;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -7659,6 +7668,18 @@ input:focus:not(:focus-visible) {
    Maintain a consistent hero section height across all pages for a cohesive layout.
    ========================================================================== */
 
+/* Breadcrumb suppression between header and hero */
+.breadcrumb,
+.breadcrumb-art,
+nav[aria-label="breadcrumb"],
+ol.breadcrumb {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
 .shop-hero,
 .workshops-hero-section,
 .brand-spotlight-hero,
@@ -7668,11 +7689,13 @@ input:focus:not(:focus-visible) {
 .membership-hero,
 .contact-hero,
 .student-supplies-hero {
-  min-height: var(--page-hero-height, 240px) !important;
+  min-height: var(--page-hero-height, 280px) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   box-sizing: border-box !important;
+  margin-top: 0 !important;
+  padding: 24px 0 !important;
 }
 
 /* ---- SHOP PAGE ---- */

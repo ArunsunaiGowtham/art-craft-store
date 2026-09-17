@@ -96,19 +96,8 @@
 
     <main>
 
-        <!-- ==================== BREADCRUMB ==================== -->
-        <section class="section" style="padding-top:24px; padding-bottom:12px;">
-            <div class="container">
-                <div class="breadcrumb-art">
-                    <span class="breadcrumb-item"><a href="index.html">Home</a></span>
-                    <span class="breadcrumb-item"><a href="blog.html">Blog</a></span>
-                    <span class="breadcrumb-item active" id="breadcrumb-title">Article</span>
-                </div>
-            </div>
-        </section>
-
         <!-- ==================== ARTICLE DETAILS & SIDEBAR ==================== -->
-        <section class="section article-details-section" style="padding-top:0;">
+        <section class="section article-details-section" style="padding-top:32px;">
             <div class="container">
                 <div class="row g-5 justify-content-center">
                     <!-- Left Column: Article Content -->
@@ -316,7 +305,8 @@
             document.getElementById('article-image').alt = post.title;
             document.getElementById('article-author-avatar').src = post.author.avatar;
             document.getElementById('article-author-avatar').alt = post.author.name;
-            document.getElementById('breadcrumb-title').textContent = post.title;
+            var bTitle = document.getElementById('breadcrumb-title');
+            if (bTitle) bTitle.textContent = post.title;
             document.title = post.title + ' - ArtCraft Supply Store';
 
             var contentEl = document.getElementById('article-content');
